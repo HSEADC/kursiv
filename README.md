@@ -10,3 +10,5 @@ cd B21DZ08-Project-5
 yarn
 yarn start
 ```
+
+#Sonya Dasha Matvey
