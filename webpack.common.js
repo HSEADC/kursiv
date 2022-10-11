@@ -92,6 +92,30 @@ module.exports = {
       filename: './pages/page.html',
       chunks: ['page']
     }),
+    // About Us Page Link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/about.html',
+      filename: './about.html',
+      chunks: ['page']
+    }),
+    // Journal page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/journal/journal.html',
+      filename: './journal/journal.html',
+      chunks: ['page']
+    }),
+    // Library page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/library/library.html',
+      filename: './library/library.html',
+      chunks: ['page']
+    }),
 
     // Partials
     new HtmlWebpackPartialsPlugin([
