@@ -3,3 +3,8 @@
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
 @import 'stylesheets/index.scss';
+@import 'stylesheets/knowledge.scss';
+@import 'stylesheets/library.scss';
+@import 'stylesheets/type.scss';
+@import 'stylesheets/article.scss';
+@import 'stylesheets/about.scss';

@@ -7,19 +7,26 @@
   </head>
 
   <body class="index">
-    <div class="images">
-      <div class="image" id="bgPNG"></div>
-      <div class="image" id="bgJPG"></div>
-      <div class="image" id="bgSVG"></div>
-      <img src="images/image.png" />
-      <img src="images/image.jpg" />
-      <img src="images/image.svg" />
-    </div>
-
-    <div>This is a landing page</div>
-    <a href="./pages/page.html">Go to an internal page</a>
-    <a href="./about.html">About</a>
-    <a href="./library/library.html">Library</a>
-    <a href="./journal/journal.html">Journal</a>
+    <header>
+      <nav>
+        <h2><a href="" style="color: grey">Главная</a></h2>
+        <h2><a href="./library.html">Шрифты</a></h2>
+        <h2><a href="./knowledge.html">Знания</a></h2>
+        <h2><a href="./about.html">О нас</a></h2>
+      </nav>
+    </header>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <section>
+      <div>
+        <h2>Мы шрифтовое медиа «Букавы»!</h2>
+        <p>Напишите нам что-нибудь.</p>
+      </div>
+      <form action="https://formspree.io/f/xbjbkayl" method="POST">
+        <input type="email" name="email" placeholder="Почта" />
+        <textarea name="message" placeholder="Сообщение"></textarea>
+        <!-- your other form fields go here -->
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
