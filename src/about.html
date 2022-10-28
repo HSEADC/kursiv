@@ -10,17 +10,88 @@
 
   <body class="about">
     <header>
-      <nav>
-        <h2><a href="./">Главная</a></h2>
-        <h2><a href="./library.html">Шрифты</a></h2>
-        <h2><a href="./knowledge.html">Знания</a></h2>
-        <h2><a href="./about.html" style="color: grey">О нас</a></h2>
+      <nav class="splash_menu">
+        <a class="menuItem" href="./holder.html">Букавы</a>
+        <!-- <a class="menuItem" href="./library.html">Шрифты</a>
+        <a class="menuItem" href="./knowledge.html">Знания</a> -->
+        <a class="menuItem" href="./about.html">О нас</a>
+        <a class="menuItem" href="./">Рассылка</a>
       </nav>
     </header>
-    <a
-      href="https://www.figma.com/file/FK14v8ObwbQxXZPNXLTqNm/%D0%9C%D0%B5%D0%B4%D0%B8%D0%B0-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81?node-id=58%3A976"
-    >
-      <img src="images/Figma.png" alt="" />
-    </a>
+    <section class="conception">
+      <h2>Ваше шрифтовое медиа</h2>
+      <p>
+        Мы — шрифтовое медиа «Букавы», которое </br>
+        объединяет в себе широкий инструментарий </br>
+        для поиска и подбора кириллических шрифтов </br>
+        и информационное медиа об истории шрифта,</br> 
+        структуре, российских шрифтовых студиях,</br>
+        дизайне, трендах в типографике.
+      </p>
+      <img src="images/Naming.png" alt="" />
+    </section>
+    <section class="target_audience">
+      <h2>Целевая аудитория</h2>
+      <p>
+        Были студенты художественных специальностей, <br> в итоге — все дизайнеры.
+      </p>
+      <img src="images/humanizedletters.png" alt="" />
+    </section>
+    <section class="research_results">
+      <h2>Исследование и выводы</h2>
+      <p>
+        В результате проведенных опросов, выяснилось,</br> 
+        что большинство людей, которые занимаются дизайном </br> в целом, не знают, где искать хорошие
+        шрифты/ищут </br> в сомнительных местах. Они сомневаются в работе </br>со шрифтом,
+        в его правильном применении, поэтому </br> наша задача — помочь им наполнять
+        мир красивой </br> типографикой, в особенности — кириллической.
+      </p>
+      <p id="free_fonts">Зайду-ка я на «бесплатные <br> шрифты онлайн»!</p>
+      <p id="library_fonts">Пользуюсь проверенной <br> библиотекой шрифтов.</p>
+      <img src="images/piechart.png" alt="" />
+    </section>
+    <section class="features">
+      <h2>Фичи</h2>
+      <div>
+        <ul>
+          <li>Режим подробного отображения</li>
+          <li>Фильтры</li>
+          <li>Поиск шрифтов</li>
+        </ul>
+        <ul>
+          <li>Интерактивные глифы</li>
+          <li>Теги</li>
+          <li>Работа со шрифтом</li>
+        </ul>
+      </div>
+    </section>
+    <section class="Authors">
+      <h2>Над проектом работают</h2>
+      <div>
+        <img id="Sonya" src="images/Sonya.png" alt="">
+        <img id="Dasha" src="images/Dasha.png" alt="">
+        <img id="Matvey" src="images/Matvey.png" alt="">
+        <p id="SonyaQuote">Соня Загуменкова</p>
+        <p id="DashaQuote">Даша Климова</p>
+        <p id="MatveyQuote">Матвей Васильев</p>
+
+      </div>
+    </section>
+    <section class="Ending">
+      <div>
+        <h2>Не пропустите запуск!</h2>
+        <p>Оставьте нам свою почту.</p>
+      </div>
+      <form action="https://formspree.io/f/xbjbkayl" method="POST">
+        <input
+          type="email"
+          name="email"
+          placeholder="matveyburevya@gmail.com"
+        />
+        <!-- your other form fields go here -->
+        <button type="submit">Подписаться на рассылку</button>
+      </form>
+      <img src="images/Ending.png" alt="" />
+    </section>
   </body>
 </html>

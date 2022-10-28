@@ -126,6 +126,12 @@ module.exports = {
       template: './src/knowledge/article.html',
       filename: './knowledge/article.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/holder.html',
+      filename: './holder.html'
+    }),
 
     // Partials
     new HtmlWebpackPartialsPlugin([

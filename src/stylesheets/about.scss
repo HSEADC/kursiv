@@ -1,14 +1,117 @@
 body.about {
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  grid-gap: 1.5em;
-  max-width: 100vw;
+  background-color: #202020;
+  margin: 0 auto;
+  // display: grid;
+  // grid-template-columns: 2fr 8fr;
+  // grid-gap: 1.5em;
+  max-width: 95vw;
+  height: 100%;
   align-items: center;
-  margin-left: 84px;
-  margin-right: 84px;
-
+  // section {
+  //   position: relative;
+  //   width: 90%;
+  //   margin: 0 auto;
+  //   margin-top: 50px;
+  // }
+  // .conception > img {
+  //   position: absolute;
+  //   right: 0;
+  // }
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .conception {
+    margin-bottom: 250px;
+    img {
+      width: 1200px;
+      align-self: end;
+      margin-top: -400px;
+    }
+  }
+  .target_audience {
+    margin-bottom: 250px;
+    img {
+      align-self: end;
+      margin-top: 40px;
+      width: 320px;
+    }
+  }
+  .research_results {
+    margin-bottom: 250px;
+    position: relative;
+    #library_fonts {
+      position: absolute;
+      right: 140px;
+      bottom: 330px;
+    }
+    #free_fonts {
+      position: absolute;
+      left: 140px;
+      bottom: 0;
+    }
+    img {
+      width: 558.84px;
+      align-self: center;
+    }
+  }
+  .features {
+    margin-bottom: 250px;
+    div {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &:last-child {
+        margin-right: 200px;
+      }
+    }
+  }
+  .Authors {
+    div {
+      margin-top: 50px;
+      display: grid;
+      align-items: end;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      img {
+        width: 281px;
+      }
+      #Sonya {
+        margin-bottom: -40px;
+        justify-self: start;
+      }
+      #Dasha {
+        justify-self: center;
+      }
+      #Matvey {
+        margin-bottom: -73px;
+        justify-self: end;
+      }
+      p {
+        &#SonyaQuote {
+          justify-self: start;
+        }
+        &#DashaQuote {
+          justify-self: center;
+        }
+        &#MatveyQuote {
+          justify-self: end;
+        }
+        align-self: start;
+      }
+    }
+  }
+  .Ending {
+    div {
+      margin-bottom: 50px;
+    }
+  }
   img {
-    width: 1200px;
+    width: auto;
     height: auto;
   }
 }
