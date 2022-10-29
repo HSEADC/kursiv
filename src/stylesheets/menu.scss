@@ -29,6 +29,13 @@
     margin-top: -10px;
     margin-bottom: 20px;
     margin-left: 100px;
+
+    &:hover {
+      color: darkgray;
+    }
+    &:focus {
+      color: lightgrey;
+    }
     &.active {
       color: grey;
     }
