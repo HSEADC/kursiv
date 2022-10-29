@@ -1,7 +1,7 @@
 body.type {
   width: 100%;
   height: 100%;
-  font-family: 'Roboto';
+  font-family: Helvetica, Arial, sans-serif;
   img {
     width: 100%;
     margin-bottom: 80px;
@@ -166,6 +166,7 @@ body.type {
         margin-top: 80px;
         font-size: 52px;
         font-weight: 500;
+        font-family: 'Roboto';
       }
     }
     .glyph_table {
@@ -174,6 +175,7 @@ body.type {
           margin: 15px auto;
           text-align: center;
           font-family: 'Roboto';
+          font-weight: 400;
           font-size: 57px;
         }
       }
@@ -212,6 +214,10 @@ body.type {
           width: 520px;
           background-color: #d4d4d4;
           border-radius: 10px;
+        }
+        .subtitle {
+          margin-top: 0px;
+          color: gray;
         }
       }
     }
