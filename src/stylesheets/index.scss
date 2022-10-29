@@ -25,5 +25,56 @@ body.index {
       bottom: 150px;
       z-index: -90;
     }
+    #mobil {
+      display: none;
+    }
+  }
+}
+@media all and (max-width: 800px) {
+  body.index {
+    width: 100%;
+    h2 {
+      margin-top: 150px !important;
+      font-size: 32px;
+    }
+    .splash_menu {
+      flex-direction: column;
+      gap: 0;
+      .menuItem {
+        margin-top: 10px;
+      }
+    }
+    p {
+      font-size: 20px !important;
+    }
+    h2,
+    p {
+      margin-top: 40px;
+      font-size: 32px;
+    }
+    form {
+      margin-top: 100px;
+      flex-direction: column;
+      input {
+        height: 44px;
+        width: 100%;
+        padding-left: 10px;
+      }
+      button {
+        height: 44px;
+        width: 368px;
+        font-size: 20px;
+      }
+    }
+    section {
+      img {
+        display: none;
+        bottom: 200px;
+      }
+      #mobil {
+        object-fit: scale-down !important;
+        display: block;
+      }
+    }
   }
 }

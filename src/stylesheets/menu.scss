@@ -11,6 +11,12 @@
     margin-bottom: 20px;
     font-size: 32px;
     color: black;
+    &:hover {
+      color: darkgray;
+    }
+    &:focus {
+      color: lightgrey;
+    }
     &.active {
       color: grey;
     }
