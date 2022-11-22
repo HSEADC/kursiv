@@ -103,3 +103,20 @@
   font-stretch: condensed;
   font-style: italic;
 }
+
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_regular.ttf')
+    format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_md.ttf') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_bold.ttf') format('woff');
+  font-weight: 700;
+}

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="javascripts/jquery-3.6.0.js" charset="utf-8"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="startingScript.js" charset="utf-8"></script>
     <analytics></analytics>
   </head>
 
@@ -12,86 +16,93 @@
     <header>
       <nav class="splash_menu">
         <a class="menuItem" href="./holder.html">Букавы</a>
-        <!-- <a class="menuItem" href="./library.html">Шрифты</a>
-        <a class="menuItem" href="./knowledge.html">Знания</a> -->
-        <a class="menuItem" href="./about.html">О нас</a>
-        <a class="menuItem" href="./">Рассылка</a>
+        <a class="menuItem" id="preburger" href="./about.html">О нас</a>
+        <a class="menuItem" id="preburger" href="./">Рассылка</a>
+        <div class="burger">
+          <span></span>
+        </div>
       </nav>
+      <div class="hidden_navigation">        <a class="menuItem" id="preburger" href="./about.html">О нас</a>
+        <a class="menuItem" id="preburger" href="./">Рассылка</a>
+</div>
     </header>
-    <section class="conception">
-      <h2>Ваше шрифтовое медиа</h2>
-      <p>
-        Мы — шрифтовое медиа «Букавы», которое </br>
-        объединяет в себе широкий инструментарий </br>
-        для поиска и подбора кириллических шрифтов </br>
-        и информационное медиа об истории шрифта,</br> 
-        структуре, российских шрифтовых студиях,</br>
-        дизайне, трендах в типографике.
-      </p>
-      <img src="images/Naming.png" alt="" />
-    </section>
-    <section class="target_audience">
-      <h2>Целевая аудитория</h2>
-      <p>
-        Были студенты художественных специальностей, <br> в итоге — все дизайнеры.
-      </p>
-      <img src="images/humanizedletters.png" alt="" />
-    </section>
-    <section class="research_results">
-      <h2>Исследование и выводы</h2>
-      <p>
-        В результате проведенных опросов, выяснилось,</br> 
-        что большинство людей, которые занимаются дизайном </br> в целом, не знают, где искать хорошие
-        шрифты/ищут </br> в сомнительных местах. Они сомневаются в работе </br>со шрифтом,
-        в его правильном применении, поэтому </br> наша задача — помочь им наполнять
-        мир красивой </br> типографикой, в особенности — кириллической.
-      </p>
-      <p id="free_fonts">Зайду-ка я на «бесплатные <br> шрифты онлайн»!</p>
-      <p id="library_fonts">Пользуюсь проверенной <br> библиотекой шрифтов.</p>
-      <img src="images/piechart.png" alt="" />
-    </section>
-    <section class="features">
-      <h2>Фичи</h2>
-      <div>
-        <ul>
-          <li>Режим подробного отображения</li>
-          <li>Фильтры</li>
-          <li>Поиск шрифтов</li>
-        </ul>
-        <ul>
-          <li>Интерактивные глифы</li>
-          <li>Теги</li>
-          <li>Работа со шрифтом</li>
-        </ul>
-      </div>
-    </section>
-    <section class="Authors">
-      <h2>Над проектом работают</h2>
-      <div>
-        <img id="Sonya" src="images/Sonya.png" alt="">
-        <img id="Dasha" src="images/Dasha.png" alt="">
-        <img id="Matvey" src="images/Matvey.png" alt="">
-        <p id="SonyaQuote">Соня Загуменкова</p>
-        <p id="DashaQuote">Даша Климова</p>
-        <p id="MatveyQuote">Матвей Васильев</p>
+    <section class="wrap">
+      <section class="conception">
+        <h2>Ваше шрифтовое медиа</h2>
+        <p>
+          Мы — шрифтовое медиа «Букавы», которое <br class="desk">
+          объединяет в себе широкий инструментарий <br class="desk">
+          для поиска и подбора кириллических шрифтов <br class="desk">
+          и информационное медиа об истории шрифта,<br class="desk"> 
+          структуре, российских шрифтовых студиях,<br class="desk">
+          дизайне, трендах в типографике.
+        </p>
+        <img class="desktopimg" src="images/Naming.png" alt="" />
+        <img class="phoneimg" src="images/phonevukva.png" alt="">
+      </section>
+      <section class="target_audience">
+        <h2>Целевая аудитория</h2>
+        <p>
+          Были студенты художественных специальностей, <br> в итоге — все дизайнеры.
+        </p>
+      </section>
+      <section class="research_results">
+        <h2>Исследование и выводы</h2>
+        <p>
+          В результате проведенных опросов, выяснилось,</br class="desk"> 
+          что большинство людей, которые занимаются дизайном </br class="desk"> в целом, не знают, где искать хорошие
+          шрифты/ищут </br class="desk"> в сомнительных местах. Они сомневаются в работе </br class="desk">со шрифтом,
+          в его правильном применении, поэтому </br class="desk"> наша задача — помочь им наполнять
+          мир красивой </br class="desk"> типографикой, в особенности — кириллической.
+        </p>
+        <p id="free_fonts">Зайду-ка я на «бесплатные <br> шрифты онлайн»!</p>
+        <p id="library_fonts">Пользуюсь проверенной <br> библиотекой шрифтов.</p>
+        <img src="images/piechart.png" alt="" />
+      </section>
+      <section class="features">
+        <h2>Фичи</h2>
+        <div>
+          <ul>
+            <li>Режим подробного отображения</li>
+            <li>Фильтры</li>
+            <li>Поиск шрифтов</li>
+          </ul>
+          <ul>
+            <li>Интерактивные глифы</li>
+            <li>Теги</li>
+            <li>Работа со шрифтом</li>
+          </ul>
+        </div>
+      </section>
+      <section class="Authors">
+        <h2>Над проектом работают</h2>
+        <div>
+          <img id="Sonya" src="images/Sonya.png" alt="">
+          <img id="Dasha" src="images/Dasha.png" alt="">
+          <img id="Matvey" src="images/Matvey.png" alt="">
+          <p id="SonyaQuote">Соня Загуменкова</p>
+          <p id="DashaQuote">Даша Климова</p>
+          <p id="MatveyQuote">Матвей Васильев</p>
 
-      </div>
-    </section>
-    <section class="Ending">
-      <div>
-        <h2>Не пропустите запуск!</h2>
-        <p>Оставьте нам свою почту.</p>
-      </div>
-      <form action="https://formspree.io/f/xbjbkayl" method="POST">
-        <input
-          type="email"
-          name="email"
-          placeholder="matveyburevya@gmail.com"
-        />
-        <!-- your other form fields go here -->
-        <button type="submit">Подписаться на рассылку</button>
-      </form>
-      <img src="images/Ending.png" alt="" />
+        </div>
+      </section>
+      <section class="Ending">
+        <div>
+          <h2>Не пропустите запуск</h2>
+          <p>Оставьте нам свою почту.</p>
+        </div>
+        <form action="https://formspree.io/f/xbjbkayl" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="matveyburevya@gmail.com"
+          />
+          <!-- your other form fields go here -->
+          <button type="submit">Подписаться на рассылку</button>
+        </form>
+        <img class="desktopimg" src="images/footermessage.png" alt="" />
+        <img class="phoneimg" src="images/phoneend.png" alt="" />
+      </section>
     </section>
   </body>
 </html>
