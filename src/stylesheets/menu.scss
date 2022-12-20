@@ -10,7 +10,7 @@
   .menuItem {
     margin-bottom: 20px;
     font-size: 32px;
-    color: black;
+    color: white;
     &:hover {
       color: darkgray;
     }
@@ -23,7 +23,7 @@
   }
 
   .submenuItem {
-    color: black;
+    color: white;
     text-align: center;
     font-size: 24px;
     margin-top: -10px;
@@ -44,6 +44,7 @@
   margin-top: 24px;
   display: flex;
   gap: 120px;
+  width: 100%;
   .burger {
     display: none;
     span {
@@ -78,7 +79,7 @@
   .menuItem {
     text-decoration: none;
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 32px;
     color: white;
     &:first-child {
       font-weight: 500;
@@ -87,9 +88,9 @@
     &:hover {
       color: rgb(190, 190, 190);
     }
-    &:focus {
-      color: grey;
-    }
+    // &:focus {
+    //   color: grey;
+    // }
   }
 }
 .high {

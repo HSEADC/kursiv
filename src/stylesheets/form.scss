@@ -1,27 +1,28 @@
 form {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
   input::placeholder {
-    font-size: 24px;
+    font-size: 28px;
   }
   input {
-    color: white;
-    height: 70px;
-    width: 892px;
-    border: solid 2px white;
-    border-radius: 6px;
-    background-color: #202020;
+    margin-top: 100px;
+    padding: 0 auto;
+    color: black;
+    height: 110px;
+    width: 100%;
+    background-color: white;
     font-size: 28px;
     padding-left: 30px;
     padding-bottom: 5px;
   }
   button {
-    width: 527px;
-    height: 70px;
-    border: none;
-    border-radius: 6px;
-    background-color: rgb(255, 255, 255);
-    color: var(--black);
+    align-self: end;
+    margin-top: 200px;
+    width: 664px;
+    height: 76px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
     font-size: 28px;
     cursor: pointer;
     &:hover {
