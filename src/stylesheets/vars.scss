@@ -1,4 +1,15 @@
 :root {
   --white: white;
   --black: #202020;
+  --text_color: #202020;
+  --heading_font: 'CSTM';
+  --main_font: 'Steinback';
+  --text_size: 60px;
+  --line_height: 80px;
+  --main_blue: #5552ff;
+}
+@media all and (max-width: 1728px) {
+  :root {
+    --text_size: 56px;
+  }
 }

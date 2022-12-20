@@ -8,23 +8,37 @@ body {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--main_font), Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+h1 {
+  font-family: var(--heading_font), 'Gill Sans', 'Gill Sans MT', Calibri,
+    'Trebuchet MS', sans-serif;
+  font-size: 96px;
+}
 h2 {
-  color: white;
+  color: var(--text-color);
   font-size: 96px;
   font-weight: 600;
 }
 p {
-  color: white;
+  color: var(--text-color);
   margin-top: 80px;
-  font-size: 32px;
-  line-height: 140%;
+  font-size: var(--text_size);
+  line-height: var(--line_height);
   font-weight: 300;
+  white-space: nowrap;
+}
+.subtitle {
+  line-height: 48px;
+  text-align: center;
+  font-size: 36px;
+}
+.white {
+  color: white;
 }
 li {
-  color: white;
+  color: var(--text-color);
   margin-top: 50px;
   font-size: 32px;
 }
