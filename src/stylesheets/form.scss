@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+  input::placeholder {
+    font-size: 28px;
+  }
+  input {
+    margin-top: 100px;
+    padding: 0 auto;
+    color: black;
+    height: 110px;
+    width: 100%;
+    background-color: white;
+    font-size: 28px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+  }
+  button {
+    align-self: end;
+    margin-top: 200px;
+    width: 664px;
+    height: 76px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(190, 190, 190);
+    }
+    &:active {
+      background-color: grey;
+    }
+  }
+}

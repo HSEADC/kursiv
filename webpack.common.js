@@ -2,19 +2,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    page: './src/page.jsx'
+    index: './src/index.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'docs'),
-    clean: true
+    path: path.resolve(__dirname, 'docs')
+    // clean: true
   },
   module: {
     rules: [
@@ -75,6 +75,10 @@ module.exports = {
       chunkFilename: '[id].css'
     }),
 
+    new CopyPlugin({
+      patterns: [{ from: 'src/share', to: 'share' }]
+    }),
+
     // Landing page
     new HtmlWebpackPlugin({
       hash: true,
@@ -85,36 +89,53 @@ module.exports = {
     }),
 
     // Internal pages
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
-    }),
+    // new HtmlWebpackPlugin({
+    //   hash: true,
+    //   scriptLoading: 'blocking',
+    //   template: './src/pages/page.html',
+    //   filename: './pages/page.html',
+    //   chunks: ['page']
+    // }),
     // About Us Page Link
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
       template: './src/about.html',
-      filename: './about.html',
-      chunks: ['page']
+      filename: './about.html'
     }),
     // Journal page link
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/journal/journal.html',
-      filename: './journal/journal.html',
-      chunks: ['page']
+      template: './src/knowledge.html',
+      filename: './knowledge.html'
     }),
     // Library page link
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library/library.html',
-      filename: './library/library.html',
-      chunks: ['page']
+      template: './src/library.html',
+      filename: './library.html'
+    }),
+    // Typeface page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/library/typeface.html',
+      filename: './library/typeface.html'
+    }),
+    // Article page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/knowledge/article.html',
+      filename: './knowledge/article.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/holder.html',
+      filename: './holder.html'
     }),
 
     // Partials

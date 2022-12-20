@@ -1,0 +1,150 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  * {
+    max-width: fit-content;
+    color: black;
+    text-decoration: none;
+    border-bottom: solid 1px black;
+  }
+  .menuItem {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: white;
+    &:hover {
+      color: darkgray;
+    }
+    &:focus {
+      color: lightgrey;
+    }
+    &.active {
+      color: grey;
+    }
+  }
+
+  .submenuItem {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    &:hover {
+      color: darkgray;
+    }
+    &:focus {
+      color: lightgrey;
+    }
+    &.active {
+      color: grey;
+    }
+  }
+}
+.splash_menu {
+  margin-top: 24px;
+  display: flex;
+  gap: 120px;
+  width: 100%;
+  .burger {
+    display: none;
+    span {
+      display: inline-block;
+      background-color: white;
+      position: relative;
+      height: 5px;
+      width: 60px;
+      transition: 0.15s ease-in-out;
+    }
+    span::after {
+      display: inline-block;
+      background-color: white;
+      position: absolute;
+      height: 5px;
+      width: 60px;
+      bottom: 10px;
+      content: '';
+      transition: 0.15s ease-in-out;
+    }
+    span::before {
+      display: inline-block;
+      position: absolute;
+      background-color: white;
+      height: 5px;
+      width: 60px;
+      top: 10px;
+      content: '';
+      transition: 0.15s ease-in-out;
+    }
+  }
+  .menuItem {
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: white;
+    &:first-child {
+      font-weight: 500;
+      font-size: 32px;
+    }
+    &:hover {
+      color: rgb(190, 190, 190);
+    }
+    // &:focus {
+    //   color: grey;
+    // }
+  }
+}
+.high {
+  display: none;
+}
+.high > span {
+  background: transparent !important;
+}
+.high > span::after {
+  top: 0 !important;
+  transform: rotate(45deg);
+}
+.high > span::before {
+  top: 0 !important;
+  transform: rotate(-45deg);
+}
+.hidden_navigation {
+  display: none;
+}
+@media all and (max-width: 1024px) {
+  .splash_menu {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hidden_navigation {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 20vh;
+    background-color: transparent;
+    .menuItem {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: white;
+      gap: 100px;
+      &:hover {
+        color: darkgray;
+      }
+      &:focus {
+        color: lightgrey;
+      }
+      &.active {
+        color: grey;
+      }
+    }
+  }
+}
+.shown {
+  display: flex !important;
+}
+.bg_blur {
+  transition: 0.15s ease-in-out;
+  filter: blur(20px) brightness(0.5);
+}

@@ -1,31 +1,132 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Light.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Light.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Thin.ttf') format('woff');
   font-weight: 100;
-  font-style: normal;
 }
-
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Regular.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Regular.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Light.ttf') format('woff');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.ttf') format('woff');
   font-weight: 400;
-  font-style: normal;
 }
-
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Medium.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Medium.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Medium.ttf') format('woff');
   font-weight: 500;
-  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.ttf') format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Black.ttf') format('woff');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-ThinItalic.ttf ') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-LightItalic.ttf') format('woff');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Italic.ttf') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-MediumItalic.ttf') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-BoldItalic.ttf') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-BlackItalic.ttf') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Light.ttf') format('woff');
+  font-weight: 100;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Regular.ttf') format('woff');
+  font-weight: 400;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Bold.ttf') format('woff');
+  font-weight: 700;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-LightItalic.ttf') format('woff');
+  font-weight: 100;
+  font-stretch: condensed;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-Italic.ttf') format('woff');
+  font-weight: 400;
+  font-stretch: condensed;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/RobotoCondensed-BoldItalic.ttf') format('woff');
+  font-weight: 700;
+  font-stretch: condensed;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Bold.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Bold.woff') format('woff');
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_regular.ttf')
+    format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_md.ttf') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src: url('fonts/Akzidenz-Grotesk/akzidenzgroteskpro_bold.ttf') format('woff');
   font-weight: 700;
-  font-style: normal;
+}
+@font-face {
+  font-family: 'Steinback';
+  src: url('fonts/Steinbeck Demo Regular.otf') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'CSTM';
+  src: url('fonts/CSTM Xprmntl.otf') format('woff');
+  font-weight: 500;
 }

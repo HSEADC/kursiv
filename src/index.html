@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
     <title>static-site-boilerplate index</title>
@@ -7,19 +7,32 @@
   </head>
 
   <body class="index">
-    <div class="images">
-      <div class="image" id="bgPNG"></div>
-      <div class="image" id="bgJPG"></div>
-      <div class="image" id="bgSVG"></div>
-      <img src="images/image.png" />
-      <img src="images/image.jpg" />
-      <img src="images/image.svg" />
-    </div>
-
-    <div>This is a landing page</div>
-    <a href="./pages/page.html">Go to an internal page</a>
-    <a href="./about.html">About</a>
-    <a href="./library/library.html">Library</a>
-    <a href="./journal/journal.html">Journal</a>
+    <header>
+      <nav class="splash_menu">
+        <a class="menuItem active" href="./holder.html">Букавы</a>
+        <!-- <a class="menuItem" href="./library.html">Шрифты</a>
+        <a class="menuItem" href="./knowledge.html">Знания</a> -->
+        <a class="menuItem" href="./about.html">О нас</a>
+        <a class="menuItem" href="./">Рассылка</a>
+      </nav>
+    </header>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <section>
+      <div>
+        <h2>Не пропустите запуск!</h2>
+        <p>Оставьте нам свою почту</p>
+      </div>
+      <form action="https://formspree.io/f/xbjbkayl" method="POST">
+        <input
+          type="email"
+          name="email"
+          placeholder="matveyburevya@gmail.com"
+        />
+        <!-- your other form fields go here -->
+        <button type="submit">Подписаться на рассылку</button>
+      </form>
+      <img src="images/Ending.png" alt="" />
+      <img id="mobil" src="images/mobile_variant.png" alt="" />
+    </section>
   </body>
 </html>
