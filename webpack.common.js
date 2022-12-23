@@ -131,6 +131,45 @@ module.exports = {
       template: './src/knowledge/article.html',
       filename: './knowledge/article.html'
     }),
+    //Styleguide
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide.html',
+      filename: './styleguide.html'
+    }),
+    // Styleguide page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide/logos.html',
+      filename: './styleguide/logos.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide/brand.html',
+      filename: './styleguide/brand.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide/fonts.html',
+      filename: './styleguide/fonts.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide/colors.html',
+      filename: './styleguide/colors.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/styleguide/mockups.html',
+      filename: './styleguide/mockups.html'
+    }),
+
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
