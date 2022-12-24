@@ -2,38 +2,108 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>static-site-boilerplate index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="javascripts/jquery-3.6.0.js" charset="utf-8"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="startingScript.js" charset="utf-8"></script>
     <analytics></analytics>
   </head>
 
   <body class="index">
     <header>
       <nav class="splash_menu">
-        <a class="menuItem active" href="./holder.html">Букавы</a>
-        <!-- <a class="menuItem" href="./library.html">Шрифты</a>
-        <a class="menuItem" href="./knowledge.html">Знания</a> -->
-        <a class="menuItem" href="./about.html">О нас</a>
-        <a class="menuItem" href="./">Рассылка</a>
-        <a class="menuItem" href="./styleguide.html">Styleguide</a>
+        <a class="menuItem" id="preburger" href="#about_us">О нас</a>
+        <a class="menuItem" id="preburger" href="#features">Фичи</a>
+        <a class="menuItem" id="preburger" href="#footer">Рассылка</a>
+        <div class="burger">
+          <span></span>
+        </div>
       </nav>
-    </header>
-    <!-- modify this form HTML and place wherever you want your form -->
-    <section>
-      <div>
-        <h2>Не пропустите запуск!</h2>
-        <p>Оставьте нам свою почту</p>
+      <div class="hidden_navigation">
+        <a class="menuItem" id="preburger" href="./about.html">О нас</a>
+        <a class="menuItem" id="preburger" href="./">Рассылка</a>
       </div>
-      <form action="https://formspree.io/f/xbjbkayl" method="POST">
-        <input
-          type="email"
-          name="email"
-          placeholder="matveyburevya@gmail.com"
-        />
-        <!-- your other form fields go here -->
-        <button type="submit">Подписаться на рассылку</button>
-      </form>
-      <img src="images/Ending.png" alt="" />
-      <img id="mobil" src="images/mobile_variant.png" alt="" />
+    </header>
+    <section id="title">
+      <div>
+        <img src="images/regular.png" alt="" />
+        <img src="images/kursivlogo.png" alt="" />
+        <img class="bold_italic_tag" src="images/bold_italic.png" alt="" />
+      </div>
+      <p class="white subtitle">
+        Медиа, рассказывающее дизайнерам о типографике <br />и особенностях
+        шрифта
+      </p>
     </section>
+    <section id="about_us" class="aligned_text">
+      <div>
+        <h2>Мы — шрифтовая система, 
+          собранная для того, чтобы сделать 
+          жизнь дизайнеров проще. </h2>
+      </div>
+    </section>
+    <section class="for_whom">
+      <div>
+        <h2>Для кого создан курсив?</h2>
+      </div>
+      <div id="boxes">
+        <div>
+          <h2>1.</h2>
+          <p>Для начинающих<br> дизайнеров,<br> чувствующих себя<br>неуверенно в работе<br> с типографикой</p>
+        </div>
+        <div>        
+          <h2>2.</h2>
+          <p>Для дизайнеров<br> с опытом работы,<br> которые нужнаются<br> в пополнении своей<br> библиотеки и новых<br> знаниях о шрифте. 
+          </p>
+        </div>
+        <div>        
+            <h2>3.</h2>
+          <p>Для специалистов,<br> 
+            которые хотят следить<br> 
+            за новыми шрифтами,<br> 
+            а также иметь под<br> рукой инструмент<br> 
+            для работы с ними.</p>
+        </div>  
+      </div>
+    </section>
+    <section class="splashes">
+      <img src="images/splashes.png" alt="">
+    </section>
+    <section class="running_fonts">
+      <img src="images/different_fonts.png" alt="">
+    </section>
+    <section id="features">
+      <div style="overflow: visible;">     
+        <h1>Фичи</h1>   
+        <div id="layout">
+          <div id="table_layout_change"></div>
+          <div></div>
+          <div id="glyph_zoom"></div>
+          <div id="filters"></div>
+          <div id="search"></div>
+        </div>
+      </div>
+    </section>
+    <section id="preludio" class="aligned_text">
+      <div>
+        <h2>Наша миссия — наполнить<br> мир хорошей типографикой</h2>
+        <p>поэтому оставайтесь с нами  <span><img src="images/arrow.png" alt=""></span></p>
+      </div>
+    </section>
+    <footer>
+      <section id="footer">
+        <h2>Подпишитесь на рассылку<br>
+          и следите за обновлениями!</h2>
+        <form action="https://formspree.io/f/xbjbkayl" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="example@mail.com">
+      <button type="submit">Подписаться на рассылку </button>
+        </form>
+      </footer>
   </body>
 </html>
