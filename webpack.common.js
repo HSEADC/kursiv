@@ -96,13 +96,13 @@ module.exports = {
     //   filename: './pages/page.html',
     //   chunks: ['page']
     // }),
-    // About Us Page Link
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/about.html',
-      filename: './about.html'
-    }),
+    // // About Us Page Link
+    // new HtmlWebpackPlugin({
+    //   hash: true,
+    //   scriptLoading: 'blocking',
+    //   template: './src/about.html',
+    //   filename: './about.html'
+    // }),
     // Journal page link
     new HtmlWebpackPlugin({
       hash: true,
