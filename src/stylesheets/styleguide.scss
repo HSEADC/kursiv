@@ -51,7 +51,7 @@ body.styleguide {
         background-color: white;
       }
       &:hover {
-        background-color: white;
+        background-color: grey;
         a {
           color: white;
         }
@@ -72,6 +72,18 @@ body.styleguide {
         background-color: white;
         margin-left: 30px;
         height: 45px;
+        &:hover {
+          background-color: grey;
+          a {
+            color: white;
+          }
+        }
+        &.active {
+          background-color: #5552ff;
+          a {
+            color: white;
+          }
+        }
       }
       &.active {
         background-color: #5552ff;

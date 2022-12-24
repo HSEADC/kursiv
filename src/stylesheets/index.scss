@@ -163,11 +163,35 @@ body.index {
         width: 100%;
         overflow: visible;
         gap: 20px;
+        .video_bg {
+          height: 100%;
+          object-fit: contain;
+        }
+        .square {
+          height: 100%;
+        }
+        #tags {
+          img {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-self: flex-start;
+            margin-left: 1.1vw;
+          }
+        }
         div {
+          position: relative;
           height: 400px;
           width: 100%;
           background-color: #dedede30;
           border-radius: 20px;
+          p {
+            position: absolute;
+            font-size: 1.1vw;
+            line-height: normal;
+            bottom: 15px;
+            left: 15px;
+            filter: opacity(0.8);
+          }
         }
         #table_layout_change {
           grid-column-start: 1;
@@ -180,10 +204,16 @@ body.index {
         #filters {
           grid-column-start: 1;
           grid-column-end: 4;
+          height: 12vw;
+          img {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
         }
         #search {
           grid-column-start: 4;
           grid-column-end: 6;
+          height: 12vw;
         }
       }
     }
