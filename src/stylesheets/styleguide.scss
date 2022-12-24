@@ -241,6 +241,9 @@ body.logos {
     body.styleguide {
       section {
         height: 60vh !important;
+        &#exception {
+          height: 90vh !important;
+        }
       }
     }
   }
