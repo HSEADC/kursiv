@@ -80,6 +80,22 @@ body.styleguide {
       height: 100vh;
       background-color: black;
       margin-right: 60px;
+      color: white;
+      h1 {
+        font-family: 'steinback';
+        font-size: 8vw;
+        margin-bottom: 80px;
+      }
+      h2 {
+        margin-bottom: 10px;
+        font-size: 4vw;
+      }
+      p {
+        line-height: 35px;
+        font-size: 1.8vw;
+        margin: 0;
+        margin-bottom: 100px;
+      }
       // background-color: white;
       img {
         width: 100%;
@@ -89,6 +105,28 @@ body.styleguide {
       &:first-of-type,
       &:last-of-type {
         // background-color: rgb(234, 255, 213);
+      }
+    }
+  }
+}
+body.brand,
+body.logos {
+  .main {
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &.row {
+        overflow: hidden;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 150px;
+        align-items: center;
+      }
+      img {
+        position: relative;
+        justify-self: center;
+        object-fit: contain;
       }
     }
   }
@@ -112,6 +150,24 @@ body.styleguide {
 }
 @media all and (max-width: 1280px) {
   body.styleguide {
+    #navbar {
+      margin: 0;
+      width: 100%;
+      .logo {
+        display: none;
+      }
+      #open_all {
+        display: none;
+      }
+    }
+    .navigation_body {
+      flex-direction: row !important;
+      width: 100%;
+      justify-content: space-evenly;
+      .sub {
+        display: none;
+      }
+    }
     .main {
       z-index: -1;
       position: relative;
@@ -121,6 +177,11 @@ body.styleguide {
       max-width: 100% !important;
       width: 100% !important;
       margin: 0 !important;
+      h2,
+      h1,
+      p {
+        margin-left: 50px !important;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -128,18 +189,34 @@ body.styleguide {
       }
     }
   }
-}
-@media all and (max-width: 1200px) {
-  body.styleguide {
-    section {
-      height: 90vh !important;
+  body.logos,
+  body.brand {
+    img {
+      width: 90% !important;
+      align-self: center !important;
     }
   }
-}
-@media all and (max-width: 1100px) {
-  body.styleguide {
-    section {
-      height: 60vh !important;
+  @media all and (max-width: 1200px) {
+    body.styleguide {
+      section {
+        height: 90vh !important;
+      }
+    }
+  }
+  @media all and (max-width: 1100px) {
+    body.styleguide {
+      section {
+        height: 60vh !important;
+      }
+    }
+  }
+  @media all and (max-width: 900px) {
+    nav {
+      li {
+        a {
+          font-size: 2.5vw !important;
+        }
+      }
     }
   }
 }

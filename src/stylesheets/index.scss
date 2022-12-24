@@ -1,80 +1,254 @@
 body.index {
-  background-color: var(--black);
-  margin: 0 auto;
-  max-width: 95vw;
+  max-width: 100vw;
+  height: 100%;
   align-items: center;
-  height: auto;
-  overflow: hidden;
-  h2,
-  p {
-    color: white;
+  overflow-x: hidden;
+  background-color: white;
+  header {
+    mix-blend-mode: difference;
+    position: fixed;
+    width: 100%;
+    .splash_menu {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 1590px;
+    }
   }
   section {
-    position: relative;
-    width: 90%;
-    min-height: 900px;
-    height: 100vh;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
+    overflow-x: hidden;
+    &:first-of-type {
+      height: 100%;
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 10vw;
+    }
+
     div {
-      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 95%;
+      max-width: 1920px;
+      overflow-x: hidden;
     }
+  }
+  #title {
+    background-color: var(--main_grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 100%;
+        &:first-child {
+          // width: 15%;
+          margin-bottom: 30px;
+          align-self: baseline !important;
+        }
+        &:last-child {
+          // width: 30%;
+          align-self: end;
+        }
+      }
+    }
+    p {
+      font-size: 2.5vw;
+      line-height: 2.5vw;
+    }
+  }
+  #about_us {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 95%;
+    }
+  }
+  .for_whom {
+    margin-bottom: 5vw;
+    div {
+      width: 95%;
+      margin: 0 auto;
+      margin-bottom: 4vw;
+      h2 {
+        font-size: 5vw;
+      }
+    }
+  }
+  #boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 20px;
+      align-items: center;
+      min-width: 30vw;
+      width: 30vw;
+      height: 36vw;
+      background: transparent;
+      border: 7px solid var(--main_blue);
+      border-radius: 5vw;
+      h2 {
+        font-size: 6.2vw;
+        line-height: 7vw;
+      }
+      p {
+        font-size: 2.2vw;
+        line-height: 2.6vw;
+        margin-top: 1vw;
+      }
+    }
+  }
+  .splashes {
+    margin-top: 5vw;
+    display: flex;
+    justify-content: center;
     img {
-      width: 100%;
-      position: absolute;
-      bottom: 150px;
-      z-index: -90;
+      width: 95%;
     }
-    #mobil {
-      display: none;
+  }
+  #info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 95%;
+    }
+  }
+  .running_fonts {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main_blue);
+    img {
+      width: 95%;
+    }
+  }
+  #features {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    div {
+      h1 {
+        font-size: 4.5vw;
+      }
+      #layout {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        overflow: visible;
+        gap: 20px;
+        div {
+          height: 400px;
+          width: 100%;
+          background-color: #dedede30;
+          border-radius: 20px;
+        }
+        #table_layout_change {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        #glyph_zoom {
+          grid-column-start: 4;
+          grid-column-end: 6;
+        }
+        #filters {
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+        #search {
+          grid-column-start: 4;
+          grid-column-end: 6;
+        }
+      }
+    }
+  }
+  footer {
+    height: 80%;
+    background-color: var(--main_blue);
+    h2 {
+      color: white;
+    }
+  }
+  .aligned_text {
+    h2 {
+      font-family: var(--heading_font), 'Gill Sans', 'Gill Sans MT', Calibri;
+      font-size: 4.5vw;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: 3.1vw;
+      span {
+        img {
+          height: 38px;
+        }
+      }
+    }
+  }
+  #preludio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    width: 100%;
+    #footer {
+      height: 100%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    height: 600px;
+    background-color: var(--main_grey);
+    h2 {
+      color: white;
+      font-size: 4vw;
+    }
+    section {
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+      }
     }
   }
 }
-@media all and (max-width: 800px) {
-  body.index {
-    width: 100%;
-    h2 {
-      margin-top: 150px !important;
-      font-size: 32px;
-    }
-    .splash_menu {
-      flex-direction: column;
-      gap: 0;
-      .menuItem {
-        margin-top: 10px;
-      }
-    }
-    p {
-      font-size: 20px !important;
-    }
-    h2,
-    p {
-      margin-top: 40px;
-      font-size: 32px;
-    }
-    form {
-      margin-top: 100px;
-      flex-direction: column;
-      input {
-        height: 44px;
-        width: 100%;
-        padding-left: 10px;
-      }
-      button {
-        height: 44px;
-        width: 368px;
-        font-size: 20px;
-      }
-    }
+@media all and (max-width: 1728px) {
+  .wrap {
+    max-width: 1495px !important;
+  }
+  footer {
     section {
-      img {
-        display: none;
-        bottom: 200px;
-      }
-      #mobil {
-        object-fit: scale-down !important;
-        display: block;
-      }
+      max-width: 1495px !important;
     }
   }
 }
