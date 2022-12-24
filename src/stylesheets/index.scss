@@ -240,6 +240,17 @@ body.index {
         width: 95%;
       }
     }
+    div.lm {
+      margin-top: 5vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      a {
+        color: grey;
+        font-size: 3vw;
+      }
+    }
   }
 }
 @media all and (max-width: 1728px) {

@@ -7,6 +7,20 @@ body.styleguide {
   //   height: 100%;
   nav {
     position: fixed;
+    div.back_to_landing {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      padding: 0 10px 0;
+      height: 45px;
+      background-color: white;
+      border-radius: 5px;
+      a {
+        color: black;
+        font-size: 26px;
+        text-decoration: none;
+      }
+    }
     .navigation_body {
       display: flex;
       flex-direction: column;
@@ -17,7 +31,7 @@ body.styleguide {
     display: flex;
     flex-direction: column;
     .logo {
-      width: 200px;
+      width: 170px;
       height: 50px;
       img {
         width: 95%;
@@ -124,6 +138,8 @@ body.logos {
         align-items: center;
       }
       img {
+        top: 0;
+        bottom: 0;
         position: relative;
         justify-self: center;
         object-fit: contain;
@@ -150,6 +166,12 @@ body.logos {
 }
 @media all and (max-width: 1280px) {
   body.styleguide {
+    .back_to_landing {
+      margin-left: 5vw;
+      a {
+        font-size: 2.5vw !important;
+      }
+    }
     #navbar {
       margin: 0;
       width: 100%;
