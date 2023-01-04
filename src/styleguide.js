@@ -13,48 +13,25 @@ $(document).ready(function () {
       )
     })
   })
-  const sectionHeight = $('section').height()
-  const sectionHeightDouble = sectionHeight * 2 - 500
-  const sectionHeightTriple = sectionHeight * 3 - 500
-  const sectionHeightQuadriple = sectionHeight * 4 - 500
-
-  var lis = document.getElementById('navbar').getElementsByClassName('sub')
-  console.log(lis[4])
+  // Smart adaptive navigation system, which keeps track of the user scroll.
+  // fourth try start
+  let subNavElements = document.getElementsByClassName('sub')
+  let sections = document.getElementsByTagName('section')
+  let sectionHeight = $(sections).height()
+  console.log(subNavElements)
+  console.log(sections)
+  console.log(subNavElements[0])
+  console.log(sections[0])
   window.addEventListener('scroll', (event) => {
-    console.log(sectionHeight)
-    console.log(sectionHeightDouble)
-    console.log(sectionHeightTriple)
-    const element = document.getElementsByClassName('main')
-    const result = element[0].getBoundingClientRect().top * -1
-    // const rect = element.getBoundingClientRect()
-    console.log(result)
-    if (sectionHeight - 100 <= result && result <= sectionHeightDouble - 100) {
-      $(lis[0]).removeClass('active')
-      $(lis[1]).addClass('active')
-      $(lis[2]).removeClass('active')
-    } else if (
-      sectionHeightDouble - 100 <= result &&
-      result <= sectionHeightTriple - 100
-    ) {
-      $(lis[0]).removeClass('active')
-      $(lis[1]).removeClass('active')
-      $(lis[2]).addClass('active')
-      $(lis[3]).removeClass('active')
-    } else if (result <= sectionHeight) {
-      $(lis[0]).addClass('active')
-      $(lis[1]).removeClass('active')
-    } else if (
-      result >= sectionHeightTriple - 100 &&
-      result <= sectionHeightQuadriple - 100
-    ) {
-      $(lis[0]).removeClass('active')
-      $(lis[2]).removeClass('active')
-      $(lis[3]).addClass('active')
-      $(lis[4]).removeClass('active')
-    } else if (result >= sectionHeightQuadriple - 100) {
-      $(lis[0]).removeClass('active')
-      $(lis[3]).removeClass('active')
-      $(lis[4]).addClass('active')
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].getBoundingClientRect().top <= sectionHeight * 0.5) {
+        Object.values(subNavElements).forEach((element) => {
+          element.classList.remove('active')
+        })
+        // subNavElements[i - 1].classList.remove('active')
+        subNavElements[i].classList.add('active')
+        // subNavElements[i + 1].classList.remove('active')
+      }
     }
   })
 })
