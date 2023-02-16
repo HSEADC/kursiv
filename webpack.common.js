@@ -9,7 +9,9 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    test: './src/jsbasics.js',
+    tesi: './src/library/roboto.js'
   },
   output: {
     filename: '[name].js',
@@ -117,12 +119,19 @@ module.exports = {
       template: './src/library.html',
       filename: './library.html'
     }),
+    // Test page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/jsbasics.html',
+      filename: './jsbasics.html'
+    }),
     // Typeface page link
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/library/typeface.html',
-      filename: './library/typeface.html'
+      template: './src/library/roboto.html',
+      filename: './library/roboto.html'
     }),
     // Article page link
     new HtmlWebpackPlugin({

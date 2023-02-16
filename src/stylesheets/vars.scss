@@ -8,6 +8,11 @@
   --line_height: 80px;
   --main_blue: #5552ff;
   --main_grey: #222222;
+  --navigationWidth: 328px;
+  --navigationExtendedWidth: 676px;
+  --margin: 100px;
+  --marginMain: calc(var(--navigationWidth) + var(--margin));
+  --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
 }
 @media all and (max-width: 1728px) {
   :root {
