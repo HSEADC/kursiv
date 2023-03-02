@@ -1,0 +1,94 @@
+body {
+  position: relative;
+  display: block;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: var(--white);
+  overflow-x: hidden;
+  color: #010101;
+  nav {
+    width: var(--navigationExtendedWidth);
+
+    .S_GlyphViewer {
+      width: calc(var(--navigationExtendedWidth) - var(--navigationWidth));
+      height: 100%;
+      position: absolute;
+      margin-left: var(--navigationWidth);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  main {
+    height: 500%;
+    section {
+      margin-bottom: 44px;
+    }
+    &.glyph {
+      margin-left: 1300px;
+    }
+
+    .A_BreadCrumbs {
+      transform: translateX(48px);
+      position: fixed;
+      font-family: Helvetica, sans-serif;
+      font-size: 25px;
+      line-height: 29px;
+    }
+    .S_FontArticleScreen {
+      padding-top: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      width: calc(100% - 96px);
+      margin: 0 auto;
+      margin-bottom: 44px;
+      .A_FontTitle {
+        width: 100%;
+      }
+      .Q_HorizontalLine {
+        width: 100%;
+        height: 1px;
+        background-color: #010101;
+      }
+      .C_FontStyleTables {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5px;
+        .M_FontStyleTable {
+          display: flex;
+          flex-direction: column;
+          .A_FontStyle {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 47px;
+          }
+        }
+      }
+    }
+    margin-top: 38px;
+    margin-left: var(--marginMain);
+    padding-right: var(--margin);
+    .devision {
+      height: 200vh;
+      img {
+        width: 100%;
+        position: sticky;
+        top: 100px;
+      }
+    }
+  }
+  #rightBorder {
+    position: fixed;
+    width: 1px;
+    border-right: 1px solid var(--borderColor);
+    right: var(--margin);
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 90.2%;
+  }
+}

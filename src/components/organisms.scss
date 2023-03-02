@@ -1,0 +1,73 @@
+.O_FontSlot {
+  overflow-x: hidden;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  transition: all 0.2s ease-in-out;
+  // height: 16vh;
+  height: fit-content;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  &.extended {
+    // height: 36vh;
+  }
+  .M_FontInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .Q_FontArrow {
+      cursor: pointer;
+      img {
+        transition: all 0.2s ease-in;
+      }
+      &.extended {
+        img {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .M_FontTitleSubtitle {
+      height: 33px;
+      overflow: hidden;
+      transition: all 0.2s ease-in;
+      color: #01010165;
+      p:nth-of-type(1) {
+        color: #010101;
+      }
+      &.extended {
+        height: 150px;
+      }
+    }
+  }
+  .A_FontPreview {
+    font-size: 70px;
+    line-height: 82px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #010101;
+  }
+}
+.O_NavList {
+  border-right: 1px solid var(--black);
+  width: var(--navigationWidth);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  li {
+    margin-top: 0;
+  }
+  .A_NavigationButton {
+    text-decoration: none;
+    color: #010101;
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 30px;
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}

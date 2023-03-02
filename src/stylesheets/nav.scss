@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 90%;
+  overflow-x: hidden;
+  width: var(--navigationWidth);
+  border-right: 1px solid black;
+  left: var(--margin);
+  &.glyph {
+    width: 1200px;
+  }
+  .O_NavList {
+    border-right: 1px solid var(--black);
+    width: var(--navigationWidth);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    li {
+      margin-top: 0;
+    }
+    .A_NavigationButton {
+      text-decoration: none;
+      color: #010101;
+      margin-top: 0;
+      font-size: 26px;
+      line-height: 30px;
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

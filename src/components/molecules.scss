@@ -1,0 +1,51 @@
+.M_FontInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  .Q_FontArrow {
+    cursor: pointer;
+    img {
+      transition: all 0.2s ease-in;
+    }
+    &.extended {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .M_FontTitleSubtitle {
+    height: 33px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    color: #01010165;
+    p:nth-of-type(1) {
+      color: #010101;
+    }
+    &.extended {
+      height: 150px;
+    }
+  }
+}
+.M_FontTitleSubtitle {
+  height: 33px;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  color: #01010165;
+  p:nth-of-type(1) {
+    color: #010101;
+  }
+  &.extended {
+    height: 150px;
+  }
+}
+.M_FontStyleTable {
+  display: flex;
+  flex-direction: column;
+  .A_FontStyle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+  }
+}

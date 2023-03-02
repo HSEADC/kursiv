@@ -1,13 +1,24 @@
 :root {
-  --white: white;
+  --heading_font: 'CSTM', serif;
+  --main_font: 'Helvetica', sans-serif;
+  --white: #ffffff;
   --black: #202020;
   --text_color: #202020;
-  --heading_font: 'CSTM';
-  --main_font: 'Steinback';
   --text_size: 60px;
   --line_height: 80px;
   --main_blue: #5552ff;
   --main_grey: #222222;
+  --borderColor: #010101;
+  // --navigationWidth: 17vw;
+  // --navigationExtendedWidth: 57vw;
+  // --margin: 5vw;
+  // --marginMain: calc(var(--navigationWidth) + var(--margin));
+  // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
+  --navigationWidth: 328px;
+  --navigationExtendedWidth: 1200px;
+  --margin: 5%;
+  --marginMain: calc(var(--navigationWidth) + var(--margin));
+  --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
 }
 @media all and (max-width: 1728px) {
   :root {
