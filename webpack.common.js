@@ -11,7 +11,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     test: './src/jsbasics.js',
-    tesi: './src/library/roboto.js'
+    library: './src/library.js',
+    fontArticle: './src/library/fontArticle.js'
   },
   output: {
     filename: '[name].js',
@@ -84,7 +85,6 @@ module.exports = {
     // Landing page
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
       template: './src/index.html',
       filename: './index.html',
       chunks: ['index']
@@ -93,7 +93,7 @@ module.exports = {
     // Internal pages
     // new HtmlWebpackPlugin({
     //   hash: true,
-    //   scriptLoading: 'blocking',
+    //
     //   template: './src/pages/page.html',
     //   filename: './pages/page.html',
     //   chunks: ['page']
@@ -101,87 +101,89 @@ module.exports = {
     // // About Us Page Link
     // new HtmlWebpackPlugin({
     //   hash: true,
-    //   scriptLoading: 'blocking',
+    //
     //   template: './src/about.html',
     //   filename: './about.html'
     // }),
     // Journal page link
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/knowledge.html',
       filename: './knowledge.html'
-    }),
-    // Library page link
-    new HtmlWebpackPlugin({
-      hash: true,
-      scriptLoading: 'blocking',
-      template: './src/library.html',
-      filename: './library.html'
     }),
     // Test page link
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/jsbasics.html',
       filename: './jsbasics.html'
     }),
     // Typeface page link
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/library/roboto.html',
-      filename: './library/roboto.html'
+      filename: './library/roboto.html',
+      chunks: ['fontArticle']
+    }),
+    //Library page link
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library.html',
+      filename: './library.html',
+      chunks: ['library']
     }),
     // Article page link
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/knowledge/article.html',
       filename: './knowledge/article.html'
     }),
     //Styleguide
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide.html',
       filename: './styleguide.html'
     }),
     // Styleguide page link
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide/logos.html',
       filename: './styleguide/logos.html'
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide/brand.html',
       filename: './styleguide/brand.html'
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide/fonts.html',
       filename: './styleguide/fonts.html'
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide/colors.html',
       filename: './styleguide/colors.html'
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/styleguide/mockups.html',
       filename: './styleguide/mockups.html'
     }),
 
     new HtmlWebpackPlugin({
       hash: true,
-      scriptLoading: 'blocking',
+
       template: './src/holder.html',
       filename: './holder.html'
     }),

@@ -1,0 +1,93 @@
+body {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  overflow-x: hidden;
+  color: #010101;
+  main {
+    height: 500%;
+    .A_BreadCrumbs {
+      transform: translateX(48px);
+      position: fixed;
+      font-family: Helvetica, sans-serif;
+      font-size: 25px;
+      line-height: 29px;
+    }
+    .S_FontPreviewScreen {
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      width: calc(100% - 96px);
+      margin: 0 auto;
+      .O_FontSlot {
+        overflow-x: hidden;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        transition: all 0.2s ease-in-out;
+        // height: 16vh;
+        height: fit-content;
+        justify-content: space-between;
+        padding-bottom: 1vh;
+        &.extended {
+          // height: 36vh;
+        }
+        .M_FontInfo {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          .Q_FontArrow {
+            cursor: pointer;
+            img {
+              transition: all 0.2s ease-in;
+            }
+            &.extended {
+              img {
+                transform: rotate(90deg);
+              }
+            }
+          }
+          .M_FontTitleSubtitle {
+            height: 33px;
+            overflow: hidden;
+            transition: all 0.2s ease-in;
+            color: #01010165;
+            p:nth-of-type(1) {
+              color: #010101;
+            }
+            &.extended {
+              height: 150px;
+            }
+          }
+        }
+        .A_FontPreview {
+          font-size: 70px;
+          line-height: 82px;
+          white-space: nowrap;
+          text-decoration: none;
+          color: #010101;
+        }
+      }
+    }
+    transition: all 0.1s;
+    margin-top: 38px;
+    margin-left: var(--marginMain);
+    padding-right: var(--margin);
+  }
+  #rightBorder {
+    position: fixed;
+    width: 1px;
+    border-right: 1px solid black;
+    right: var(--margin);
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 90.2%;
+  }
+}
