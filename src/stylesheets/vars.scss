@@ -16,9 +16,11 @@
   // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
   --navigationWidth: 328px;
   --navigationExtendedWidth: 1200px;
-  --margin: 5%;
-  --marginMain: calc(var(--navigationWidth) + var(--margin));
+  // --margin: 5%;
+  --margin: 80px;
+  --marginMain: calc(var(--menuWidth) + var(--margin));
   --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
+  --menuWidth: calc(var(--margin) + var(--margin) + 370px);
 }
 @media all and (max-width: 1728px) {
   :root {

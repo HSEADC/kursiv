@@ -8,7 +8,6 @@ body {
   color: #010101;
   nav {
     width: var(--navigationExtendedWidth);
-
     .S_GlyphViewer {
       width: calc(var(--navigationExtendedWidth) - var(--navigationWidth));
       height: 100%;
@@ -75,10 +74,38 @@ body {
     padding-right: var(--margin);
     .devision {
       height: 200vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       img {
-        width: 100%;
+        width: 80%;
         position: sticky;
         top: 100px;
+      }
+    }
+    .O_GlyphTable {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      .W_GlyphArea {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .C_Glyphs {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          gap: 0;
+          .A_Glyph {
+            width: 100%;
+            aspect-ratio: 1;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+          }
+        }
       }
     }
   }
@@ -90,5 +117,8 @@ body {
     top: 50%;
     transform: translate(0, -50%);
     height: 90.2%;
+  }
+  @media all and (max-width: 1680px) {
+    background-color: var(--main_blue);
   }
 }

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', (e) => {
   $('.sub a').each(function () {
     $(this).on('click', function (e) {
       e.preventDefault()
@@ -34,4 +34,5 @@ $(document).ready(function () {
       }
     }
   })
+  // Main Menu system
 })

@@ -1,33 +1,211 @@
-nav {
-  display: flex;
-  flex-direction: row;
+header {
   position: fixed;
-  height: 90%;
-  overflow-x: hidden;
-  width: var(--navigationWidth);
-  border-right: 1px solid black;
-  left: var(--margin);
-  &.glyph {
-    width: 1200px;
-  }
-  .O_NavList {
-    border-right: 1px solid var(--black);
-    width: var(--navigationWidth);
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    li {
-      margin-top: 0;
+  width: var(--menuWidth);
+  height: 100vh;
+  top: 0;
+  nav {
+    input {
+      all: unset;
     }
-    .A_NavigationButton {
-      text-decoration: none;
-      color: #010101;
-      margin-top: 0;
-      font-size: 26px;
-      line-height: 30px;
-      &.active {
-        text-decoration: underline;
+    &.O_Menu {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-radius: 48px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(168.42deg, #5552ff 33.33%, #225ee9 100%);
+      width: 370px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 826px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .M_MenuSearch {
+        padding: 6px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        background-color: white;
+        width: 340px;
+        height: 36px;
+        border-radius: 24px;
+        input {
+          width: 100%;
+          border: none;
+          font-size: 16px;
+          font-family: Helvetica, sans-serif;
+          font-weight: 500;
+          background-color: transparent;
+          height: 100%;
+        }
+        .Q_MenuSearchIcon {
+          max-height: 100%;
+          width: fit-content;
+        }
+      }
+      .W_MenuButtonTable {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 12px;
+        column-gap: 11px;
+        margin-bottom: 25px;
+        .M_MenuFontStyleButton {
+          display: flex;
+          flex-direction: column;
+          width: 105px;
+          height: 65px;
+          background-color: #7085ff;
+          border-radius: 5px;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            background-color: #566ce7;
+            cursor: pointer;
+          }
+          &:focus {
+            background-color: #566ce78d;
+            cursor: pointer;
+          }
+          &.active {
+            background-color: #566ce78d;
+          }
+          .A_MenuFontStyleText {
+            margin-top: 10px;
+            color: white;
+            font-size: 9px;
+          }
+        }
+      }
+      .A_MenuSectionTitle {
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+        opacity: 0.8;
+        &:nth-last-child(1) {
+          margin-top: 84px;
+        }
+      }
+      .C_MenuHorizontalButtonRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 32px;
+        .A_MenuHorizontalButton {
+          white-space: nowrap;
+          display: flex;
+          justify-content: center;
+          background-color: #7085ff;
+          color: white;
+          border-radius: 5px;
+          width: 160px;
+          height: 100%;
+          font-size: 12px;
+          padding: 9px 22px;
+          &:hover {
+            background-color: #566ce7;
+            cursor: pointer;
+          }
+          &:focus {
+            background-color: #566ce78d;
+            cursor: pointer;
+          }
+          &.active {
+            background-color: #566ce78d;
+          }
+        }
+      }
+      .W_MenuBottom {
+        width: 338px;
+        .lolik {
+          margin-top: 22px;
+          width: 100%;
+        }
+        .Q_MenuBottomBG {
+          width: 100%;
+          padding: 16px;
+          border-radius: 26px;
+          background-color: #757aff;
+        }
+        .W_MenuParameters {
+          margin-bottom: 1px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          &:nth-last-of-type(1) {
+            margin-top: 16px;
+          }
+          .C_MenuIconParameter {
+            display: flex;
+            flex-direction: row;
+            img {
+              margin-right: 22px;
+            }
+            .C_MenuSettingsBox {
+              width: 88px;
+              display: flex;
+              flex-direction: row;
+              border-radius: 5px;
+              background-color: white;
+              opacity: 0.8;
+              padding: 2px 10px;
+            }
+          }
+        }
       }
     }
+    // display: flex;
+    // flex-direction: row;
+    // position: fixed;
+    // height: 90%;
+    // overflow-x: hidden;
+    // width: var(--navigationWidth);
+    // border-right: 1px solid black;
+    // left: var(--margin);
+    // &.glyph {
+    //   width: 1200px;
+    // }
+    // .O_NavList {
+    //   border-right: 1px solid var(--black);
+    //   width: var(--navigationWidth);
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 26px;
+    //   li {
+    //     margin-top: 0;
+    //   }
+    //   .A_NavigationButton {
+    //     text-decoration: none;
+    //     color: #010101;
+    //     margin-top: 0;
+    //     font-size: 26px;
+    //     line-height: 30px;
+    //     &.active {
+    //       text-decoration: underline;
+    //     }
+    //   }
+    // }
   }
+}
+#leftBorder {
+  position: fixed;
+  width: 1px;
+  border-right: 1px solid black;
+  left: var(--menuWidth);
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 90.2%;
+}
+#rightBorder {
+  position: fixed;
+  width: 1px;
+  border-right: 1px solid black;
+  right: var(--margin);
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 90.2%;
 }
