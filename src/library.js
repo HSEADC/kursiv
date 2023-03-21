@@ -35,10 +35,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
               fontObject.sans[i]
             ) {
               fontSlots.style.backgroundColor = 'yellow'
-            } else if (
-              fontSlots.children[0].children[1].children[0].innerHTML !=
-              fontObject.sans[i]
-            ) {
             }
           }
         }
