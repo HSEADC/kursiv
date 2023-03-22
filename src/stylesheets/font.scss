@@ -39,6 +39,9 @@ body {
         height: fit-content;
         justify-content: space-between;
         padding-bottom: 1vh;
+        &.hidden {
+          display: none;
+        }
         &.extended {
           // height: 36vh;
         }

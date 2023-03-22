@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
   let arrow = document.getElementsByClassName('Q_FontArrow')
   let fontSlot = document.getElementsByClassName('O_FontSlot')
   let styles = document.getElementsByClassName('M_FontTitleSubtitle')
+  const menuFilterButtons = document.getElementsByClassName(
+    'M_MenuFontStyleButton'
+  )
+  const menuExtraSettingButtons = document.getElementsByClassName(
+    'A_MenuHorizontalButton'
+  )
+  let fonts = document.getElementsByClassName('O_FontSlot')
+
   for (let index = 0; index < arrow.length; index++) {
     arrow[index].addEventListener('click', (e) => {
       fontSlot[index].classList.toggle('extended')
@@ -13,41 +21,54 @@ document.addEventListener('DOMContentLoaded', (e) => {
       styles[index].classList.toggle('extended')
     })
   }
-  const menuFilterButtons = document.getElementsByClassName(
-    'M_MenuFontStyleButton'
-  )
-  const menuExtraSettingButtons = document.getElementsByClassName(
-    'A_MenuHorizontalButton'
-  )
-  const fonts = document.getElementsByClassName('O_FontSlot')
-  const fontObject = {
-    sans: ['Roboto', 'PT Sans']
+  function buildObjectWithFilteredFonts(object) {
+    let wrapperObject = {}
+    for (let fontStyle of object) {
+      if (fontStyle.dataset.fontstyle in wrapperObject) {
+        let wow = wrapperObject[fontStyle.dataset.fontstyle]
+        wow.push(fontStyle)
+      } else {
+        wrapperObject[fontStyle.dataset.fontstyle] = [fontStyle]
+      }
+    }
+    return wrapperObject
   }
-  console.log(fontObject.sans.length)
-  for (let item of menuFilterButtons) {
-    item.addEventListener('click', (e) => {
-      let fontType = item.children[1].innerHTML
-      if (fontType == 'Гротеск') {
-        for (let fontSlots of fonts) {
-          for (let i = 0; i < fontObject.sans.length; i++) {
-            if (
-              fontSlots.children[0].children[1].children[0].innerHTML ==
-              fontObject.sans[i]
-            ) {
-              fontSlots.style.backgroundColor = 'yellow'
-            }
-          }
+  function resetStates(subject, params) {
+    for (let i = 0; i < subject.length; i++) {
+      subject[i].classList.remove(params)
+    }
+  }
+
+  buildObjectWithFilteredFonts(fonts)
+  for (let i = 0; i < fonts.length; i++) {
+    // console.log(fonts[i])
+    // console.log(fonts[i].dataset.fontStyle)
+  }
+  function iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(
+    trigger,
+    array,
+    parameter
+  ) {
+    for (let i = 0; i < Object.keys(array).length; i++) {
+      if (Object.keys(array)[i] != trigger.dataset.filterparameter) {
+        console.log(Object.keys(array)[i])
+        for (let j = 0; j < array[Object.keys(array)[i]].length; j++) {
+          console.log(array[Object.keys(array)[i]][j])
+          array[Object.keys(array)[i]][j].classList.add('hidden')
         }
       }
-      // for (let fontSlot of fonts) {
-      //   console.log(fontSlot.children[0].children[1].children[0].innerHTML)
-      // }
-    })
+    }
   }
-  for (let item of menuExtraSettingButtons) {
-    item.addEventListener('click', (e) => {
-      console.log(element)
-      item.classList.toggle('active')
+  for (let button of menuFilterButtons) {
+    button.addEventListener('click', (e) => {
+      resetStates(menuFilterButtons, 'active')
+      resetStates(fonts, 'hidden')
+      button.classList.add('active')
+      iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(
+        button,
+        buildObjectWithFilteredFonts(fonts),
+        'hi'
+      )
     })
   }
 })
