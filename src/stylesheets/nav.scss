@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  width: var(--menuWidth);
+  width: var(--navigationWidth);
   height: 100vh;
   top: 0;
   &.navTwo {
@@ -232,7 +232,7 @@ header {
   position: fixed;
   width: 1px;
   border-right: 1px solid black;
-  left: var(--menuWidth);
+  left: var(--navigationWidth);
   top: 50%;
   transform: translate(0, -50%);
   height: 90.2%;
