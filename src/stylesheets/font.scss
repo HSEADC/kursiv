@@ -6,6 +6,9 @@ body {
   background-color: white;
   overflow-x: hidden;
   color: #010101;
+  nav {
+    border: 0;
+  }
   main {
     height: 500%;
     .A_BreadCrumbs {
@@ -29,13 +32,16 @@ body {
         display: flex;
         flex-direction: column;
         padding: 10px 20px;
-        border-right: 1px solid black;
-        border-left: 1px solid black;
+        border-radius: 25px;
+        // border: 1px solid black;
         transition: all 0.2s ease-in-out;
         // height: 16vh;
         height: fit-content;
         justify-content: space-between;
         padding-bottom: 1vh;
+        &.hidden {
+          display: none;
+        }
         &.extended {
           // height: 36vh;
         }
@@ -78,16 +84,7 @@ body {
     }
     transition: all 0.1s;
     margin-top: 38px;
-    margin-left: var(--marginMain);
+    margin-left: var(--menuWidth);
     padding-right: var(--margin);
-  }
-  #rightBorder {
-    position: fixed;
-    width: 1px;
-    border-right: 1px solid black;
-    right: var(--margin);
-    top: 50%;
-    transform: translate(0, -50%);
-    height: 90.2%;
   }
 }

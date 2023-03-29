@@ -12,7 +12,8 @@ module.exports = {
     index: './src/index.js',
     test: './src/jsbasics.js',
     library: './src/library.js',
-    fontArticle: './src/library/fontArticle.js'
+    fontArticle: './src/library/fontArticle.js',
+    spaces: './src/spaces.js'
   },
   output: {
     filename: '[name].js',
@@ -111,6 +112,14 @@ module.exports = {
 
       template: './src/knowledge.html',
       filename: './knowledge.html'
+    }),
+    // Spaces page link
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/spaces.html',
+      filename: './spaces.html',
+      chunks: ['spaces']
     }),
     // Test page link
     new HtmlWebpackPlugin({

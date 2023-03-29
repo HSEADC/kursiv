@@ -1,0 +1,44 @@
+.O_GlyphSlot {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--mainBlue);
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  padding: 12% 5%;
+  align-self: center;
+}
+.O_Languages {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+.O_Pairs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40vw;
+  align-items: flex-end;
+}
+.O_Usage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 90%;
+    border-radius: 12px;
+  }
+  div {
+    flex-grow: 1;
+  }
+}
+@media all and (max-width: 1024px) {
+  .O_Usage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    img {
+      width: 98%;
+    }
+  }
+}

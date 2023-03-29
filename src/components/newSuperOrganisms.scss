@@ -1,0 +1,13 @@
+.SO_Main {
+  margin-left: var(--mainMarginLeft);
+  padding: 0px 100px 0 40px;
+  max-width: 1920px;
+}
+@media all and (max-width: 1024px) {
+  .SO_Main {
+    // background-color: yellow;
+    margin: 0 auto;
+    padding: 0 80px;
+    max-width: 1920px;
+  }
+}
