@@ -17,7 +17,7 @@
   background-color: white;
   width: 340px;
   height: 36px;
-  border-radius: 24px;
+  border-radius: 10px;
   input {
     width: 100%;
     border: none;
@@ -85,12 +85,12 @@
     flex-direction: column;
     width: 105px;
     height: 65px;
-    background-color: #7085ff;
+    border: 1px solid white;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     &:hover {
-      background-color: #566ce7;
+      background-color: #6c81f8;
       cursor: pointer;
     }
     &:focus {
@@ -98,7 +98,7 @@
       cursor: pointer;
     }
     &.active {
-      background-color: #566ce78d;
+      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -173,9 +173,9 @@
 }
 .C_MenuHorizontalButtonRow {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  height: 32px;
+  gap: 10px;
 }
 .W_MenuParameters {
   margin-bottom: 1px;

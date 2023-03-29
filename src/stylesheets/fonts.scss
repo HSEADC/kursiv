@@ -1,2 +1,13 @@
-@font-face font-family: 'CSTM'
-src: url('/fonts/CSTM.otf') format('otf');
+// @font-face {
+//   font-family: 'ptsans';
+//   src: url('fonts/20Kopeek-Black.otf') format('opentype');
+// }
+@font-face {
+  font-family: 'ptsans';
+  src: url('/src/fonts/20Kopeek-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'opensans';
+  src: url('/src/fonts/OpenSans-MediumItalic.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');

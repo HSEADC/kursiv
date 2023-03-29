@@ -87,25 +87,9 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
+      chunks: ['library']
     }),
 
-    // Internal pages
-    // new HtmlWebpackPlugin({
-    //   hash: true,
-    //
-    //   template: './src/pages/page.html',
-    //   filename: './pages/page.html',
-    //   chunks: ['page']
-    // }),
-    // // About Us Page Link
-    // new HtmlWebpackPlugin({
-    //   hash: true,
-    //
-    //   template: './src/about.html',
-    //   filename: './about.html'
-    // }),
-    // Journal page link
     new HtmlWebpackPlugin({
       hash: true,
 
@@ -127,7 +111,16 @@ module.exports = {
       template: './src/jsbasics.html',
       filename: './jsbasics.html'
     }),
+
     // Typeface page link
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/roboto.html',
+      filename: './library/helvetica.html',
+      chunks: ['fontArticle']
+    }),
+
     new HtmlWebpackPlugin({
       hash: true,
 
@@ -135,6 +128,15 @@ module.exports = {
       filename: './library/roboto.html',
       chunks: ['fontArticle']
     }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/ptsans.html',
+      filename: './library/ptsans.html',
+      chunks: ['fontArticle']
+    }),
+
     //Library page link
     new HtmlWebpackPlugin({
       hash: true,

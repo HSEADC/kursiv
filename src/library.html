@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="O_Header">
     <nav class="O_Menu">
       <section class="W_MenuTop">
         <div class="M_MenuSearch">
@@ -23,6 +23,7 @@
             <p class="A_MenuFontStyleText">Гротеск</p>
           </div>
           <div class="M_MenuFontStyleButton" data-filterParameter="serif">
+            <img src="images/Q_MenuFontStyleTypeOld.svg" class="Q_MenuFontStyleType" alt="">
             <p class="A_MenuFontStyleText">Новая антиква</p>
 
           </div>
@@ -49,44 +50,50 @@
         </div>
         <p class="A_MenuSectionTitle">Дополнительно</p>
         <div class="C_MenuHorizontalButtonRow">
-          <div class="A_MenuHorizontalButton">Только бесплатные</div>
-          <div class="A_MenuHorizontalButton">Только вариативные</div>
+          <div class="A_MenuHorizontalButton" data-value="">
+            <div class="Q_RadioButton">
+            </div>
+            <div>Только бесплатные</div>
+          </div>
+          <div class="A_MenuHorizontalButton">
+            <div class="Q_RadioButton"></div>
+            <div>Только вариативные</div>
+          </div>
         </div>
       </section>
       <section class="W_MenuBottom">
-        <p class="A_MenuSectionTitle">Настройки предпросмотра</p>
-        <div class="Q_MenuBottomBG">
-          <div class="W_MenuParameters">
-            <div class="C_MenuIconParameter">
-              <img src="images/SettingsIcon.svg" alt="">
-              <div class="C_MenuSettingsBox">
-                <input type="text" class="A_MenuSettingsParameterText">
-                <div class="C_MenuSettingsButtons"></div>
-              </div>
-            </div>
-            <div class="C_MenuIconParameter">
-              <img src="images/SettingsIcon.svg" alt="">
-              <div class="C_MenuSettingsBox">
-                <input type="text" class="A_MenuSettingsParameterText">
-                <div class="C_MenuSettingsButtons"></div>
-              </div>
+        <p class="A_MenuSectionTitle">Текст</p>
+        <div class="W_MenuParameters">
+          <div class="C_MenuIconParameter">
+            <img src="images/SettingsIcon.svg" alt="">
+            <div class="C_MenuSettingsBox">
+              <input type="text" class="A_MenuSettingsParameterText">
+              <div class="C_MenuSettingsButtons"></div>
             </div>
           </div>
-          <div class="W_MenuParameters">
-            <img src="images/Table.png" alt="">
-            <img src="images/Table.png" alt="">
+          <div class="C_MenuIconParameter">
+            <img src="images/SettingsIcon.svg" alt="">
+            <div class="C_MenuSettingsBox">
+              <input type="text" class="A_MenuSettingsParameterText">
+              <div class="C_MenuSettingsButtons"></div>
+            </div>
           </div>
-          <img class="lolik" src="images/19.png" alt="">
+        </div>
+        <div class="W_MenuParameters">
+          <img src="images/Table.png" alt="">
+          <img src="images/Table.png" alt="">
+        </div>
+        <textarea placeholder="Пуговицы все три застегнулись не по.." class="A_MenuPreviewInput"></textarea>
         </div>
       </section>
 
     </nav>
   </header>
   <section id="leftBorder"></section>
-  <main>
+  <main class="SO_MainLibrary">
     <p class="A_BreadCrumbs">Главный экран</p>
-    <section class="S_FontPreviewScreen">
-      <div class="O_FontSlot" data-fontStyle="sans">
+    <section class="SO_FontPreviewScreen">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
@@ -105,7 +112,7 @@
         </div>
         <a href="./library/roboto.html" class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="sans">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
@@ -118,15 +125,15 @@
             <p>x начертаний</p>
           </div>
         </div>
-        <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
+        <a href="./library/ptsans.html" class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="old" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>EB Garamond</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -135,13 +142,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="serif" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>NWT Bodoni</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -150,13 +157,13 @@
         </div>
         <a href="./library/roboto.html" class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="old">
+      <div class="O_FontSlot" data-fontStyle="old" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>Spectral</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -165,13 +172,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="free">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>Inter</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -180,13 +187,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="price">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>Fira Sans</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -195,13 +202,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="price">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>Bebas Neue Cyrillic</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -210,13 +217,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="serif">
+      <div class="O_FontSlot" data-fontStyle="serif" data-value="price">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>21 Cent</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -225,13 +232,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="old">
+      <div class="O_FontSlot" data-fontStyle="sans" data-value="price">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>20 Kopeek</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
@@ -240,13 +247,13 @@
         </div>
         <a class="A_FontPreview">Пуговицы все три застегнулись не по..</a>
       </div>
-      <div class="O_FontSlot" data-fontStyle="old">
+      <div class="O_FontSlot" data-fontStyle="art" data-value="price">
         <div class="M_FontInfo">
           <div class="Q_FontArrow">
             <img src="./images/Q_Arrow.svg" alt="">
           </div>
           <div class="M_FontTitleSubtitle">
-            <p>None</p>
+            <p>Base&Bloom</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
             <p>x начертаний</p>
