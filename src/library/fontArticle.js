@@ -5,9 +5,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const triggerPointEnd = devisions[1].offsetTop
   const nav = document.querySelector('.W_Nav')
   const main = document.querySelector('.SO_Main')
-  const languages = document.querySelectorAll('.A_Languages')
+  const languages = document.querySelectorAll('[data-languageColumn]')
+  const languageButton = document.querySelector('.A_LanguagesButton')
   let height = devisions[0].offsetHeight
-  function hideExtraLanguages() {}
+  function hideExtraPoints(array, excessive, trigger) {
+    array.forEach((e) => {
+      for (let i = 5; i < e.childElementCount; i++) {
+        if (e.childElementCount > excessive) {
+          e.children[i].classList.toggle('hidden')
+        }
+        trigger.addEventListener('click', () => {
+          e.children[i].classList.toggle('hidden')
+        })
+      }
+    })
+  }
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault()
@@ -89,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-
+  hideExtraPoints(languages, 5, languageButton)
   window.addEventListener('load', addActiveClass)
   window.addEventListener('scroll', addActiveClass)
   window.addEventListener('scroll', adjustLayoutOnScroll)

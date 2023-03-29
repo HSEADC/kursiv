@@ -31,4 +31,10 @@
   // --marginMain: calc(var(--menuWidth) + var(--margin));
   // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
   // --menuWidth: calc(var(--margin) + var(--margin) + 370px);
+  @media all and (max-width: 1024px) {
+    --margin: 30px;
+    --navigationWidth: var(--margin);
+    --infoTextSize: 46px;
+    --fontStyleSize: 3vw;
+  }
 }

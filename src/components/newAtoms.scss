@@ -137,6 +137,9 @@
 .A_MainText {
   font-size: var(--mainTextSize);
   line-height: var(--mainTextLineHeight);
+  &.hidden {
+    display: none;
+  }
 }
 .A_LanguagesButton {
   position: absolute;
@@ -153,4 +156,12 @@
   transform: translateX(-50%);
   color: white;
   cursor: pointer;
+}
+@media all and (max-width: 1024px) {
+  #rightBorder {
+    right: var(--margin);
+  }
+  .Q_Devision {
+    display: none;
+  }
 }

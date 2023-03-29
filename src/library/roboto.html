@@ -13,7 +13,7 @@
     <nav class="C_NavList">
       <a href="#intro" class="A_NavText">Введение</a>
       <a href="#styles" class="A_NavText">Начертания</a>
-      <a href="#settings" class="A_NavText">Настройки</a>
+      <!-- <a href="#settings" class="A_NavText">Настройки</a> -->
       <a href="#glyphs" class="A_NavText">Глифы</a>
       <a href="#info" class="A_NavText">Информация</a>
       <a href="#languages" class="A_NavText">Языки</a>
@@ -104,7 +104,7 @@
       </div>
     </div>
     <div class="A_HorizontalLine"></div>
-    <div id="settings" style="height: 500vh" class="A_Screen"></div>
+    <!-- <div id="settings" style="height: 500vh" class="A_Screen"></div> -->
     <div id="glyphs" class="A_Screen">
       <div class="Q_Devision"></div>
       <div class="W_GlyphTable">
@@ -592,7 +592,7 @@
 
     <div id="languages" class="O_Languages A_Screen">
       <div class="W_ThreeColumnsInOneRow">
-        <div class="C_Column">
+        <div class="C_Column" data-languageColumn>
           <div class="A_MainText">Латиницу,</div>
           <div class="A_MainText">Греческий,</div>
           <div class="A_MainText">Кириллицу,</div>
@@ -612,7 +612,7 @@
           <div class="A_MainText">Корейский,</div>
           <div class="A_MainText">Хань</div>
         </div>
-        <div class="C_Column">
+        <div class="C_Column" data-languageColumn>
           <div class="A_MainText">Латиницу,</div>
           <div class="A_MainText">Греческий,</div>
           <div class="A_MainText">Кириллицу,</div>
@@ -632,7 +632,7 @@
           <div class="A_MainText">Корейский,</div>
           <div class="A_MainText">Хань</div>
         </div>
-        <div class="C_Column">
+        <div class="C_Column" data-languageColumn>
           <div class="A_MainText">Латиницу,</div>
           <div class="A_MainText">Греческий,</div>
           <div class="A_MainText">Кириллицу,</div>
@@ -655,8 +655,44 @@
       </div>
       <div class="A_LanguagesButton">Показать еще</div>
     </div>
-    <div id="usage" class="A_Screen"></div>
-    <div id="pairs" class="A_Screen"></div>
+    <div class="A_HorizontalLine"></div>
+    <div id="usage" class="O_Usage A_Screen">
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example1.png" alt="">
+        <p class="A_InfoText">Проект 1</p>
+        <p class="A_InfoTitle">Книга</p>
+      </div>
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example2.png" alt="">
+        <p class="A_InfoText">Проект 2</p>
+        <p class="A_InfoTitle">Брендинг</p>
+      </div>
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example3.png" alt="">
+        <p class="A_InfoText">Проект 3</p>
+        <p class="A_InfoTitle">Плакаты</p>
+      </div>
+    </div>
+    <div class="A_HorizontalLine"></div>
+
+    <div id="pairs" class="O_Pairs A_Screen">
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example2.png" alt="">
+        <p class="A_InfoText">Проект 2</p>
+        <p class="A_InfoTitle">Брендинг</p>
+      </div>
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example2.png" alt="">
+        <p class="A_InfoText">Проект 2</p>
+        <p class="A_InfoTitle">Брендинг</p>
+      </div>
+      <div class="M_UsageExample">
+        <img src="../images/Q_Example2.png" alt="">
+        <p class="A_InfoText">Проект 2</p>
+        <p class="A_InfoTitle">Брендинг</p>
+      </div>
+
+    </div>
   </main>
   <section id="rightBorder"></section>
 </body>
