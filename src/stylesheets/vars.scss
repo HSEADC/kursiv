@@ -1,4 +1,7 @@
 :root {
+  --mainBlue: #225ee9;
+  --mainGrey: #222222;
+  --borderColor: #010101;
   --heading_font: 'CSTM', serif;
   --main_font: 'Helvetica', sans-serif;
   --white: #ffffff;
@@ -6,24 +9,19 @@
   --text_color: #202020;
   --text_size: 60px;
   --line_height: 80px;
-  --main_blue: #5552ff;
-  --main_grey: #222222;
-  --borderColor: #010101;
+  --navigationWidth: 22vw;
+  --mainWidth: calc(100% - var(--navigationWidth));
+  --mainMarginLeft: var(--navigationWidth);
+  --fontStyleSize: 2vw;
   // --navigationWidth: 17vw;
   // --navigationExtendedWidth: 57vw;
-  // --margin: 5vw;
   // --marginMain: calc(var(--navigationWidth) + var(--margin));
   // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
-  --navigationWidth: 328px;
-  --navigationExtendedWidth: 1200px;
-  // --margin: 5%;
+  // --navigationWidth: 328px;
+  // --navigationExtendedWidth: 1200px;
+  // // --margin: 5%;
   --margin: 80px;
-  --marginMain: calc(var(--menuWidth) + var(--margin));
-  --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
-  --menuWidth: calc(var(--margin) + var(--margin) + 370px);
-}
-@media all and (max-width: 1728px) {
-  :root {
-    --text_size: 56px;
-  }
+  // --marginMain: calc(var(--menuWidth) + var(--margin));
+  // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
+  // --menuWidth: calc(var(--margin) + var(--margin) + 370px);
 }

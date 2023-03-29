@@ -1,16 +1,10 @@
-document.addEventListener('DOMContentLoaded', (e) => {
-  $('.sub a').each(function () {
-    $(this).on('click', function (e) {
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      console.log(link.getAttribute('href')[1])
       e.preventDefault()
-      console.log('hi')
-      var scrollTo = $(this).attr('href')
-      var whitespace = scrollTo == '#logo' ? 100 : 1
-      $('html,body').animate(
-        {
-          scrollTop: $(scrollTo).offset().top - whitespace
-        },
-        1000
-      )
+      const target = document.getElementById(link.getAttribute('href')[1])
+      target.scrollIntoView({ behavior: 'smooth', inline: 'end' })
     })
   })
   // Smart adaptive navigation system, which keeps track of the user scroll.

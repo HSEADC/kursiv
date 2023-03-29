@@ -50,18 +50,4 @@ li {
     height: 24px;
     margin: 0 10px;
   }
-
-  .image {
-    &#bgPNG {
-      background-image: url('images/image.png');
-    }
-
-    &#bgJPG {
-      background-image: url('images/image.jpg');
-    }
-
-    &#bgSVG {
-      background-image: url('images/image.svg');
-    }
-  }
 }

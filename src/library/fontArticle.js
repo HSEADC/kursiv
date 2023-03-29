@@ -1,132 +1,95 @@
-// import './fontArticle.css'
-// window.addEventListener('DOMContentLoaded', (event) => {
-//   document.getElementsByClassName(
-//     'A_BreadCrumbs'
-//   )[0].innerHTML = `Главный экран · Библиотека · ${document.title}`
-//   document.getElementsByTagName('li')[0].addEventListener('click', (event) => {
-//     event.preventDefault()
-//     document.getElementsByTagName('nav')[0].classList.toggle('glyph')
-//     document.getElementsByTagName('main')[0].classList.toggle('glyph')
-//     console.log(document.title)
-//     // document.getElementsByTagName('main')[0].style.marginLeft =
-//     //   'var(--marginExtendedMain)'
-//   })
-//   // aa
-//   // Количество пикселей до разбивки
-//   let animationGlyphStartPoint = document.getElementsByClassName('devision')[0].offsetTop
-//   // Высота разбивки
-//   let height = document.getElementsByClassName('devision')[0].offsetHeight
-//   // Анонимная функция по скроллу
-//   addEventListener('scroll', (e) => {
-//     // Ну скроллу прибавляю
-//     let scroll = window.scrollY + window.innerHeight / 2
-//     let valueToShiftNavStart = animationGlyphStartPoint - scroll
-//     let valueToShiftMainStart = animationGlyphStartPoint - scroll - 100
-//     if (scroll > animationGlyphStartPoint && scroll < animationGlyphStartPoint + height) {
-//       if (valueToShiftNavStart * -1 > 328 && valueToShiftNavStart * -1 < 1200) {
-//         document.getElementsByTagName('nav')[0].classList.remove('glyph')
-//         document.getElementsByTagName('main')[0].classList.remove('glyph')
-//         document.getElementsByTagName('nav')[0].style.width = `${
-//           valueToShiftNavStart * -1
-//         }px`
-//       }
-//       if (valueToShiftNavStart * -1 > 328 && valueToShiftNavStart * -1 < 1200) {
-//         document.getElementsByTagName('nav')[0].classList.remove('glyph')
-//         document.getElementsByTagName('main')[0].classList.remove('glyph')
-//         document.getElementsByTagName('main')[0].style.marginLeft = `${
-//           valueToShiftMainStart * -1
-//         }px`
-//       }
-//     }
-//     // Кусок кода, который доводит линию и отступ до конца.
-//     if (scroll > animationGlyphStartPoint + height) {
-//       document.getElementsByTagName('nav')[0].classList.add('glyph')
-//       document.getElementsByTagName('main')[0].classList.add('glyph')
-//       document.getElementsByTagName('nav')[0].style.width = null
-//       document.getElementsByTagName('main')[0].style.marginLeft = null
-//     } else if (scroll < animationGlyphStartPoint) {
-//       document.getElementsByTagName('nav')[0].classList.remove('glyph')
-//       document.getElementsByTagName('main')[0].classList.remove('glyph')
-//       document.getElementsByTagName('nav')[0].style.width =
-//         'var(--navigationWidth)'
-//       document.getElementsByTagName('main')[0].style.marginLeft =
-//         'calc(var(--navigationWidth) + var(--margin))'
-//     }
-//   })
-// })
-
 import './fontArticle.css'
-window.addEventListener('DOMContentLoaded', (event) => {
-  document.getElementsByClassName(
-    'A_BreadCrumbs'
-  )[0].innerHTML = `Главный экран · Библиотека · ${document.title}`
-  document.getElementsByTagName('li')[0].addEventListener('click', (event) => {
-    event.preventDefault()
-    nav.classList.toggle('glyph')
-    main.classList.toggle('glyph')
-    console.log(document.title)
-    // document.getElementsByTagName('main')[0].style.marginLeft =
-    //   'var(--marginExtendedMain)'
-  })
-  const devision = document.getElementsByClassName('devision')
-  const animationGlyphStartPoint = devision[0].offsetTop
-  const animationGlyphEndPoint = devision[1].offsetTop
-  const nav = document.getElementsByTagName('nav')[0]
-  const main = document.getElementsByTagName('main')[0]
-  let height = document.getElementsByClassName('devision')[0].offsetHeight
-  addEventListener('scroll', (e) => {
-    // let scroll = window.scrollY + window.innerHeight / 2
-    let scroll = window.scrollY
-    let valueToShiftNavStart = animationGlyphStartPoint - scroll
-    let valueToShiftMainStart = animationGlyphStartPoint - scroll - 100
-    let valueToShiftNavEnd = animationGlyphEndPoint - scroll
-    let val = 1200 - (valueToShiftNavEnd + 328) * -1
-    let valueToShiftMainEnd = animationGlyphEndPoint - scroll - 100
-    console.warn(scroll)
-    console.log(animationGlyphStartPoint + height)
-    console.log(animationGlyphEndPoint + height)
-    let resetClass = function reset() {
-      document.getElementsByTagName('nav')[0].classList.remove('glyph')
-      main.classList.remove('glyph')
-    }
-    if (
-      scroll >= animationGlyphStartPoint &&
-      scroll <= animationGlyphStartPoint + height
-    ) {
-      if (valueToShiftNavStart * -1 > 328 && valueToShiftNavStart * -1 < 1200) {
-        resetClass
-        nav.style.width = `${valueToShiftNavStart * -1}px`
-        main.style.marginLeft = `${valueToShiftMainStart * -1}px`
-      }
-    } else if (
-      scroll >= animationGlyphEndPoint &&
-      scroll <= animationGlyphEndPoint + height
-    ) {
-      if (valueToShiftNavEnd * -1 > 328 && valueToShiftNavEnd * -1 < 1200) {
-        console.warn('hio')
-        nav.classList.remove('glyph')
-        main.classList.remove('glyph')
+window.addEventListener('DOMContentLoaded', () => {
+  const devisions = document.getElementsByClassName('Q_Devision')
+  const triggerPointStart = devisions[0].offsetTop
+  const triggerPointEnd = devisions[1].offsetTop
+  const nav = document.querySelector('.W_Nav')
+  const main = document.querySelector('.SO_Main')
+  let height = devisions[0].offsetHeight
 
-        nav.style.width = `${val}px`
-        main.style.marginLeft = `${val + 100}px`
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault()
+      const target = document.querySelector(link.getAttribute('href'))
+      const yOffset = 1
+      const y =
+        target.getBoundingClientRect().top + window.pageYOffset + yOffset
+
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    })
+  })
+  function breadCrumbsDocumentTitleSet() {
+    document.getElementsByClassName(
+      'A_BreadCrumbs'
+    )[0].innerHTML = `Главный экран · Библиотека · ${document.title}`
+  }
+  breadCrumbsDocumentTitleSet()
+  function addActiveClass() {
+    const main = document.querySelector('.SO_Main')
+    const screens = document.querySelectorAll('.A_Screen')
+    const navTitles = document.querySelectorAll('.A_NavText')
+    for (let i = 0; i < screens.length; i++) {
+      const screenPosition = screens[i].getBoundingClientRect().top
+      if (screenPosition <= 0 && screenPosition <= window.innerHeight) {
+        navTitles.forEach((title) => {
+          title.classList.remove('active')
+        })
+
+        navTitles[i].classList.add('active')
       }
     }
-    if (
-      scroll < animationGlyphStartPoint ||
-      scroll > animationGlyphEndPoint + height
-    ) {
-      nav.style.width = 'var(--navigationWidth)'
-      main.style.marginLeft = 'calc(var(--navigationWidth) + var(--margin))'
-      nav.classList.remove('glyph')
-      main.classList.remove('glyph')
+  }
+  function adjustLayoutOnScroll() {
+    let scroll = window.scrollY + 2 * (window.innerHeight / 3)
+    let valueToShiftNavStart = triggerPointStart - scroll
+    let valueToShiftNavEnd = triggerPointEnd - scroll
+    let val = 1200 - (valueToShiftNavEnd + 421) * -1
+
+    if (scroll >= triggerPointStart && scroll <= triggerPointStart + height) {
+      if (
+        valueToShiftNavStart * -1 >= 421 &&
+        valueToShiftNavStart * -1 <= 1200
+      ) {
+        nav.style.width = `${valueToShiftNavStart * -1}px`
+        main.style.marginLeft = `${valueToShiftNavStart * -1}px`
+      }
     } else if (
-      scroll > animationGlyphStartPoint + height &&
-      scroll < animationGlyphEndPoint
+      scroll >= triggerPointEnd &&
+      scroll <= triggerPointEnd + height
     ) {
-      nav.style = null
-      main.style.marginLeft = null
-      nav.classList.add('glyph')
-      main.classList.add('glyph')
+      if (val >= 421 && val <= 1200) {
+        nav.style.width = `${val}px`
+        main.style.marginLeft = `${val}px`
+      }
     }
-  })
+    if (scroll <= triggerPointStart || scroll >= triggerPointEnd + height) {
+      nav.classList.add('transition')
+      nav.classList.add('transition')
+      nav.style = 'none'
+      main.style = 'none'
+    } else {
+      nav.classList.remove('transition')
+      nav.classList.remove('transition')
+    }
+    if (scroll >= triggerPointStart + height && scroll <= triggerPointEnd) {
+      nav.classList.add('transition')
+      nav.classList.add('transition')
+      nav.style.width = '1200px'
+      main.style.marginLeft = '1200px'
+    }
+  }
+  const glyphs = document.getElementsByClassName('A_Glyph')
+  const slots = document.getElementsByClassName('A_GlyphGrow')
+  console.warn(slots)
+  for (let i = 0; i < glyphs.length; i++) {
+    glyphs[i].addEventListener('mouseover', () => {
+      for (let j = 0; j < slots.length; j++) {
+        slots[j].children[0].textContent = glyphs[i].textContent
+      }
+    })
+  }
+
+  window.addEventListener('load', addActiveClass)
+  window.addEventListener('scroll', addActiveClass)
+  window.addEventListener('scroll', adjustLayoutOnScroll)
 })
