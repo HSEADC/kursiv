@@ -126,7 +126,7 @@
   grid-template-columns: repeat(8, 1fr);
 }
 .A_InfoTitle {
-  font-size: var(--infoTextSize);
+  font-size: var(--infoTitleSize);
   line-height: var(--mainTextLineHeight);
 }
 .A_InfoText {
@@ -142,7 +142,7 @@
   }
 }
 .A_LanguagesButton {
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,8 +152,6 @@
   border-radius: var(--borderRadiusButtons);
   width: var(--buttonWidth);
   height: var(--buttonHeight);
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
   cursor: pointer;
 }
@@ -163,5 +161,8 @@
   }
   .Q_Devision {
     display: none;
+  }
+  .A_InfoTitle {
+    font-size: var(--infoTitleSize);
   }
 }
