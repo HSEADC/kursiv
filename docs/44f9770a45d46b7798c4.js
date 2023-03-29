@@ -1,13 +1,13 @@
-$(document).ready(function () {
-  $('.sub a').each(function () {
-    $(this).on('click', function (e) {
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      console.log(link.getAttribute('href')[1]);
       e.preventDefault();
-      console.log('hi');
-      var scrollTo = $(this).attr('href');
-      var whitespace = scrollTo == '#logo' ? 100 : 1;
-      $('html,body').animate({
-        scrollTop: $(scrollTo).offset().top - whitespace
-      }, 1000);
+      var target = document.getElementById(link.getAttribute('href')[1]);
+      target.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'end'
+      });
     });
   }); // Smart adaptive navigation system, which keeps track of the user scroll.
   // fourth try start
@@ -29,5 +29,5 @@ $(document).ready(function () {
         subNavElements[i].classList.add('active'); // subNavElements[i + 1].classList.remove('active')
       }
     }
-  });
+  }); // Main Menu system
 });
