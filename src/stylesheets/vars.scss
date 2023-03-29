@@ -15,6 +15,7 @@
   --fontStyleSize: 2vw;
   --mainTextSize: 36px;
   --infoTextSize: 32px;
+  --infoTitleSize: 32px;
   --mainTextLineHeight: 128%;
   --borderRadiusButtons: 6px;
   --buttonsTextSize: 26px;
@@ -34,7 +35,9 @@
   @media all and (max-width: 1024px) {
     --margin: 30px;
     --navigationWidth: var(--margin);
-    --infoTextSize: 46px;
+    --infoTextSize: 3.5vw;
+    --infoTitleSize: 4vw;
     --fontStyleSize: 3vw;
+    --mainTextSize: 3.5vw;
   }
 }

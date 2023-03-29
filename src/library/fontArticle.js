@@ -16,6 +16,12 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         trigger.addEventListener('click', () => {
           e.children[i].classList.toggle('hidden')
+          trigger.classList.toggle('active')
+          if (trigger.classList.contains('active')) {
+            trigger.innerHTML = 'Скрыть'
+          } else {
+            trigger.innerHTML = 'Показать еще'
+          }
         })
       }
     })

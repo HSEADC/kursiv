@@ -117,6 +117,19 @@
   }
   .С_InformationColumns {
     flex-direction: column;
-    gap: 100px;
+    gap: 7vw;
+    padding: 30px 0 30px;
+  }
+  .M_InformationColumn {
+    gap: 20px;
+  }
+  .M_UsageExample {
+    gap: 0px;
+    .A_InfoTitle {
+      font-size: 3.5vw;
+    }
+    .A_InfoText {
+      font-size: 2vw;
+    }
   }
 }

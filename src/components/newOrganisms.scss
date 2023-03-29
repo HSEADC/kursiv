@@ -10,8 +10,13 @@
 }
 .O_Languages {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   height: fit-content;
+  .A_LanguagesButton {
+    align-self: center;
+  }
 }
 .O_Pairs {
   display: flex;
@@ -33,10 +38,13 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .O_Languages {
+  }
   .O_Usage {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    row-gap: 40px;
     img {
       width: 98%;
     }
