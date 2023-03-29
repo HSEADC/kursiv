@@ -155,6 +155,55 @@
   color: white;
   cursor: pointer;
 }
+.A_MenuSectionTitle {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  opacity: 0.8;
+  &:nth-last-child(1) {
+    margin-top: 84px;
+  }
+}
+.A_MenuHorizontalButton {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  background-color: #7085ff;
+  color: white;
+  border-radius: 5px;
+  width: 160px;
+  height: 100%;
+  font-size: 12px;
+  padding: 9px 22px;
+  &:hover {
+    background-color: #566ce7;
+    cursor: pointer;
+  }
+  &:focus {
+    background-color: #566ce78d;
+    cursor: pointer;
+  }
+  &.active {
+    background-color: #566ce78d;
+  }
+}
+.A_NavigationButton {
+  text-decoration: none;
+  color: #010101;
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 30px;
+  &.active {
+    text-decoration: underline;
+  }
+}
+.A_MenuFontStyleText {
+  margin-top: 10px;
+  color: white;
+  font-size: 9px;
+}
+
 @media all and (max-width: 1024px) {
   #rightBorder {
     right: var(--margin);

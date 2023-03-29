@@ -4,6 +4,31 @@
   justify-content: flex-end;
   height: 25vw;
 }
+.Q_MenuSearchIcon {
+  max-height: 100%;
+  width: fit-content;
+}
+.M_MenuSearch {
+  padding: 6px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: white;
+  width: 340px;
+  height: 36px;
+  border-radius: 24px;
+  input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    height: 100%;
+  }
+}
+//
 .M_FontStyleTable {
   display: flex;
   flex-direction: column;
@@ -49,6 +74,49 @@
     }
   }
 }
+.W_MenuButtonTable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 12px;
+  column-gap: 11px;
+  margin-bottom: 25px;
+  .M_MenuFontStyleButton {
+    display: flex;
+    flex-direction: column;
+    width: 105px;
+    height: 65px;
+    background-color: #7085ff;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #566ce7;
+      cursor: pointer;
+    }
+    &:focus {
+      background-color: #566ce78d;
+      cursor: pointer;
+    }
+    &.active {
+      background-color: #566ce78d;
+    }
+  }
+}
+
+.W_MenuBottom {
+  width: 338px;
+  .lolik {
+    margin-top: 22px;
+    width: 100%;
+  }
+  .Q_MenuBottomBG {
+    width: 100%;
+    padding: 16px;
+    border-radius: 26px;
+    background-color: #757aff;
+  }
+}
+
 .O_GlyphSlot {
   display: flex;
   flex-direction: row;
@@ -103,6 +171,38 @@
   flex-direction: column;
   gap: 10px;
 }
+.C_MenuHorizontalButtonRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 32px;
+}
+.W_MenuParameters {
+  margin-bottom: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &:nth-last-of-type(1) {
+    margin-top: 16px;
+  }
+  .C_MenuIconParameter {
+    display: flex;
+    flex-direction: row;
+    img {
+      margin-right: 22px;
+    }
+    .C_MenuSettingsBox {
+      width: 88px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 5px;
+      background-color: white;
+      opacity: 0.8;
+      padding: 2px 10px;
+    }
+  }
+}
+
 @media all and (max-width: 1024px) {
   .W_GlyphTable {
     max-width: 100%;

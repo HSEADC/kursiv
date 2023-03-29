@@ -25,6 +25,46 @@
   height: 40vw;
   align-items: flex-end;
 }
+.O_Menu {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(168.42deg, #5552ff 33.33%, #225ee9 100%);
+  width: 370px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 826px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.nav {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: 90%;
+    overflow-x: hidden;
+    width: var(--navigationWidth);
+    border-right: 1px solid black;
+    left: var(--margin);
+    &.glyph {
+      width: 1200px;
+    }
+    .O_NavList {
+      border-right: 1px solid var(--black);
+      width: var(--navigationWidth);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      li {
+        margin-top: 0;
+      }
+    }
+  }
+}
 .O_Usage {
   display: flex;
   flex-direction: row;
