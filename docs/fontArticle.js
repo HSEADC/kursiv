@@ -21,6 +21,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
         trigger.addEventListener('click', function () {
           e.children[i].classList.toggle('hidden');
+          trigger.classList.toggle('active');
+
+          if (trigger.classList.contains('active')) {
+            trigger.innerHTML = 'Скрыть';
+          } else {
+            trigger.innerHTML = 'Показать еще';
+          }
         });
       };
 
