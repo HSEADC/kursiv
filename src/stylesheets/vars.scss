@@ -13,6 +13,13 @@
   --mainWidth: calc(100% - var(--navigationWidth));
   --mainMarginLeft: var(--navigationWidth);
   --fontStyleSize: 2vw;
+  --mainTextSize: 36px;
+  --infoTextSize: 32px;
+  --mainTextLineHeight: 128%;
+  --borderRadiusButtons: 6px;
+  --buttonsTextSize: 26px;
+  --buttonWidth: 264px;
+  --buttonHeight: 44px;
   // --navigationWidth: 17vw;
   // --navigationExtendedWidth: 57vw;
   // --marginMain: calc(var(--navigationWidth) + var(--margin));

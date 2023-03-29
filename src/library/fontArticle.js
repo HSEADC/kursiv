@@ -5,8 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const triggerPointEnd = devisions[1].offsetTop
   const nav = document.querySelector('.W_Nav')
   const main = document.querySelector('.SO_Main')
+  const languages = document.querySelectorAll('.A_Languages')
   let height = devisions[0].offsetHeight
-
+  function hideExtraLanguages() {}
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault()

@@ -1,0 +1,15 @@
+.O_GlyphSlot {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--mainBlue);
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  padding: 12% 5%;
+  align-self: center;
+}
+.O_Languages {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}

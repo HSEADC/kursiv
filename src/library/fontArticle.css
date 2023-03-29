@@ -3,4 +3,5 @@
 @import '../stylesheets/basics.scss';
 @import '../components/newAtoms.scss';
 @import '../components/newMolecules.scss';
+@import '../components/newOrganisms.scss';
 @import '../components/newSuperOrganisms.scss';
