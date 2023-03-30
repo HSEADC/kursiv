@@ -14,8 +14,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
   var fontSlot = document.getElementsByClassName('O_FontSlot');
   var styles = document.getElementsByClassName('M_FontTitleSubtitle');
   var menuFilterButtons = document.getElementsByClassName('M_MenuFontStyleButton');
-  var menuExtraSettingButtons = document.getElementsByClassName('A_MenuHorizontalButton');
+  var menuExtraSettingButtons = document.querySelectorAll('.A_MenuHorizontalButton');
   var fonts = document.getElementsByClassName('O_FontSlot');
+
+  for (var i = 0; i < fontSlot.length; i++) {
+    var fontName = fontSlot[i].dataset.name;
+    fontSlot[i].children[1].style.fontFamily = "".concat(fontName);
+  }
 
   var _loop = function _loop(index) {
     arrow[index].addEventListener('click', function (e) {
@@ -55,53 +60,126 @@ document.addEventListener('DOMContentLoaded', function (e) {
     return wrapperObject;
   }
 
-  function resetStates(subject, params) {
-    for (var i = 0; i < subject.length; i++) {
-      subject[i].classList.remove(params);
-    }
-  }
+  function assignHiddenClassToDataValue(array) {
+    for (var _i = 0; _i < array.length; _i++) {
+      console.log(array[_i]);
 
-  buildObjectWithFilteredFonts(fonts);
-
-  for (var i = 0; i < fonts.length; i++) {// console.log(fonts[i])
-    // console.log(fonts[i].dataset.fontStyle)
-  }
-
-  function iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(trigger, array, parameter) {
-    for (var _i = 0; _i < Object.keys(array).length; _i++) {
-      if (Object.keys(array)[_i] != trigger.dataset.filterparameter) {
-        console.log(Object.keys(array)[_i]);
-
-        for (var j = 0; j < array[Object.keys(array)[_i]].length; j++) {
-          console.log(array[Object.keys(array)[_i]][j]);
-
-          array[Object.keys(array)[_i]][j].classList.add('hidden');
-        }
+      if (array[_i].dataset.value != 'free') {
+        array[_i].classList.add('hidden');
       }
     }
   }
 
-  var _iterator2 = _createForOfIteratorHelper(menuFilterButtons),
-      _step2;
+  function resetStates(subject, params) {
+    for (var _i2 = 0; _i2 < subject.length; _i2++) {
+      subject[_i2].classList.remove(params);
+    }
+  }
+
+  function updateElements() {
+    var textarea = document.querySelector('textarea');
+    var fontSlots = document.querySelectorAll('.A_FontPreview');
+    fontSlots.forEach(function (slot) {
+      slot.innerHTML = textarea.value;
+    });
+  }
+
+  var textarea = document.querySelector('textarea');
+  textarea.addEventListener('input', updateElements);
+  buildObjectWithFilteredFonts(fonts);
+
+  for (var _i3 = 0; _i3 < fonts.length; _i3++) {}
+
+  function iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(trigger, array, extra) {
+    for (var p = 0; p < trigger.length; p++) {
+      if (trigger[p].classList.contains('active') == true) {
+        var target = trigger[p];
+        console.log(target);
+
+        for (var _i4 = 0; _i4 < Object.keys(array).length; _i4++) {
+          if (Object.keys(array)[_i4] != target.dataset.filterparameter) {
+            console.log(Object.keys(array)[_i4]);
+
+            for (var j = 0; j < array[Object.keys(array)[_i4]].length; j++) {
+              console.log(array[Object.keys(array)[_i4]][j]);
+
+              array[Object.keys(array)[_i4]][j].classList.add('hidden');
+            }
+          }
+        }
+      }
+    }
+
+    var _iterator2 = _createForOfIteratorHelper(extra),
+        _step2;
+
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var button = _step2.value;
+
+        if (button.children[0].classList.contains('active')) {
+          assignHiddenClassToDataValue(fontSlot);
+        }
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  }
+
+  var _iterator3 = _createForOfIteratorHelper(menuFilterButtons),
+      _step3;
 
   try {
     var _loop2 = function _loop2() {
-      var button = _step2.value;
+      var button = _step3.value;
       button.addEventListener('click', function (e) {
-        resetStates(menuFilterButtons, 'active');
         resetStates(fonts, 'hidden');
-        button.classList.add('active');
-        iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(button, buildObjectWithFilteredFonts(fonts), 'hi');
+
+        if (button.classList.contains('active')) {
+          button.classList.remove('active');
+        } else {
+          for (var _i5 = 0; _i5 < menuFilterButtons.length; _i5++) {
+            menuFilterButtons[_i5].classList.remove('active');
+          }
+
+          button.classList.add('active');
+        }
+
+        iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(menuFilterButtons, buildObjectWithFilteredFonts(fonts), menuExtraSettingButtons);
       });
     };
 
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
       _loop2();
     }
   } catch (err) {
-    _iterator2.e(err);
+    _iterator3.e(err);
   } finally {
-    _iterator2.f();
+    _iterator3.f();
+  }
+
+  var _iterator4 = _createForOfIteratorHelper(menuExtraSettingButtons),
+      _step4;
+
+  try {
+    var _loop3 = function _loop3() {
+      var button = _step4.value;
+      button.addEventListener('click', function (e) {
+        resetStates(fonts, 'hidden');
+        button.children[0].classList.toggle('active');
+        iterateThroughArrayAndSetClassToAllItemsIfNotMatchingUpWithTrigger(menuFilterButtons, buildObjectWithFilteredFonts(fonts), menuExtraSettingButtons);
+      });
+    };
+
+    for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+      _loop3();
+    }
+  } catch (err) {
+    _iterator4.e(err);
+  } finally {
+    _iterator4.f();
   }
 });
 /******/ })()
