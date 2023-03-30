@@ -4,7 +4,7 @@
 @import 'stylesheets/basic.scss';
 @import 'stylesheets/index.scss';
 /* @import 'stylesheets/nav.scss'; */
-@import 'stylesheets/OLibrary.scss';
+/* @import 'stylesheets/OLibrary.scss'; */
 @import 'components/newAtoms.scss';
 @import 'components/newMolecules.scss';
 @import 'components/newOrganisms.scss';

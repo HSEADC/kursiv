@@ -10,6 +10,7 @@
   --text_size: 60px;
   --line_height: 80px;
   --navigationWidth: 22vw;
+  --navigationWidthPixels: 430px;
   --mainWidth: calc(100% - var(--navigationWidth));
   --mainMarginLeft: var(--navigationWidth);
   --fontStyleSize: 2vw;
@@ -21,6 +22,8 @@
   --buttonsTextSize: 26px;
   --buttonWidth: 264px;
   --buttonHeight: 44px;
+  --robotoFont: font-family: roboto;
+
   // --navigationWidth: 17vw;
   // --navigationExtendedWidth: 57vw;
   // --marginMain: calc(var(--navigationWidth) + var(--margin));
@@ -39,5 +42,6 @@
     --infoTitleSize: 4vw;
     --fontStyleSize: 3vw;
     --mainTextSize: 3.5vw;
+
   }
 }

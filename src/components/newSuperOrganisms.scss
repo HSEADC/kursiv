@@ -3,6 +3,17 @@
   padding: 0px 100px 0 40px;
   max-width: 1920px;
 }
+.SO_FontPreviewScreen {
+  display: flex;
+  padding-top: 100px;
+  flex-direction: column;
+  gap: 30px;
+}
+.SO_MainLibrary {
+  margin-left: var(--navigationWidthPixels);
+  padding: 0px 100px 0 40px;
+  max-width: 1920px;
+}
 @media all and (max-width: 1024px) {
   .SO_Main {
     // background-color: yellow;

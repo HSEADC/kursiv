@@ -8,6 +8,18 @@ window.addEventListener('DOMContentLoaded', () => {
   const languages = document.querySelectorAll('[data-languageColumn]')
   const languageButton = document.querySelector('.A_LanguagesButton')
   let height = devisions[0].offsetHeight
+  let fontStyles = document.getElementsByClassName('M_FontStyleTable')
+  let spans = document.querySelectorAll('span')
+  let glyphScreen = document.getElementsByClassName('W_GlyphTable')
+  function setFontTo(textElement) {
+    for (let i = 0; i < textElement.length; i++) {
+      let fontName = textElement[i].dataset.name
+      textElement[i].style.fontFamily = `${fontName}`
+    }
+  }
+  setFontTo(fontStyles)
+  setFontTo(spans)
+  setFontTo(glyphScreen)
   function hideExtraPoints(array, excessive, trigger) {
     array.forEach((e) => {
       for (let i = 5; i < e.childElementCount; i++) {
@@ -40,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function breadCrumbsDocumentTitleSet() {
     document.getElementsByClassName(
       'A_BreadCrumbs'
-    )[0].innerHTML = `Главный экран · Библиотека · ${document.title}`
+    )[0].innerHTML = `<a>Главный экран</a> · <a href="../index.html">Библиотека</a> · ${document.title}`
   }
   breadCrumbsDocumentTitleSet()
   function addActiveClass() {
