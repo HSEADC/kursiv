@@ -131,6 +131,7 @@
   }
 }
 .O_Usage {
+  height: 50vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -151,6 +152,7 @@
     justify-items: center;
     row-gap: 40px;
     column-gap: 40px;
+    height: fit-content;
     img {
       width: 98%;
     }

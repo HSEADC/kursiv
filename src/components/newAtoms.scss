@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
   img {
     max-width: 100%;
   }
@@ -19,7 +20,6 @@
   }
 }
 .A_FontStyle {
-  font-family: 'Helvetica';
   font-size: var(--fontStyleSize);
   line-height: 48px;
 }
@@ -29,7 +29,7 @@
   aspect-ratio: 1/1;
   border: 1px solid white;
   &.active {
-    background-color: red;
+    background-color: white;
   }
 }
 .C_NavList {
@@ -43,8 +43,14 @@
   border-right: 1px solid black;
 }
 .С_BreadCrumbsAndDownloadButton {
+  font-family: helvetica;
   position: fixed;
   top: 26px;
+  a {
+    all: unset;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 .A_Screen {
   width: 100%;

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   let fonts = document.getElementsByClassName('O_FontSlot')
   for (let i = 0; i < fontSlot.length; i++) {
     let fontName = fontSlot[i].dataset.name
-    fontSlot[i].style.fontFamily = `${fontName}`
+    fontSlot[i].children[1].style.fontFamily = `${fontName}`
   }
   for (let index = 0; index < arrow.length; index++) {
     arrow[index].addEventListener('click', (e) => {
