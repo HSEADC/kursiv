@@ -42,14 +42,26 @@
   height: 100%;
   border-right: 1px solid black;
 }
-.С_BreadCrumbsAndDownloadButton {
-  font-family: helvetica;
+.C_BreadCrumbsAndDownloadButton {
   position: fixed;
-  top: 26px;
+  pointer-events: none;
+  display: flex;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 90%;
+  width: 100%;
+  padding-left: calc(var(--navigationWidth) + 40px);
   a {
     all: unset;
+    pointer-events: all;
     cursor: pointer;
-    text-decoration: underline;
+    // text-decoration: underline;
+    padding: 5px 5px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
   }
 }
 .A_Screen {
@@ -247,7 +259,14 @@
 textarea {
   all: unset;
 }
-
+@media all and (max-width: 1690px) {
+  .A_Glyph {
+    font-size: 34px;
+  }
+  .C_Glyphs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 @media all and (max-width: 1024px) {
   #rightBorder {
     right: var(--margin);

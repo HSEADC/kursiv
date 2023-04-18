@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function breadCrumbsDocumentTitleSet() {
     document.getElementsByClassName(
       'A_BreadCrumbs'
-    )[0].innerHTML = `<a>Главный экран</a> · <a href="../index.html">Библиотека</a> · ${document.title}`
+    )[0].innerHTML = `<a>Главный экран</a> · <a href="../index.html">Библиотека</a> · <a href="">${document.title}</a>`
   }
   breadCrumbsDocumentTitleSet()
   function addActiveClass() {

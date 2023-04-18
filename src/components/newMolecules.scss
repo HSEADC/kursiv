@@ -202,7 +202,12 @@
     }
   }
 }
-
+@media all and (max-width: 1690px) and (min-width: 1025px) {
+  .W_GlyphTable {
+    width: 340px;
+    height: 800vh;
+  }
+}
 @media all and (max-width: 1024px) {
   .W_GlyphTable {
     max-width: 100%;

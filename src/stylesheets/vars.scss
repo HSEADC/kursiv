@@ -14,8 +14,8 @@
   --mainWidth: calc(100% - var(--navigationWidth));
   --mainMarginLeft: var(--navigationWidth);
   --fontStyleSize: 2vw;
-  --mainTextSize: 36px;
-  --infoTextSize: 32px;
+  --mainTextSize: 2.1vw; 
+  --infoTextSize: 2vw;
   --infoTitleSize: 32px;
   --mainTextLineHeight: 128%;
   --borderRadiusButtons: 6px;
@@ -23,6 +23,7 @@
   --buttonWidth: 264px;
   --buttonHeight: 44px;
   --robotoFont: font-family: roboto;
+  --interfaceFont: suisse;
 
   // --navigationWidth: 17vw;
   // --navigationExtendedWidth: 57vw;
