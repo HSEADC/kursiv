@@ -1,8 +1,5 @@
 import './library.css'
 document.addEventListener('DOMContentLoaded', (e) => {
-  document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML =
-    document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML +
-    ` · ${document.title}`
   let arrow = document.getElementsByClassName('Q_FontArrow')
   let fontSlot = document.getElementsByClassName('O_FontSlot')
   let styles = document.getElementsByClassName('M_FontTitleSubtitle')
@@ -24,6 +21,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
       styles[index].classList.toggle('extended')
     })
   }
+  function breadCrumbsDocumentTitleSet() {
+    document.getElementsByClassName(
+      'A_BreadCrumbs'
+    )[0].innerHTML = `<a>Главный экран</a> · <a href="">${document.title}</a>`
+  }
+  breadCrumbsDocumentTitleSet()
   function buildObjectWithFilteredFonts(object) {
     let wrapperObject = {}
     for (let fontStyle of object) {
