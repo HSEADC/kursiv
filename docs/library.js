@@ -9,7 +9,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 document.addEventListener('DOMContentLoaded', function (e) {
-  document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML = document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML + " \xB7 ".concat(document.title);
   var arrow = document.getElementsByClassName('Q_FontArrow');
   var fontSlot = document.getElementsByClassName('O_FontSlot');
   var styles = document.getElementsByClassName('M_FontTitleSubtitle');
@@ -33,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
   for (var index = 0; index < arrow.length; index++) {
     _loop(index);
   }
+
+  function breadCrumbsDocumentTitleSet() {
+    document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML = "<a>\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u044D\u043A\u0440\u0430\u043D</a> \xB7 <a href=\"\">".concat(document.title, "</a>");
+  }
+
+  breadCrumbsDocumentTitleSet();
 
   function buildObjectWithFilteredFonts(object) {
     var wrapperObject = {};

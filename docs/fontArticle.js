@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   function breadCrumbsDocumentTitleSet() {
-    document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML = "<a>\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u044D\u043A\u0440\u0430\u043D</a> \xB7 <a href=\"../index.html\">\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430</a> \xB7 ".concat(document.title);
+    document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML = "<a>\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u044D\u043A\u0440\u0430\u043D</a> \xB7 <a href=\"../index.html\">\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430</a> \xB7 <a href=\"\">".concat(document.title, "</a>");
   }
 
   breadCrumbsDocumentTitleSet();
