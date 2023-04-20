@@ -2,6 +2,21 @@
 /******/ 	"use strict";
 var __webpack_exports__ = {};
 
+;// CONCATENATED MODULE: ./src/app.js
+function setSizeForGlyphs() {
+  var leftLine = document.querySelector('.W_GlyphSlot'),
+      rightLine = document.querySelector('#rightBorder'),
+      glyphArea = document.querySelector('.W_GlyphTable'),
+      leftPadding = leftLine.getBoundingClientRect().right,
+      rightPadding = window.innerWidth - rightLine.getBoundingClientRect().right;
+  console.log('hi');
+  glyphArea.style.width = "".concat(window.innerWidth - rightPadding - leftPadding - 80, "px");
+
+  if (glyphArea.width != window.innerWidth - rightPadding - leftPadding) {}
+}
+;// CONCATENATED MODULE: ./src/library/fontArticle.js
+
+
 window.addEventListener('DOMContentLoaded', function () {
   var devisions = document.getElementsByClassName('Q_Devision');
   var triggerPointStart = devisions[0].offsetTop;
@@ -140,9 +155,11 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   hideExtraPoints(languages, 5, languageButton);
+  window.addEventListener('load', setSizeForGlyphs);
   window.addEventListener('load', addActiveClass);
   window.addEventListener('scroll', addActiveClass);
   window.addEventListener('scroll', adjustLayoutOnScroll);
+  window.addEventListener('resize', setSizeForGlyphs);
 });
 /******/ })()
 ;
