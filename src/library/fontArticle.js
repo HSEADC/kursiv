@@ -1,4 +1,5 @@
 import './fontArticle.css'
+import { setSizeForGlyphs } from '../app.js'
 window.addEventListener('DOMContentLoaded', () => {
   const devisions = document.getElementsByClassName('Q_Devision')
   const triggerPointStart = devisions[0].offsetTop
@@ -120,7 +121,9 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   }
   hideExtraPoints(languages, 5, languageButton)
+  window.addEventListener('load', setSizeForGlyphs)
   window.addEventListener('load', addActiveClass)
   window.addEventListener('scroll', addActiveClass)
   window.addEventListener('scroll', adjustLayoutOnScroll)
+  window.addEventListener('resize', setSizeForGlyphs)
 })

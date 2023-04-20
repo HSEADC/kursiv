@@ -13,7 +13,8 @@ module.exports = {
     test: './src/jsbasics.js',
     library: './src/library.js',
     fontArticle: './src/library/fontArticle.js',
-    spaces: './src/spaces.js'
+    spaces: './src/spaces.js',
+    reactBasics: './src/reactBasics.jsx'
   },
   output: {
     filename: '[name].js',
@@ -103,6 +104,14 @@ module.exports = {
       template: './src/spaces.html',
       filename: './spaces.html',
       chunks: ['spaces']
+    }),
+    // Spaces page link
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/reactBasics.html',
+      filename: './reactBasics.html',
+      chunks: ['reactBasics']
     }),
     // Test page link
     new HtmlWebpackPlugin({
