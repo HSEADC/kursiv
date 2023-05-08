@@ -1,0 +1,160 @@
+.O_GlyphSlot {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--mainBlue);
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  padding: 12% 5%;
+  align-self: center;
+}
+.O_FontSlot {
+  overflow-x: hidden;
+  min-height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  &.hidden {
+    display: none;
+  }
+  &.extended {
+    // height: 36vh;
+  }
+  .M_FontInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .Q_FontArrow {
+      cursor: pointer;
+      img {
+        transition: all 0.2s ease-in;
+      }
+      &.extended {
+        img {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .M_FontTitleSubtitle {
+      height: 33px;
+      overflow: hidden;
+      transition: all 0.2s ease-in;
+      color: #01010165;
+      p:nth-of-type(1) {
+        color: #010101;
+      }
+      &.extended {
+        height: 150px;
+      }
+    }
+  }
+  .A_FontPreview {
+    font-size: 70px;
+    line-height: 82px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #010101;
+  }
+}
+.O_Languages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: fit-content;
+  .A_LanguagesButton {
+    align-self: center;
+  }
+}
+.O_Header {
+  position: fixed;
+  width: var(--navigationWidthPixels);
+  height: 100vh;
+  top: 0;
+}
+
+.O_Pairs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40vw;
+  align-items: flex-end;
+}
+.O_Menu {
+  padding-top: 25px;
+  padding-bottom: 145px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    175.97deg,
+    #5552ff 26.2%,
+    #225ee9 52.59%,
+    #4b54fa 81.07%
+  );
+  width: 370px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 826px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.nav {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: 90%;
+    overflow-x: hidden;
+    width: var(--navigationWidth);
+    border-right: 1px solid black;
+    left: var(--margin);
+    &.glyph {
+      width: 1200px;
+    }
+    .O_NavList {
+      border-right: 1px solid var(--black);
+      width: var(--navigationWidth);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      li {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.O_Usage {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 90%;
+    border-radius: 12px;
+  }
+  div {
+    flex-grow: 1;
+  }
+}
+@media all and (max-width: 1024px) {
+  .O_Languages {
+  }
+  .O_Usage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 40px;
+    column-gap: 40px;
+    height: fit-content;
+    img {
+      width: 98%;
+    }
+  }
+}

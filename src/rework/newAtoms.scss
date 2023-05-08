@@ -5,6 +5,65 @@
     max-width: 100%;
   }
 }
+.A_Description {
+  font-family: var(--interfaceFont);
+  font-size: 14px;
+  color: white;
+  white-space: nowrap;
+}
+.A_HeaderLine {
+  height: 1px;
+  width: 48px;
+  background-color: white;
+  white-space: nowrap;
+}
+.Q_Logo {
+  width: 105px;
+  height: 31px;
+}
+.A_HeaderLink {
+  font-family: var(--interfaceFont);
+  font-size: 14px;
+  white-space: nowrap;
+
+  color: white;
+}
+.C_LogoAndDescription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 313px;
+}
+.C_HeaderLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  width: 313px;
+}
+.C_HeaderSwitch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 313px;
+}
+.W_Header {
+  z-index: 1000;
+  left: 32;
+  position: sticky;
+  top: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: var(--mainBlue);
+  border-radius: 20px;
+  width: 100%;
+}
 .A_NavText {
   all: unset;
   display: flex;
@@ -116,7 +175,7 @@
     margin-bottom: -13px;
     line-height: 75%;
     align-self: center;
-    font-size: 440px;
+    font-size: 30.5vw;
     color: white;
   }
 }
@@ -270,6 +329,9 @@ textarea {
 @media all and (max-width: 1440px) {
   .C_BreadCrumbsAndDownloadButton {
     display: none;
+  }
+  .C_Glyphs {
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 @media all and (max-width: 1024px) {

@@ -1,0 +1,13 @@
+@import '../stylesheets/reset.scss';
+@import '../stylesheets/vars.scss';
+@import '../stylesheets/basic.scss';
+@import '../stylesheets/fonts.scss';
+@import '../rework/newAtoms.scss';
+@import '../rework/newMolecules.scss';
+@import '../rework/newOrganisms.scss';
+@import '../rework/newSuperOrganisms.scss';
+@media all and (max-width: 1000px) {
+  * {
+    display: none;
+  }
+}

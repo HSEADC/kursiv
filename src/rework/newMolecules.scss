@@ -158,12 +158,14 @@
 }
 .W_GlyphSlot {
   display: flex;
-  position: absolute;
-  margin-left: var(--navigationWidth);
-  border-radius: 15px;
-  width: calc(1200px - var(--navigationWidth));
-  height: 100%;
   justify-content: center;
+  background-color: var(--mainBlue);
+  width: 100%;
+  height: 85vh;
+  position: sticky;
+  top: 96px;
+  border-radius: 44px;
+  flex-grow: 1;
 }
 .C_Column {
   display: flex;
@@ -208,12 +210,24 @@
 }
 @media all and (max-width: 1440px) {
   .W_Nav {
+    display: none;
     .W_GlyphSlot {
       display: none;
     }
   }
   .Q_Devision {
     display: none;
+  }
+  .O_GlyphsAndGlyphSlot {
+    display: flex;
+    gap: 40px;
+    .W_GlyphsTable {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
   }
 }
 @media all and (max-width: 1024px) {

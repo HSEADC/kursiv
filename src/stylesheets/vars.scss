@@ -1,5 +1,6 @@
 :root {
   --mainBlue: #225ee9;
+  // --mainBlue: #f6ff00;
   --mainGrey: #222222;
   --borderColor: #010101;
   --heading_font: 'CSTM', serif;
@@ -36,6 +37,9 @@
   // --marginMain: calc(var(--menuWidth) + var(--margin));
   // --marginExtendedMain: calc(var(--navigationExtendedWidth) + var(--margin));
   // --menuWidth: calc(var(--margin) + var(--margin) + 370px);
+  @media all and (max-width: 1440px) {
+    --margin: 38px;
+  }
   @media all and (max-width: 1024px) {
     --margin: 30px;
     --navigationWidth: var(--margin);

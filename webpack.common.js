@@ -14,7 +14,8 @@ module.exports = {
     library: './src/library.js',
     fontArticle: './src/library/fontArticle.js',
     spaces: './src/spaces.js',
-    reactBasics: './src/reactBasics.jsx'
+    reactBasics: './src/reactBasics.jsx',
+    rework: './src/rework.js'
   },
   output: {
     filename: '[name].js',
@@ -128,6 +129,14 @@ module.exports = {
       template: './src/library/roboto.html',
       filename: './library/helvetica.html',
       chunks: ['fontArticle']
+    }),
+
+    // Typeface page link
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/rework.html',
+      filename: './library/rework.html',
+      chunks: ['rework']
     }),
 
     new HtmlWebpackPlugin({
