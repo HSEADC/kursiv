@@ -126,4 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', addActiveClass)
   window.addEventListener('scroll', adjustLayoutOnScroll)
   window.addEventListener('resize', setSizeForGlyphs)
+  window.addEventListener('scroll', () => {
+    setSizeForGlyphs()
+  })
 })

@@ -4,10 +4,11 @@ export function setSizeForGlyphs() {
     glyphArea = document.querySelector('.W_GlyphTable'),
     leftPadding = leftLine.getBoundingClientRect().right,
     rightPadding = window.innerWidth - rightLine.getBoundingClientRect().right
-  console.log('hi')
   glyphArea.style.width = `${
     window.innerWidth - rightPadding - leftPadding - 80
   }px`
-  if (glyphArea.width != window.innerWidth - rightPadding - leftPadding) {
+  if (window.innerWidth <= 900) {
+    console.log('hie')
+    glyphArea.style.width = '100%'
   }
 }
