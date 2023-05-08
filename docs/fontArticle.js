@@ -9,10 +9,12 @@ function setSizeForGlyphs() {
       glyphArea = document.querySelector('.W_GlyphTable'),
       leftPadding = leftLine.getBoundingClientRect().right,
       rightPadding = window.innerWidth - rightLine.getBoundingClientRect().right;
-  console.log('hi');
   glyphArea.style.width = "".concat(window.innerWidth - rightPadding - leftPadding - 80, "px");
 
-  if (glyphArea.width != window.innerWidth - rightPadding - leftPadding) {}
+  if (window.innerWidth <= 900) {
+    console.log('hie');
+    glyphArea.style.width = '100%';
+  }
 }
 ;// CONCATENATED MODULE: ./src/library/fontArticle.js
 
@@ -160,6 +162,9 @@ window.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', addActiveClass);
   window.addEventListener('scroll', adjustLayoutOnScroll);
   window.addEventListener('resize', setSizeForGlyphs);
+  window.addEventListener('scroll', function () {
+    setSizeForGlyphs();
+  });
 });
 /******/ })()
 ;
