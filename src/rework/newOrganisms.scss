@@ -1,9 +1,12 @@
 .O_GlyphSlot {
   display: flex;
+  position: absolute;
   flex-direction: row;
   background-color: var(--mainBlue);
   border-radius: 15px;
-  width: 90%;
+  width: 700px;
+  left: var(--padding);
+
   height: 90%;
   padding: 12% 5%;
   align-self: center;
@@ -61,7 +64,8 @@
     color: #010101;
   }
 }
-.O_Languages {
+.W_Languages {
+  padding-left: var(--padding);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -130,17 +134,19 @@
     }
   }
 }
-.O_Usage {
-  height: 50vh;
+.O_FixedElements {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  img {
-    width: 90%;
-    border-radius: 12px;
-  }
-  div {
-    flex-grow: 1;
+  flex-direction: column;
+  gap: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+}
+@media all and (max-width: 1690px) and (min-width: 1025px) {
+  .O_GlyphSlot {
+    width: 600px;
   }
 }
 @media all and (max-width: 1024px) {

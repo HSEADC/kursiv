@@ -1,6 +1,6 @@
 .SO_Main {
   margin-left: var(--mainMarginLeft);
-  padding: 0px 120px 0 40px;
+  padding: 0px calc(var(--padding) + var(--newMargin)) 0px 0px;
   max-width: 1920px;
 }
 .SO_FontPreviewScreen {
@@ -17,7 +17,7 @@
 @media all and (max-width: 1440px) {
   .SO_Main {
     margin: 0;
-    padding: 0 30px;
+    padding: 0 90px;
   }
 }
 @media all and (max-width: 1024px) {

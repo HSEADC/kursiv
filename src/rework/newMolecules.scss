@@ -1,12 +1,44 @@
-.M_Intro {
+.W_Intro {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 25vw;
+  padding-top: 10vh;
+  padding-left: var(--padding);
+}
+.W_InformationColumns {
+  overflow: hidden;
+  padding-left: var(--padding);
+}
+.W_Usage {
+  padding-left: var(--padding);
+}
+.C_UseCases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 90%;
+    border-radius: 12px;
+  }
+  div {
+    flex-grow: 1;
+  }
+}
+.C_CharacterAndAuthors {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 .Q_MenuSearchIcon {
   max-height: 100%;
   width: fit-content;
+}
+.O_GlyphsAndGlyphSlot {
+  display: flex;
+  flex-direction: row;
+  .W_GlyphSlot {
+    max-width: 700px;
+  }
 }
 .M_MenuSearch {
   padding: 6px 20px;
@@ -39,12 +71,6 @@
     white-space: nowrap;
   }
 }
-.С_InformationColumns {
-  overflow: hidden;
-
-  display: flex;
-  justify-content: space-between;
-}
 .M_InformationColumn {
   display: flex;
   flex-direction: column;
@@ -56,9 +82,10 @@
   gap: 10px;
 }
 .M_HorizontalLines {
+  left: var(--padding);
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 700px;
   padding: 12% 5%;
   position: absolute;
   height: 90%;
@@ -129,21 +156,18 @@
 }
 .W_GlyphArea {
 }
-.W_GlyphTable {
-  height: 270vw;
+.W_GlyphsTable {
+  padding-left: var(--padding);
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
 .W_Nav {
   overflow: hidden;
-  position: fixed;
   display: flex;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   width: var(--navigationWidth);
   border-right: 1px solid black;
   justify-content: center;
@@ -152,19 +176,21 @@
     padding: 0 30px;
   }
 }
+.W_BorderAndNavList {
+  display: flex;
+}
 .W_ThreeColumnsInOneRow {
   display: flex;
   justify-content: space-between;
 }
 .W_GlyphSlot {
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  background-color: var(--mainBlue);
   width: 100%;
   height: 85vh;
   position: sticky;
-  top: 96px;
-  border-radius: 44px;
+  top: 80px;
   flex-grow: 1;
 }
 .C_Column {
@@ -207,8 +233,17 @@
   .W_GlyphTable {
     height: 800vh;
   }
+  .M_HorizontalLines {
+    width: 600px;
+  }
+  .O_GlyphSlot {
+    width: 600px;
+  }
 }
 @media all and (max-width: 1440px) {
+  .W_Intro {
+    padding: 0;
+  }
   .W_Nav {
     display: none;
     .W_GlyphSlot {
@@ -242,7 +277,7 @@
     display: flex;
     flex-direction: column;
   }
-  .С_InformationColumns {
+  .W_InformationColumns {
     flex-direction: column;
     gap: 7vw;
     padding: 30px 0 30px;

@@ -5,6 +5,9 @@
     max-width: 100%;
   }
 }
+.Q_AnimationContainer {
+  height: 60vh;
+}
 .A_Description {
   font-family: var(--interfaceFont);
   font-size: 14px;
@@ -175,7 +178,7 @@
     margin-bottom: -13px;
     line-height: 75%;
     align-self: center;
-    font-size: 30.5vw;
+    font-size: 23vw;
     color: white;
   }
 }
@@ -232,7 +235,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 50px;
+  bottom: 10vh;
   background-color: var(--mainBlue);
   font-size: var(--buttonsTextSize);
   border-radius: var(--borderRadiusButtons);
@@ -314,6 +317,26 @@
 }
 .A_FontPreview {
   text-overflow: ellipsis;
+}
+.A_Border {
+  width: 1px;
+  height: 85vh;
+  background-color: black;
+  position: fixed;
+  /* margin-left: -80px; */
+  top: 50%;
+  transform: translateY(-50%);
+  &:nth-of-type(1) {
+    left: 22vw;
+  }
+  &:nth-of-type(2) {
+    right: 80px;
+  }
+}
+.C_Borders {
+  display: flex;
+  justify-content: space-between;
+  height: 85%;
 }
 textarea {
   all: unset;
