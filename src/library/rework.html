@@ -9,51 +9,53 @@
 </head>
 
 <body>
-    <!-- <div class="C_BreadCrumbsAndDownloadButton">
-        <p class="A_BreadCrumbs"></p>
-        <div class="A_FontDownloadButton"></div>
-    </div>
     <div class="O_FixedElements">
         <div class="W_Header">
-            <div class="C_LogoAndDescription">
-                <img class="Q_Logo" src="../images/Q_Logo.svg" alt="">
-                <div class="A_HeaderLine"></div>
-                <div class="A_Description">шрифтовое медиа</div>
-            </div>
-            <div class="C_HeaderLinks">
-                <div class="A_HeaderLink">Библиотека</div>
-                <div class="A_HeaderLink">Журнал</div>
-            </div>
-            <div class="C_HeaderSwitch">
-                <div></div>
+            <div style="    width: 100%;
+            display: flex;
+            justify-content: space-between;
+        ">
+
+                <div class="C_LogoAndDescription">
+                    <img class="Q_Logo" src="../images/Q_Logo.svg" alt="">
+                    <div class="A_HeaderLine"></div>
+                    <div class="A_Description">шрифтовое медиа</div>
+                </div>
+                <div class="C_HeaderLinks">
+                    <div class="A_HeaderLink">Библиотека</div>
+                    <div class="A_HeaderLink">Журнал</div>
+                </div>
+                <div class="C_HeaderSwitch">
+                    <span class="A_Menu">
+                    </span>
+                </div>
+                <div style="height:30px;" class="A_Switch">
+                    <img style="height: 80%; align-self: center;" src="../images/switch.svg" alt="">
+                </div>
             </div>
         </div>
         <div class="C_Borders">
-            <div class="W_BorderAndNavList">
-                <div class="A_Border"></div>
-                <div class="W_Nav">
-                    <nav class="C_NavList">
-                        <a href="#intro" class="A_NavText">Введение</a>
-                        <a href="#styles" class="A_NavText">Начертания</a>
-                        <!-- <a href="#settings" class="A_NavText">Настройки</a> -->
-    <!-- <a href="#glyphs" class="A_NavText">Глифы</a>
-                        <a href="#info" class="A_NavText">Информация</a>
-                        <a href="#languages" class="A_NavText">Языки</a>
-                        <a href="#usage" class="A_NavText">Применение</a>
-                    </nav>
-                </div>
-
+            <div class="W_Nav">
+                <nav class="C_NavList">
+                    <a href="#intro" class="A_NavText">Введение</a>
+                    <a href="#styles" class="A_NavText">Начертания</a>
+                    <!-- <a href="#settings" class="A_NavText">Настройки</a> -->
+                    <a href="#glyphs" class="A_NavText">Глифы</a>
+                    <a href="#info" class="A_NavText">Информация</a>
+                    <a href="#languages" class="A_NavText">Языки</a>
+                    <a href="#usage" class="A_NavText">Применение</a>
+                </nav>
             </div>
-            <div class="A_Border"></div>
+
         </div>
-    </div> -->
+    </div>
     <main class="SO_Main">
         <div class="A_Border"></div>
         <div class="A_Border"></div>
         <div id="intro" class="W_Intro A_Screen">
             <img src="../images/roboto.png" alt="">
             <div class="A_HorizontalLine"></div>
-            <div id="styles" class="W_Styles">
+            <div id="styles" class="W_Styles A_Screen">
                 <div class="W_ThreeColumnsInOneRow">
                     <div class="M_FontStyleTable" data-name="Roboto">
                         <div class="A_FontStyle">Roboto Thin</div>
@@ -588,7 +590,7 @@
 
             </div>
         </div>
-        <div id="info" class="W_InformationColumns">
+        <div id="info" class="W_InformationColumns A_Screen">
             <div class="A_HorizontalLine"></div>
             <div class="C_CharacterAndAuthors">
                 <div class="M_InformationColumn">
@@ -612,7 +614,7 @@
             </div>
         </div>
 
-        <div id="languages" class="W_Languages">
+        <div id="languages" class="W_Languages A_Screen">
             <div class="A_HorizontalLine"></div>
             <div class="W_ThreeColumnsInOneRow">
                 <div class="C_Column" data-languageColumn>

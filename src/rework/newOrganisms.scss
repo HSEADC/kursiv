@@ -135,6 +135,7 @@
   }
 }
 .O_FixedElements {
+  // pointer-events: none;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -143,10 +144,17 @@
   width: 100%;
   height: 100%;
   padding: 0 30px;
+  z-index: 9999999;
 }
 @media all and (max-width: 1690px) and (min-width: 1025px) {
   .O_GlyphSlot {
     width: 600px;
+  }
+}
+@media all and (max-width: 1440px) {
+  .O_GlyphSlot {
+    left: 0;
+    width: 41vw;
   }
 }
 @media all and (max-width: 1024px) {
