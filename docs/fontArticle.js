@@ -16,6 +16,26 @@ function setSizeForGlyphs() {
     glyphArea.style.width = '100%';
   }
 }
+function adjustLayoutOnScroll() {
+  var glyphSlotWidth = document.querySelector('.W_GlyphSlot');
+  var mainWidth = document.querySelector('.SO_Main').offsetWidth;
+  var windowWidth = window.innerWidth;
+  var glyphMaxWidth = document.querySelector('.O_GlyphSlot').offsetWidth + parseInt(window.getComputedStyle(document.querySelector('.W_GlyphsTable')).getPropertyValue('padding-left')) * 2;
+  var glyphAnimationTriggers = document.querySelectorAll('.Q_AnimationContainer');
+
+  if (glyphAnimationTriggers[0].getBoundingClientRect().top <= 0 && glyphAnimationTriggers[0].getBoundingClientRect().top >= glyphAnimationTriggers[0].offsetHeight * -1) {
+    glyphSlotWidth.style.maxWidth = "".concat(scale(glyphAnimationTriggers[0].getBoundingClientRect().top * -1, 0, glyphAnimationTriggers[0].offsetHeight, 0, glyphMaxWidth), "px");
+    glyphSlotWidth.style.borderRight = "1px solid rgba(0, 0, 0, ".concat(scale(glyphAnimationTriggers[0].getBoundingClientRect().top * -1, 0, glyphAnimationTriggers[0].offsetHeight, 0, 1), ")");
+  } else if (glyphAnimationTriggers[0].getBoundingClientRect().top <= glyphAnimationTriggers[0].offsetHeight * -1) {
+    glyphSlotWidth.style.maxWidth = "".concat(glyphMaxWidth, "px");
+    glyphSlotWidth.style.borderRight = "1px solid rgba(0, 0, 0, 1)";
+  } else {
+    glyphSlotWidth.style.maxWidth = "0px";
+  }
+}
+function scale(number, inMin, inMax, outMin, outMax) {
+  return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
 ;// CONCATENATED MODULE: ./src/library/fontArticle.js
 
 
