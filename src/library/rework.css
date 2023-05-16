@@ -6,8 +6,8 @@
 @import '../rework/newMolecules.scss';
 @import '../rework/newOrganisms.scss';
 @import '../rework/newSuperOrganisms.scss';
-@media all and (max-width: 1000px) {
+/* @media all and (max-width: 1000px) {
   * {
     display: none;
   }
-}
+} */

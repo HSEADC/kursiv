@@ -5,21 +5,77 @@
     max-width: 100%;
   }
 }
+.Q_AnimationContainer {
+  height: 60vh;
+}
 .A_Description {
   font-family: var(--interfaceFont);
   font-size: 14px;
   color: white;
   white-space: nowrap;
+  transition: all 0.15s ease;
 }
+.A_Switch {
+  display: flex;
+}
+.A_Menu {
+  height: 2px;
+  background-color: white;
+  width: 36px;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  &.active {
+  }
+}
+.A_Menu::after {
+  content: '';
+  height: 2px;
+  background-color: white;
+  width: 36px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -8px;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  &.active {
+    top: 0;
+    transform: rotate(45deg);
+    transition: 0.15s ease-in-out;
+  }
+}
+.A_Menu::before {
+  content: '';
+  height: 2px;
+  background-color: white;
+  width: 36px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  &.active {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: 0.15s ease-in-out;
+  }
+}
+
 .A_HeaderLine {
   height: 1px;
   width: 48px;
   background-color: white;
   white-space: nowrap;
+  transition: all 0.15s ease;
 }
 .Q_Logo {
   width: 105px;
   height: 31px;
+  transition: all 0.15s ease;
 }
 .A_HeaderLink {
   font-family: var(--interfaceFont);
@@ -41,14 +97,37 @@
   justify-content: center;
   align-items: center;
   gap: 44px;
+  height: 30px;
+
   width: 313px;
 }
 .C_HeaderSwitch {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   width: 313px;
+  height: 30px;
+
+  &.active {
+    .A_Menu {
+      background: transparent;
+    }
+    .A_Menu::before {
+      background: black;
+      opacity: 1;
+      top: 0;
+      transform: rotate(-45deg);
+      transition: 0.15s ease-in-out;
+    }
+    .A_Menu::after {
+      background: black;
+      opacity: 1;
+      top: 0;
+      transform: rotate(45deg);
+      transition: 0.15s ease-in-out;
+    }
+  }
 }
 .W_Header {
   z-index: 1000;
@@ -63,6 +142,25 @@
   background: var(--mainBlue);
   border-radius: 20px;
   width: 100%;
+  height: 50px;
+  transition: 0.5s ease-in-out;
+  align-items: flex-start;
+
+  &.active {
+    background: white;
+    align-items: flex-start;
+    transition: 0.5s ease-in-out;
+    height: 380px;
+    .Q_Logo {
+      filter: brightness(0);
+    }
+    .A_HeaderLine {
+      background-color: #010101;
+    }
+    .A_Description {
+      color: black;
+    }
+  }
 }
 .A_NavText {
   all: unset;
@@ -75,12 +173,13 @@
   cursor: pointer;
   &.active {
     background: var(--mainBlue);
+    margin-right: 20px;
     color: white;
   }
 }
 .A_FontStyle {
   font-size: var(--fontStyleSize);
-  line-height: 48px;
+  line-height: 3.5vw;
 }
 .Q_RadioButton {
   border-radius: 100px;
@@ -99,7 +198,6 @@
   justify-items: center;
   width: var(--navigationWidth);
   height: 100%;
-  border-right: 1px solid black;
 }
 .C_BreadCrumbsAndDownloadButton {
   position: fixed;
@@ -175,7 +273,7 @@
     margin-bottom: -13px;
     line-height: 75%;
     align-self: center;
-    font-size: 30.5vw;
+    font-size: 23vw;
     color: white;
   }
 }
@@ -232,7 +330,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 50px;
+  bottom: 10vh;
   background-color: var(--mainBlue);
   font-size: var(--buttonsTextSize);
   border-radius: var(--borderRadiusButtons);
@@ -315,6 +413,26 @@
 .A_FontPreview {
   text-overflow: ellipsis;
 }
+.A_Border {
+  width: 1px;
+  height: 85vh;
+  background-color: black;
+  position: fixed;
+  /* margin-left: -80px; */
+  top: 53%;
+  transform: translateY(-50%);
+  &:nth-of-type(1) {
+    left: 22vw;
+  }
+  &:nth-of-type(2) {
+    right: 80px;
+  }
+}
+.C_Borders {
+  display: flex;
+  justify-content: space-between;
+  height: 85%;
+}
 textarea {
   all: unset;
 }
@@ -327,6 +445,29 @@ textarea {
   }
 }
 @media all and (max-width: 1440px) {
+  .C_HeaderSwitch {
+    display: flex;
+  }
+  .A_Switch {
+    display: none;
+    img {
+      display: none;
+    }
+  }
+  .C_HeaderLinks {
+    display: none;
+  }
+  .Q_AnimationContainer {
+    display: none;
+  }
+  .A_Border {
+    &:nth-of-type(1) {
+      left: 40px;
+    }
+    &:nth-of-type(2) {
+      right: 40px;
+    }
+  }
   .C_BreadCrumbsAndDownloadButton {
     display: none;
   }
@@ -335,6 +476,9 @@ textarea {
   }
 }
 @media all and (max-width: 1024px) {
+  .A_FontStyle {
+    line-height: 5vw;
+  }
   #rightBorder {
     right: var(--margin);
   }
@@ -343,5 +487,13 @@ textarea {
   }
   .A_InfoTitle {
     font-size: var(--infoTitleSize);
+  }
+  .A_Border {
+    &:nth-of-type(1) {
+      left: 20px;
+    }
+    &:nth-of-type(2) {
+      right: 20px;
+    }
   }
 }

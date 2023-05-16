@@ -1,7 +1,14 @@
 .SO_Main {
   margin-left: var(--mainMarginLeft);
-  padding: 0px 120px 0 40px;
+  padding: 0px calc(var(--padding) + var(--newMargin)) 0px 0px;
+  margin-top: 100px;
   max-width: 1920px;
+  background-color: white;
+  transition: all 0.15s ease;
+
+  &.active {
+    filter: brightness(0.4);
+  }
 }
 .SO_FontPreviewScreen {
   display: flex;
@@ -17,12 +24,14 @@
 @media all and (max-width: 1440px) {
   .SO_Main {
     margin: 0;
-    padding: 0 30px;
+    padding: 0 90px;
+    padding-top: 220px;
   }
 }
 @media all and (max-width: 1024px) {
   .SO_Main {
-    // background-color: yellow;
+    padding: 0 40px;
+    padding-top: 180px;
     max-width: 1920px;
   }
 }

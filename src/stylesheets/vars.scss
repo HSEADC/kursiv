@@ -1,5 +1,7 @@
 :root {
   --mainBlue: #225ee9;
+  --padding: 40px;
+  --newMargin: 80px;
   // --mainBlue: #f6ff00;
   --mainGrey: #222222;
   --borderColor: #010101;
@@ -45,7 +47,7 @@
     --navigationWidth: var(--margin);
     --infoTextSize: 3.5vw;
     --infoTitleSize: 4vw;
-    --fontStyleSize: 3vw;
+    --fontStyleSize: 2.5vw;
     --mainTextSize: 3.5vw;
 
   }
