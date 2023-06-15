@@ -1,0 +1,20 @@
+@import 'stylesheets/reset.scss';
+@import 'stylesheets/vars.scss';
+@import 'stylesheets/fonts.scss';
+@import 'stylesheets/basics.scss';
+@import 'stylesheets/reactbasics.scss';
+.A_Title {
+  color: red;
+  font-family: 'suisse';
+  font-size: 38px;
+}
+.M_Card .A_Title {
+  font-family: 'suisse';
+  font-size: 38px;
+  color: green;
+}
+p {
+  font-family: 'suisse';
+  font-size: 38px;
+  color: rgb(0, 0, 0);
+}
