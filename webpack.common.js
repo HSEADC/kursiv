@@ -15,6 +15,7 @@ module.exports = {
     fontArticle: './src/library/fontArticle.js',
     spaces: './src/spaces.js',
     reactBasics: './src/reactBasics.jsx',
+    open: './src/open.jsx',
     rework: './src/rework.js'
   },
   output: {
@@ -113,6 +114,13 @@ module.exports = {
       template: './src/reactBasics.html',
       filename: './reactBasics.html',
       chunks: ['reactBasics']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/open.html',
+      filename: './open.html',
+      chunks: ['open']
     }),
     // Test page link
     new HtmlWebpackPlugin({

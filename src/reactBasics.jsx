@@ -1,6 +1,30 @@
-import React from 'react'
+import './reactBasics.css'
+import './images/19.png'
 import { createRoot } from 'react-dom/client'
-import A_Title from './reactBasics/A_Title.jsx'
-// Render your React component instead
+import React from 'react'
+import O_Schedule from './reactBasics/O_Schedule.jsx'
+import O_Header from './components/O_Header/O_Header.jsx'
+import O_Footer from './components/O_Footer/O_Footer.jsx'
+const mainTitle = 'Schedule'
+const events = [
+  { title: 'React workshop 09', date: '18 APR 2023' },
+  { title: 'React workshop 02', date: '18 APR 2023' },
+  { title: 'React workshop 03', date: '18 APR 2023' },
+  { title: 'React workshop 04', date: '18 APR 2023' },
+  { title: 'React workshop 06', date: '18 APR 2023' },
+  { title: 'React workshop 09', date: '18 APR 2023' },
+  { title: 'React workshop 08', date: '18 APR 2023' }
+]
 const root = createRoot(document.getElementById('app'))
-root.render(<A_Title name="ADC" />)
+root.render(
+  <>
+    <O_Header />
+    <O_Schedule
+      events={events}
+      title={events}
+      fontTitle={'Roboto'}
+      splashBackground={'../images/bg.svg'}
+    ></O_Schedule>
+    <O_Footer />
+  </>
+)

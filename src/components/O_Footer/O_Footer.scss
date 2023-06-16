@@ -1,0 +1,69 @@
+.O_Footer {
+  width: 100%;
+  height: fit-content;
+  left: 0px;
+  top: 4274px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #161616;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 0 96px 80px;
+  * {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1200px) {
+  .O_Footer {
+    flex-direction: column;
+    .C_FooterTextSection {
+      max-width: 70%;
+      * {
+        font-size: 20px;
+      }
+    }
+    .W_FooterDecoration {
+      align-self: flex-end;
+      width: 50%;
+      padding: 0;
+      .C_FooterDecorationIconAndText {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+@media all and (max-width: 900px) {
+  .O_Footer {
+    .C_FooterTextSection {
+      max-width: none;
+    }
+  }
+}
+@media all and (max-width: 650px) {
+  .O_Footer {
+    padding: 0 13px;
+    .C_FooterTextSection {
+      * {
+        gap: 0px;
+        font-size: 14px;
+      }
+      padding-top: 10px;
+      justify-content: space-between;
+      gap: 0;
+      width: 90%;
+    }
+    .W_FooterDecoration {
+      align-self: flex-end;
+      width: 50%;
+      padding-right: 10%;
+      .C_FooterDecorationIconAndText {
+        align-items: flex-end;
+      }
+      * {
+        gap: 0px;
+        font-size: 14px;
+      }
+    }
+  }
+}

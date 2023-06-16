@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default class Greeting extends React.Component {
+export default class A_Title extends React.Component {
   render() {
-    return <h1 className="A_Title"> Hello, {this.props.name}!</h1>
+    return <div className="A_Title">{this.props.text}</div>
   }
 }

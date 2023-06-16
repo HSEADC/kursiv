@@ -1,9 +1,10 @@
 .O_GlyphSlot {
+  background-image: url('../images/bg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   position: absolute;
   flex-direction: row;
-  background-color: var(--mainBlue);
-  border-radius: 15px;
   width: 700px;
   left: var(--padding);
 

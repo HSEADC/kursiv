@@ -11,6 +11,13 @@ body {
   // font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+div {
+  font-family: var(--main_font);
+  color: var(--mainGray);
+}
+a {
+  text-decoration: none;
+}
 // h1 {
 //   font-family: var(--heading_font), 'Gill Sans', 'Gill Sans MT', Calibri,
 //     'Trebuchet MS', sans-serif;
