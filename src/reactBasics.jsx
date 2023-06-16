@@ -8,12 +8,12 @@ import O_Footer from './components/O_Footer/O_Footer.jsx'
 const mainTitle = 'Schedule'
 const events = [
   { title: 'React workshop 09', date: '18 APR 2023' },
+  { title: 'React workshop 02', date: '18 APR 2023' },
+  { title: 'React workshop 03', date: '18 APR 2023' },
+  { title: 'React workshop 04', date: '18 APR 2023' },
+  { title: 'React workshop 06', date: '18 APR 2023' },
   { title: 'React workshop 09', date: '18 APR 2023' },
-  { title: 'React workshop 09', date: '18 APR 2023' },
-  { title: 'React workshop 09', date: '18 APR 2023' },
-  { title: 'React workshop 09', date: '18 APR 2023' },
-  { title: 'React workshop 09', date: '18 APR 2023' },
-  { title: 'React workshop 09', date: '18 APR 2023' }
+  { title: 'React workshop 08', date: '18 APR 2023' }
 ]
 const root = createRoot(document.getElementById('app'))
 root.render(

@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import './A_FooterText.scss'
-export default class A_FooterText extends Component {
-  render() {
-    return (
-      <div className="A_FooterText">
-        <p>{this.props.text} →</p>
-      </div>
-    )
-  }
+export default function A_FooterText({ text, link, primary }) {
+  return (
+    <a
+      className={primary ? 'A_FooterText primary' : 'A_FooterText secondary'}
+      href={link}
+    >
+      {text}
+    </a>
+  )
 }

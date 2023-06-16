@@ -1,7 +1,19 @@
 .A_FooterText {
-  p {
-    font-size: 22px;
-    line-height: 30px;
-    color: var(--mainGray);
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--mainGray);
+  font-family: var(--main_font);
+  padding: 5px;
+  width: fit-content;
+  &.primary {
+    color: var(--secondaryGray);
+  }
+  &.secondary {
+    &:hover {
+      color: black;
+      background-color: var(--mainGray);
+      border-radius: 10px;
+    }
   }
 }
