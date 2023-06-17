@@ -851,110 +851,144 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
 
 
 ;// CONCATENATED MODULE: ./src/components/C_HeaderTitleAndButton/C_HeaderTitleAndButton.jsx
-function C_HeaderTitleAndButton_typeof(obj) { "@babel/helpers - typeof"; return C_HeaderTitleAndButton_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, C_HeaderTitleAndButton_typeof(obj); }
-
-function C_HeaderTitleAndButton_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function C_HeaderTitleAndButton_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function C_HeaderTitleAndButton_createClass(Constructor, protoProps, staticProps) { if (protoProps) C_HeaderTitleAndButton_defineProperties(Constructor.prototype, protoProps); if (staticProps) C_HeaderTitleAndButton_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function C_HeaderTitleAndButton_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) C_HeaderTitleAndButton_setPrototypeOf(subClass, superClass); }
-
-function C_HeaderTitleAndButton_setPrototypeOf(o, p) { C_HeaderTitleAndButton_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return C_HeaderTitleAndButton_setPrototypeOf(o, p); }
-
-function C_HeaderTitleAndButton_createSuper(Derived) { var hasNativeReflectConstruct = C_HeaderTitleAndButton_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = C_HeaderTitleAndButton_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = C_HeaderTitleAndButton_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return C_HeaderTitleAndButton_possibleConstructorReturn(this, result); }; }
-
-function C_HeaderTitleAndButton_possibleConstructorReturn(self, call) { if (call && (C_HeaderTitleAndButton_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return C_HeaderTitleAndButton_assertThisInitialized(self); }
-
-function C_HeaderTitleAndButton_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function C_HeaderTitleAndButton_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function C_HeaderTitleAndButton_getPrototypeOf(o) { C_HeaderTitleAndButton_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return C_HeaderTitleAndButton_getPrototypeOf(o); }
 
 
 
+function C_HeaderTitleAndButton(_ref) {
+  var headerButtonTitle = _ref.headerButtonTitle;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_HeaderTitleAndButton"
+  }, /*#__PURE__*/react.createElement("div", null, "\u0422\u0451\u043C\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C ", headerButtonTitle), /*#__PURE__*/react.createElement(A_HeaderButton, null));
+}
+;// CONCATENATED MODULE: ./src/components/C_BurgerMenu/C_BurgerMenu.jsx
 
 
-var C_HeaderTitleAndButton = /*#__PURE__*/function (_Component) {
-  C_HeaderTitleAndButton_inherits(C_HeaderTitleAndButton, _Component);
-
-  var _super = C_HeaderTitleAndButton_createSuper(C_HeaderTitleAndButton);
-
-  function C_HeaderTitleAndButton() {
-    C_HeaderTitleAndButton_classCallCheck(this, C_HeaderTitleAndButton);
-
-    return _super.apply(this, arguments);
-  }
-
-  C_HeaderTitleAndButton_createClass(C_HeaderTitleAndButton, [{
-    key: "render",
-    value: function render() {
-      var headerButtonTitle = this.props.headerButtonTitle;
-      return /*#__PURE__*/react.createElement("div", {
-        className: "C_HeaderTitleAndButton"
-      }, /*#__PURE__*/react.createElement("div", null, "\u0422\u0451\u043C\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C ", headerButtonTitle), /*#__PURE__*/react.createElement(A_HeaderButton, null));
-    }
-  }]);
-
-  return C_HeaderTitleAndButton;
-}(react.Component);
+function C_BurgerMenu(_ref) {
+  var onClick = _ref.onClick,
+      active = _ref.active;
+  return /*#__PURE__*/react.createElement("div", {
+    className: active ? 'C_BurgerMenu active' : 'C_BurgerMenu',
+    onClick: onClick
+  }, /*#__PURE__*/react.createElement("span", {
+    className: "A_Menu"
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/W_HeaderMain/W_HeaderMain.jsx
 
 
+
+
+
+
+function W_HeaderMain(_ref) {
+  var active = _ref.active,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "W_HeaderMain"
+  }, /*#__PURE__*/react.createElement(C_LogoAndDescription, null), /*#__PURE__*/react.createElement(C_HeaderLinks, null), /*#__PURE__*/react.createElement(C_HeaderTitleAndButton, null), /*#__PURE__*/react.createElement(C_BurgerMenu, {
+    active: active,
+    onClick: onClick
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/A_HeaderBurgerButtons/A_HeaderBurgerButtons.jsx
+
+
+function A_HeaderBurgerButtons(_ref) {
+  var href = _ref.href,
+      buttonTitle = _ref.buttonTitle;
+  return /*#__PURE__*/react.createElement("a", {
+    href: href,
+    className: "A_HeaderBurgerButtons"
+  }, buttonTitle);
+}
+;// CONCATENATED MODULE: ./src/components/C_HeaderBurgerStack/C_HeaderBurgerStack.jsx
+
+
+
+function C_HeaderBurgerStack() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_HeaderBurgerStack"
+  }, /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
+    href: "",
+    buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+  }), /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
+    href: "",
+    buttonTitle: "\u0416\u0443\u0440\u043D\u0430\u043B"
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/A_FooterText/A_FooterText.jsx
+
+
+function A_FooterText(_ref) {
+  var text = _ref.text,
+      link = _ref.link,
+      primary = _ref.primary;
+  return /*#__PURE__*/react.createElement("a", {
+    className: primary ? 'A_FooterText primary' : 'A_FooterText secondary',
+    href: link
+  }, text);
+}
+;// CONCATENATED MODULE: ./src/components/C_HeaderBurgerDecoration/C_HeaderBurgerDecoration.jsx
+
+
+
+function C_HeaderBurgerDecoration(imageSource) {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_HeaderBurgerDecoration"
+  }, /*#__PURE__*/react.createElement("img", {
+    src: imageSource,
+    alt: ""
+  }), /*#__PURE__*/react.createElement(A_FooterText, {
+    text: "2022-2023",
+    primary: true
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/W_HeaderOpen/W_HeaderOpen.jsx
+
+
+
+
+function W_HeaderOpen() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "W_HeaderOpen"
+  }, /*#__PURE__*/react.createElement(C_HeaderBurgerDecoration, null), /*#__PURE__*/react.createElement(C_HeaderBurgerStack, null));
+}
 ;// CONCATENATED MODULE: ./src/components/O_Header/O_Header.jsx
-function O_Header_typeof(obj) { "@babel/helpers - typeof"; return O_Header_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, O_Header_typeof(obj); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function O_Header_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function O_Header_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function O_Header_createClass(Constructor, protoProps, staticProps) { if (protoProps) O_Header_defineProperties(Constructor.prototype, protoProps); if (staticProps) O_Header_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function O_Header_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) O_Header_setPrototypeOf(subClass, superClass); }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function O_Header_setPrototypeOf(o, p) { O_Header_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return O_Header_setPrototypeOf(o, p); }
-
-function O_Header_createSuper(Derived) { var hasNativeReflectConstruct = O_Header_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = O_Header_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = O_Header_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return O_Header_possibleConstructorReturn(this, result); }; }
-
-function O_Header_possibleConstructorReturn(self, call) { if (call && (O_Header_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return O_Header_assertThisInitialized(self); }
-
-function O_Header_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function O_Header_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function O_Header_getPrototypeOf(o) { O_Header_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return O_Header_getPrototypeOf(o); }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
+function O_Header() {
+  var _useState = (0,react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      active = _useState2[0],
+      setActive = _useState2[1];
 
-
-var O_Header = /*#__PURE__*/function (_Component) {
-  O_Header_inherits(O_Header, _Component);
-
-  var _super = O_Header_createSuper(O_Header);
-
-  function O_Header() {
-    O_Header_classCallCheck(this, O_Header);
-
-    return _super.apply(this, arguments);
+  function handleClick() {
+    setActive(function (active) {
+      return !active;
+    });
   }
 
-  O_Header_createClass(O_Header, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react.createElement("div", {
-        className: "O_Header"
-      }, /*#__PURE__*/react.createElement(C_LogoAndDescription, null), /*#__PURE__*/react.createElement(C_HeaderLinks, null), /*#__PURE__*/react.createElement(C_HeaderTitleAndButton, null));
-    }
-  }]);
-
-  return O_Header;
-}(react.Component);
-
-
+  return /*#__PURE__*/react.createElement("div", {
+    className: active ? 'O_Header active' : 'O_Header'
+  }, /*#__PURE__*/react.createElement(W_HeaderMain, {
+    active: active,
+    onClick: handleClick
+  }), /*#__PURE__*/react.createElement(W_HeaderOpen, null));
+}
 ;// CONCATENATED MODULE: ./src/components/A_SplashTitle/A_SplashTitle.jsx
 function A_SplashTitle_typeof(obj) { "@babel/helpers - typeof"; return A_SplashTitle_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, A_SplashTitle_typeof(obj); }
 
@@ -1125,15 +1159,114 @@ var O_Schedule = /*#__PURE__*/function (_Component) {
 }(react.Component);
 
 
+;// CONCATENATED MODULE: ./src/components/C_FooterTextColumn/C_FooterTextColumn.jsx
+
+
+
+function C_FooterTextColumn(_ref) {
+  var title = _ref.title,
+      firstLink = _ref.firstLink,
+      firstHref = _ref.firstHref,
+      secondLink = _ref.secondLink,
+      secondHref = _ref.secondHref,
+      thirdLink = _ref.thirdLink,
+      thirdHref = _ref.thirdHref;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_FooterTextColumn"
+  }, Boolean(title) && /*#__PURE__*/react.createElement(A_FooterText, {
+    text: title,
+    primary: true
+  }), Boolean(firstLink) && /*#__PURE__*/react.createElement(A_FooterText, {
+    text: firstLink,
+    link: firstHref
+  }), Boolean(secondLink) && /*#__PURE__*/react.createElement(A_FooterText, {
+    text: secondLink,
+    link: secondHref
+  }), Boolean(thirdLink) && /*#__PURE__*/react.createElement(A_FooterText, {
+    text: thirdLink,
+    link: thirdHref
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/C_FooterTextSection/C_FooterTextSection.jsx
+
+
+
+function C_FooterTextSection() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_FooterTextSection"
+  }, /*#__PURE__*/react.createElement(C_FooterTextColumn, {
+    title: "\u0421\u043B\u0435\u0434\u0438 \u0437\u0430 \u043D\u043E\u0432\u043E\u0441\u0442\u044F\u043C\u0438:",
+    firstLink: "\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u2192",
+    secondLink: "\u0432\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u2192",
+    firstHref: "https://ya.ru/",
+    secondHref: "https://ya.ru/",
+    thirdLink: "",
+    thirdHref: ""
+  }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
+    title: "\u041A\u043E\u043C\u0430\u043D\u0434\u0430:",
+    firstLink: "\u041C\u0430\u0442\u0432\u0435\u0439",
+    secondLink: "\u0421\u043E\u043D\u044F",
+    thirdLink: "\u0414\u0430\u0448\u0430"
+  }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
+    title: "\u041A\u0443\u0440\u0430\u0442\u043E\u0440\u044B:",
+    firstLink: "\u0417\u0430\u0445\u0430\u0440 \u0414\u0435\u043D\u044C",
+    secondLink: "\u0421\u043E\u043D\u044F \u041A\u0430\u0435\u043C",
+    thirdLink: ""
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/C_FooterDecorationIconAndText/C_FooterDecorationIconAndText.jsx
+
+
+
+function C_FooterDecorationIconAndText(_ref) {
+  var text = _ref.text,
+      link = _ref.link,
+      primary = _ref.primary;
+  return /*#__PURE__*/react.createElement("div", {
+    className: "C_FooterDecorationIconAndText"
+  }, /*#__PURE__*/react.createElement("img", {
+    src: "",
+    alt: ""
+  }), /*#__PURE__*/react.createElement(A_FooterText, {
+    text: "hse adc \u2192"
+  }), /*#__PURE__*/react.createElement(A_FooterText, {
+    text: "2022-2023",
+    primary: true
+  }));
+}
+;// CONCATENATED MODULE: ./src/components/W_FooterDecoration/W_FooterDecoration.jsx
+
+
+
+function W_FooterDecoration() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "W_FooterDecoration"
+  }, /*#__PURE__*/react.createElement("img", {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png",
+    alt: ""
+  }), /*#__PURE__*/react.createElement(C_FooterDecorationIconAndText, null));
+}
+;// CONCATENATED MODULE: ./src/components/O_Footer/O_Footer.jsx
+
+
+
+
+function O_Footer() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "O_Footer"
+  }, /*#__PURE__*/react.createElement(C_FooterTextSection, null), /*#__PURE__*/react.createElement(W_FooterDecoration, null));
+}
 ;// CONCATENATED MODULE: ./src/open.jsx
 
 
 
 
 
+
 var root = (0,client/* createRoot */.s)(document.getElementById('app'));
-var footer = (0,client/* createRoot */.s)(document.getElementsByClassName('footer'[0]));
+var footer = document.getElementById('footer');
 root.render( /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(O_Header, null)));
+footer.render( /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(O_Footer, null)));
 })();
 
 /******/ })()
