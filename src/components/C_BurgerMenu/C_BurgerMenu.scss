@@ -1,0 +1,54 @@
+.C_BurgerMenu {
+  display: none;
+  .A_Menu {
+    height: 2px;
+    background-color: white;
+    width: 36px;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    transition: all 0.15s ease;
+  }
+  &.active {
+    .A_Menu {
+      background-color: transparent;
+    }
+    .A_Menu::after {
+      top: 0;
+      transform: rotate(45deg);
+      transition: 0.15s ease-in-out;
+      background-color: black;
+    }
+    .A_Menu::before {
+      top: 0;
+      transform: rotate(-45deg);
+      transition: 0.15s ease-in-out;
+      background-color: black;
+    }
+  }
+  .A_Menu::after {
+    content: '';
+    height: 2px;
+    background-color: white;
+    width: 36px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    vertical-align: middle;
+    transition: all 0.15s ease;
+  }
+  .A_Menu::before {
+    content: '';
+    height: 2px;
+    background-color: white;
+    width: 36px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    vertical-align: middle;
+    transition: all 0.15s ease;
+  }
+}
