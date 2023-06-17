@@ -1,0 +1,16 @@
+.W_HeaderOpen {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 1s ease;
+  * {
+    transition: all 1s ease;
+    color: var(--mainGray);
+    filter: opacity(0%);
+  }
+  .C_HeaderTitleAndButton,
+  .C_HeaderLinks {
+    display: block;
+  }
+}

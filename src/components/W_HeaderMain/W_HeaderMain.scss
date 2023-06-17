@@ -1,0 +1,19 @@
+.W_HeaderMain {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 46px;
+  height: 46px;
+  align-items: center;
+  .C_HeaderLinks {
+    height: 60%;
+    .A_HeaderLink {
+      width: 120px;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

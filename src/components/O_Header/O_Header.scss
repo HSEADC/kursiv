@@ -1,16 +1,18 @@
 .O_Header {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
   top: 20px;
   left: 50%;
   transform: translate(-50%);
   width: 95%;
   border-radius: 14px;
   height: 46px;
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--mainBlue);
   transition: all 1s ease;
   &.open {
@@ -20,5 +22,39 @@
   .C_HeaderLinks,
   .C_HeaderTitleAndButton {
     width: 300px;
+  }
+}
+@media all and (max-width: 900px) {
+  .O_Header {
+    .C_HeaderTitleAndButton,
+    .C_HeaderLinks {
+      display: none;
+    }
+    .C_BurgerMenu {
+      display: block;
+    }
+    &.active {
+      background: white;
+      align-items: flex-start;
+      transition: 0.5s ease-in-out;
+      height: 300px;
+      color: black;
+      .C_LogoAndDescription,
+      .C_HeaderLinks,
+      .C_HeaderTitleAndButton,
+      .C_BurgerMenu {
+        * {
+          color: BLACK;
+        }
+      }
+      .W_HeaderOpen {
+        height: 200px;
+        * {
+          color: black;
+          transition: all 1s ease;
+          filter: opacity(100%);
+        }
+      }
+    }
   }
 }

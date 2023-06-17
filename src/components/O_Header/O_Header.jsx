@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import './O_Header.scss'
-import C_HeaderLinks from '../С_HeaderLinks/С_HeaderLinks.jsx'
-import C_LogoAndDescription from '../C_LogoAndDescription/C_LogoAndDescription.jsx'
-import C_HeaderTitleAndButton from '../C_HeaderTitleAndButton/C_HeaderTitleAndButton.jsx'
+import W_HeaderMain from '../W_HeaderMain/W_HeaderMain.jsx'
+import W_HeaderOpen from '../W_HeaderOpen/W_HeaderOpen.jsx'
 export default function O_Header() {
+  const [active, setActive] = useState(false)
+  function handleClick() {
+    setActive((active) => !active)
+  }
   return (
-    <div className="O_Header">
-      <C_LogoAndDescription />
-      <C_HeaderLinks />
-      <C_HeaderTitleAndButton />
+    <div className={active ? 'O_Header active' : 'O_Header'}>
+      <W_HeaderMain active={active} onClick={handleClick} />
+      <W_HeaderOpen />
     </div>
   )
 }
