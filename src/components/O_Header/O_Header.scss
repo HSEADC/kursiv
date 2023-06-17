@@ -2,7 +2,8 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 30px;
   overflow: hidden;
   top: 20px;
   left: 50%;
@@ -37,7 +38,7 @@
       background: white;
       align-items: flex-start;
       transition: 0.5s ease-in-out;
-      height: 300px;
+      height: 580px;
       color: black;
       .C_LogoAndDescription,
       .C_HeaderLinks,
@@ -48,9 +49,7 @@
         }
       }
       .W_HeaderOpen {
-        height: 200px;
         * {
-          color: black;
           transition: all 1s ease;
           filter: opacity(100%);
         }
