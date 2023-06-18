@@ -909,10 +909,10 @@ function C_HeaderBurgerStack() {
   return /*#__PURE__*/react.createElement("div", {
     className: "C_HeaderBurgerStack"
   }, /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
-    href: "",
+    href: "../index.html",
     buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
   }), /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
-    href: "",
+    href: "../journal.html",
     buttonTitle: "\u0416\u0443\u0440\u043D\u0430\u043B"
   }));
 }
@@ -1015,7 +1015,7 @@ function A_SplashTitle_getPrototypeOf(o) { A_SplashTitle_getPrototypeOf = Object
 
 
 
-var A_SplashTitle = /*#__PURE__*/function (_React$Component) {
+var A_SplashTitle_A_SplashTitle = /*#__PURE__*/function (_React$Component) {
   A_SplashTitle_inherits(A_SplashTitle, _React$Component);
 
   var _super = A_SplashTitle_createSuper(A_SplashTitle);
@@ -1041,124 +1041,30 @@ var A_SplashTitle = /*#__PURE__*/function (_React$Component) {
 
 
 ;// CONCATENATED MODULE: ./src/components/Q_SplashBackground/Q_SplashBackground.jsx
-function Q_SplashBackground_typeof(obj) { "@babel/helpers - typeof"; return Q_SplashBackground_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, Q_SplashBackground_typeof(obj); }
-
-function Q_SplashBackground_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function Q_SplashBackground_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function Q_SplashBackground_createClass(Constructor, protoProps, staticProps) { if (protoProps) Q_SplashBackground_defineProperties(Constructor.prototype, protoProps); if (staticProps) Q_SplashBackground_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function Q_SplashBackground_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) Q_SplashBackground_setPrototypeOf(subClass, superClass); }
-
-function Q_SplashBackground_setPrototypeOf(o, p) { Q_SplashBackground_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return Q_SplashBackground_setPrototypeOf(o, p); }
-
-function Q_SplashBackground_createSuper(Derived) { var hasNativeReflectConstruct = Q_SplashBackground_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = Q_SplashBackground_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = Q_SplashBackground_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return Q_SplashBackground_possibleConstructorReturn(this, result); }; }
-
-function Q_SplashBackground_possibleConstructorReturn(self, call) { if (call && (Q_SplashBackground_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return Q_SplashBackground_assertThisInitialized(self); }
-
-function Q_SplashBackground_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function Q_SplashBackground_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function Q_SplashBackground_getPrototypeOf(o) { Q_SplashBackground_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return Q_SplashBackground_getPrototypeOf(o); }
 
 
-
-
-var Q_SplashBackground = /*#__PURE__*/function (_Component) {
-  Q_SplashBackground_inherits(Q_SplashBackground, _Component);
-
-  var _super = Q_SplashBackground_createSuper(Q_SplashBackground);
-
-  function Q_SplashBackground() {
-    Q_SplashBackground_classCallCheck(this, Q_SplashBackground);
-
-    return _super.apply(this, arguments);
-  }
-
-  Q_SplashBackground_createClass(Q_SplashBackground, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          type = _this$props.type,
-          splashBackground = _this$props.splashBackground;
-
-      if (type == 'color') {
-        return /*#__PURE__*/react.createElement("div", null);
-      } else if (type == 'image') {
-        return /*#__PURE__*/react.createElement("img", {
-          src: splashBackground
-        });
-      }
-    }
-  }]);
-
-  return Q_SplashBackground;
-}(react.Component);
-
-
+function Q_SplashBackground_Q_SplashBackground(_ref) {
+  var isImage = _ref.isImage;
+  return /*#__PURE__*/React.createElement("img", {
+    className: "Q_SplashBackground",
+    src: isImage ? 'https://v5.airtableusercontent.com/v1/18/18/1687060800000/Ld7o68tBXc9Hhvg5hrK7SQ/_qnA3VaQvMTVPiPwwRkpNC84hCWO64mYOoGBOtrgJiEoxHznewR-ZcXlCxe_hfF5tQe59SnjgWSzC595u5JyxeykcIFrTn76-vaH2fqHqGc/og5aAL1S7B8CqxlB6jz2RfDb6lvL0VqHCcCkkvUwzWU' : ''
+  });
+}
 ;// CONCATENATED MODULE: ./src/components/O_SplashScreen/O_SplashScreen.jsx
-function O_SplashScreen_typeof(obj) { "@babel/helpers - typeof"; return O_SplashScreen_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, O_SplashScreen_typeof(obj); }
-
-function O_SplashScreen_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function O_SplashScreen_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function O_SplashScreen_createClass(Constructor, protoProps, staticProps) { if (protoProps) O_SplashScreen_defineProperties(Constructor.prototype, protoProps); if (staticProps) O_SplashScreen_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function O_SplashScreen_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) O_SplashScreen_setPrototypeOf(subClass, superClass); }
-
-function O_SplashScreen_setPrototypeOf(o, p) { O_SplashScreen_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return O_SplashScreen_setPrototypeOf(o, p); }
-
-function O_SplashScreen_createSuper(Derived) { var hasNativeReflectConstruct = O_SplashScreen_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = O_SplashScreen_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = O_SplashScreen_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return O_SplashScreen_possibleConstructorReturn(this, result); }; }
-
-function O_SplashScreen_possibleConstructorReturn(self, call) { if (call && (O_SplashScreen_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return O_SplashScreen_assertThisInitialized(self); }
-
-function O_SplashScreen_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function O_SplashScreen_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function O_SplashScreen_getPrototypeOf(o) { O_SplashScreen_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return O_SplashScreen_getPrototypeOf(o); }
 
 
 
 
-
-
-var O_Schedule = /*#__PURE__*/function (_Component) {
-  O_SplashScreen_inherits(O_Schedule, _Component);
-
-  var _super = O_SplashScreen_createSuper(O_Schedule);
-
-  function O_Schedule() {
-    O_SplashScreen_classCallCheck(this, O_Schedule);
-
-    return _super.apply(this, arguments);
-  }
-
-  O_SplashScreen_createClass(O_Schedule, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          fontTitle = _this$props.fontTitle,
-          splashBackground = _this$props.splashBackground,
-          type = _this$props.type;
-      return /*#__PURE__*/react.createElement("div", {
-        className: "O_SplashScreen"
-      }, /*#__PURE__*/react.createElement(Q_SplashBackground, {
-        splashBackground: splashBackground,
-        type: type
-      }), /*#__PURE__*/react.createElement(A_SplashTitle, {
-        fontTitle: fontTitle
-      }));
-    }
-  }]);
-
-  return O_Schedule;
-}(react.Component);
-
-
+function O_Schedule(_ref) {
+  var fontTitle = _ref.fontTitle;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "O_SplashScreen"
+  }, /*#__PURE__*/React.createElement(A_SplashTitle, {
+    fontTitle: fontTitle
+  }), /*#__PURE__*/React.createElement(Q_SplashBackground, {
+    isImage: true
+  }));
+}
 ;// CONCATENATED MODULE: ./src/components/C_FooterTextColumn/C_FooterTextColumn.jsx
 
 

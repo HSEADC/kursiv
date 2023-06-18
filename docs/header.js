@@ -587,41 +587,9 @@ if (true) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -630,13 +598,11 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 
-;// CONCATENATED MODULE: ./src/images/19.png
-const _19_namespaceObject = __webpack_require__.p + "images/5400d0b9a29efec76a94.png";
-// EXTERNAL MODULE: ./node_modules/react-dom/client.js
-var client = __webpack_require__(745);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(294);
-;// CONCATENATED MODULE: ./src/reactBasics/A_Title.jsx
+// EXTERNAL MODULE: ./node_modules/react-dom/client.js
+var client = __webpack_require__(745);
+;// CONCATENATED MODULE: ./src/components/A_HeaderLink/A_HeaderLink.jsx
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -661,268 +627,19 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var A_Title = /*#__PURE__*/function (_React$Component) {
-  _inherits(A_Title, _React$Component);
-
-  var _super = _createSuper(A_Title);
-
-  function A_Title() {
-    _classCallCheck(this, A_Title);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(A_Title, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react.createElement("div", {
-        className: "A_Title"
-      }, this.props.text);
-    }
-  }]);
-
-  return A_Title;
-}(react.Component);
-
-
-;// CONCATENATED MODULE: ./src/reactBasics/M_Card.jsx
-function M_Card_typeof(obj) { "@babel/helpers - typeof"; return M_Card_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, M_Card_typeof(obj); }
-
-function M_Card_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function M_Card_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function M_Card_createClass(Constructor, protoProps, staticProps) { if (protoProps) M_Card_defineProperties(Constructor.prototype, protoProps); if (staticProps) M_Card_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function M_Card_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) M_Card_setPrototypeOf(subClass, superClass); }
-
-function M_Card_setPrototypeOf(o, p) { M_Card_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return M_Card_setPrototypeOf(o, p); }
-
-function M_Card_createSuper(Derived) { var hasNativeReflectConstruct = M_Card_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = M_Card_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = M_Card_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return M_Card_possibleConstructorReturn(this, result); }; }
-
-function M_Card_possibleConstructorReturn(self, call) { if (call && (M_Card_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return M_Card_assertThisInitialized(self); }
-
-function M_Card_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function M_Card_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function M_Card_getPrototypeOf(o) { M_Card_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return M_Card_getPrototypeOf(o); }
-
-
-
-
-var M_Title = /*#__PURE__*/function (_React$Component) {
-  M_Card_inherits(M_Title, _React$Component);
-
-  var _super = M_Card_createSuper(M_Title);
-
-  function M_Title() {
-    M_Card_classCallCheck(this, M_Title);
-
-    return _super.apply(this, arguments);
-  }
-
-  M_Card_createClass(M_Title, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          date = _this$props.date,
-          title = _this$props.title;
-      return /*#__PURE__*/react.createElement("div", {
-        className: "M_Card"
-      }, /*#__PURE__*/react.createElement(A_Title, {
-        text: title
-      }), /*#__PURE__*/react.createElement("p", null, date));
-    }
-  }]);
-
-  return M_Title;
-}(react.Component);
-
-
-;// CONCATENATED MODULE: ./src/components/A_SplashTitle/A_SplashTitle.jsx
-function A_SplashTitle_typeof(obj) { "@babel/helpers - typeof"; return A_SplashTitle_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, A_SplashTitle_typeof(obj); }
-
-function A_SplashTitle_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function A_SplashTitle_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function A_SplashTitle_createClass(Constructor, protoProps, staticProps) { if (protoProps) A_SplashTitle_defineProperties(Constructor.prototype, protoProps); if (staticProps) A_SplashTitle_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function A_SplashTitle_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) A_SplashTitle_setPrototypeOf(subClass, superClass); }
-
-function A_SplashTitle_setPrototypeOf(o, p) { A_SplashTitle_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return A_SplashTitle_setPrototypeOf(o, p); }
-
-function A_SplashTitle_createSuper(Derived) { var hasNativeReflectConstruct = A_SplashTitle_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = A_SplashTitle_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = A_SplashTitle_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return A_SplashTitle_possibleConstructorReturn(this, result); }; }
-
-function A_SplashTitle_possibleConstructorReturn(self, call) { if (call && (A_SplashTitle_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return A_SplashTitle_assertThisInitialized(self); }
-
-function A_SplashTitle_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function A_SplashTitle_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function A_SplashTitle_getPrototypeOf(o) { A_SplashTitle_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return A_SplashTitle_getPrototypeOf(o); }
-
-
-
-
-var A_SplashTitle = /*#__PURE__*/function (_React$Component) {
-  A_SplashTitle_inherits(A_SplashTitle, _React$Component);
-
-  var _super = A_SplashTitle_createSuper(A_SplashTitle);
-
-  function A_SplashTitle() {
-    A_SplashTitle_classCallCheck(this, A_SplashTitle);
-
-    return _super.apply(this, arguments);
-  }
-
-  A_SplashTitle_createClass(A_SplashTitle, [{
-    key: "render",
-    value: function render() {
-      var fontTitle = this.props.fontTitle;
-      return /*#__PURE__*/react.createElement("div", {
-        className: "A_SplashTitle"
-      }, fontTitle);
-    }
-  }]);
-
-  return A_SplashTitle;
-}(react.Component);
-
-
-;// CONCATENATED MODULE: ./src/components/Q_SplashBackground/Q_SplashBackground.jsx
-
-
-function Q_SplashBackground(_ref) {
-  var isImage = _ref.isImage;
-  return /*#__PURE__*/react.createElement("img", {
-    className: "Q_SplashBackground",
-    src: isImage ? 'https://v5.airtableusercontent.com/v1/18/18/1687060800000/Ld7o68tBXc9Hhvg5hrK7SQ/_qnA3VaQvMTVPiPwwRkpNC84hCWO64mYOoGBOtrgJiEoxHznewR-ZcXlCxe_hfF5tQe59SnjgWSzC595u5JyxeykcIFrTn76-vaH2fqHqGc/og5aAL1S7B8CqxlB6jz2RfDb6lvL0VqHCcCkkvUwzWU' : ''
-  });
-}
-;// CONCATENATED MODULE: ./src/components/O_SplashScreen/O_SplashScreen.jsx
-
-
-
-
-function O_SplashScreen_O_Schedule(_ref) {
-  var fontTitle = _ref.fontTitle;
-  return /*#__PURE__*/react.createElement("div", {
-    className: "O_SplashScreen"
-  }, /*#__PURE__*/react.createElement(A_SplashTitle, {
-    fontTitle: fontTitle
-  }), /*#__PURE__*/react.createElement(Q_SplashBackground, {
-    isImage: true
-  }));
-}
-;// CONCATENATED MODULE: ./src/reactBasics/O_Schedule.jsx
-function O_Schedule_typeof(obj) { "@babel/helpers - typeof"; return O_Schedule_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, O_Schedule_typeof(obj); }
-
-function O_Schedule_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function O_Schedule_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function O_Schedule_createClass(Constructor, protoProps, staticProps) { if (protoProps) O_Schedule_defineProperties(Constructor.prototype, protoProps); if (staticProps) O_Schedule_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function O_Schedule_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) O_Schedule_setPrototypeOf(subClass, superClass); }
-
-function O_Schedule_setPrototypeOf(o, p) { O_Schedule_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return O_Schedule_setPrototypeOf(o, p); }
-
-function O_Schedule_createSuper(Derived) { var hasNativeReflectConstruct = O_Schedule_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = O_Schedule_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = O_Schedule_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return O_Schedule_possibleConstructorReturn(this, result); }; }
-
-function O_Schedule_possibleConstructorReturn(self, call) { if (call && (O_Schedule_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return O_Schedule_assertThisInitialized(self); }
-
-function O_Schedule_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function O_Schedule_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function O_Schedule_getPrototypeOf(o) { O_Schedule_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return O_Schedule_getPrototypeOf(o); }
-
-
-
-
-
-
-var O_Schedule = /*#__PURE__*/function (_Component) {
-  O_Schedule_inherits(O_Schedule, _Component);
-
-  var _super = O_Schedule_createSuper(O_Schedule);
-
-  function O_Schedule() {
-    O_Schedule_classCallCheck(this, O_Schedule);
-
-    return _super.apply(this, arguments);
-  }
-
-  O_Schedule_createClass(O_Schedule, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          events = _this$props.events,
-          mainTitle = _this$props.mainTitle,
-          fontTitle = _this$props.fontTitle,
-          splashBackground = _this$props.splashBackground;
-      var cards = events.map(function (event, i) {
-        return /*#__PURE__*/react.createElement(M_Title, {
-          title: event.title,
-          date: event.date,
-          key: i
-        });
-      });
-      return /*#__PURE__*/react.createElement("div", {
-        className: "O_Schedule"
-      }, /*#__PURE__*/react.createElement(O_SplashScreen_O_Schedule, {
-        fontTitle: fontTitle,
-        splashBackground: splashBackground
-      }), /*#__PURE__*/react.createElement(A_Title, {
-        mainTitle: mainTitle
-      }), cards);
-    }
-  }]);
-
-  return O_Schedule;
-}(react.Component);
-
-
-;// CONCATENATED MODULE: ./src/components/A_HeaderLink/A_HeaderLink.jsx
-function A_HeaderLink_typeof(obj) { "@babel/helpers - typeof"; return A_HeaderLink_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, A_HeaderLink_typeof(obj); }
-
-function A_HeaderLink_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function A_HeaderLink_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function A_HeaderLink_createClass(Constructor, protoProps, staticProps) { if (protoProps) A_HeaderLink_defineProperties(Constructor.prototype, protoProps); if (staticProps) A_HeaderLink_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function A_HeaderLink_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) A_HeaderLink_setPrototypeOf(subClass, superClass); }
-
-function A_HeaderLink_setPrototypeOf(o, p) { A_HeaderLink_setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return A_HeaderLink_setPrototypeOf(o, p); }
-
-function A_HeaderLink_createSuper(Derived) { var hasNativeReflectConstruct = A_HeaderLink_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = A_HeaderLink_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = A_HeaderLink_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return A_HeaderLink_possibleConstructorReturn(this, result); }; }
-
-function A_HeaderLink_possibleConstructorReturn(self, call) { if (call && (A_HeaderLink_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return A_HeaderLink_assertThisInitialized(self); }
-
-function A_HeaderLink_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function A_HeaderLink_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function A_HeaderLink_getPrototypeOf(o) { A_HeaderLink_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return A_HeaderLink_getPrototypeOf(o); }
-
-
-
 
 var A_HeaderLink = /*#__PURE__*/function (_React$Component) {
-  A_HeaderLink_inherits(A_HeaderLink, _React$Component);
+  _inherits(A_HeaderLink, _React$Component);
 
-  var _super = A_HeaderLink_createSuper(A_HeaderLink);
+  var _super = _createSuper(A_HeaderLink);
 
   function A_HeaderLink() {
-    A_HeaderLink_classCallCheck(this, A_HeaderLink);
+    _classCallCheck(this, A_HeaderLink);
 
     return _super.apply(this, arguments);
   }
 
-  A_HeaderLink_createClass(A_HeaderLink, [{
+  _createClass(A_HeaderLink, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -1272,141 +989,12 @@ function O_Header() {
     onClick: handleClick
   }), /*#__PURE__*/react.createElement(W_HeaderOpen, null));
 }
-;// CONCATENATED MODULE: ./src/components/C_FooterTextColumn/C_FooterTextColumn.jsx
+;// CONCATENATED MODULE: ./src/header.jsx
 
 
 
-function C_FooterTextColumn(_ref) {
-  var title = _ref.title,
-      firstLink = _ref.firstLink,
-      firstHref = _ref.firstHref,
-      secondLink = _ref.secondLink,
-      secondHref = _ref.secondHref,
-      thirdLink = _ref.thirdLink,
-      thirdHref = _ref.thirdHref;
-  return /*#__PURE__*/react.createElement("div", {
-    className: "C_FooterTextColumn"
-  }, Boolean(title) && /*#__PURE__*/react.createElement(A_FooterText, {
-    text: title,
-    primary: true
-  }), Boolean(firstLink) && /*#__PURE__*/react.createElement(A_FooterText, {
-    text: firstLink,
-    link: firstHref
-  }), Boolean(secondLink) && /*#__PURE__*/react.createElement(A_FooterText, {
-    text: secondLink,
-    link: secondHref
-  }), Boolean(thirdLink) && /*#__PURE__*/react.createElement(A_FooterText, {
-    text: thirdLink,
-    link: thirdHref
-  }));
-}
-;// CONCATENATED MODULE: ./src/components/C_FooterTextSection/C_FooterTextSection.jsx
-
-
-
-function C_FooterTextSection() {
-  return /*#__PURE__*/react.createElement("div", {
-    className: "C_FooterTextSection"
-  }, /*#__PURE__*/react.createElement(C_FooterTextColumn, {
-    title: "\u0421\u043B\u0435\u0434\u0438 \u0437\u0430 \u043D\u043E\u0432\u043E\u0441\u0442\u044F\u043C\u0438:",
-    firstLink: "\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u2192",
-    secondLink: "\u0432\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u2192",
-    firstHref: "https://ya.ru/",
-    secondHref: "https://ya.ru/",
-    thirdLink: "",
-    thirdHref: ""
-  }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
-    title: "\u041A\u043E\u043C\u0430\u043D\u0434\u0430:",
-    firstLink: "\u041C\u0430\u0442\u0432\u0435\u0439",
-    secondLink: "\u0421\u043E\u043D\u044F",
-    thirdLink: "\u0414\u0430\u0448\u0430"
-  }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
-    title: "\u041A\u0443\u0440\u0430\u0442\u043E\u0440\u044B:",
-    firstLink: "\u0417\u0430\u0445\u0430\u0440 \u0414\u0435\u043D\u044C",
-    secondLink: "\u0421\u043E\u043D\u044F \u041A\u0430\u0435\u043C",
-    thirdLink: ""
-  }));
-}
-;// CONCATENATED MODULE: ./src/components/C_FooterDecorationIconAndText/C_FooterDecorationIconAndText.jsx
-
-
-
-function C_FooterDecorationIconAndText(_ref) {
-  var text = _ref.text,
-      link = _ref.link,
-      primary = _ref.primary;
-  return /*#__PURE__*/react.createElement("div", {
-    className: "C_FooterDecorationIconAndText"
-  }, /*#__PURE__*/react.createElement("img", {
-    src: "",
-    alt: ""
-  }), /*#__PURE__*/react.createElement(A_FooterText, {
-    text: "hse adc \u2192"
-  }), /*#__PURE__*/react.createElement(A_FooterText, {
-    text: "2022-2023",
-    primary: true
-  }));
-}
-;// CONCATENATED MODULE: ./src/components/W_FooterDecoration/W_FooterDecoration.jsx
-
-
-
-function W_FooterDecoration() {
-  return /*#__PURE__*/react.createElement("div", {
-    className: "W_FooterDecoration"
-  }, /*#__PURE__*/react.createElement("img", {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png",
-    alt: ""
-  }), /*#__PURE__*/react.createElement(C_FooterDecorationIconAndText, null));
-}
-;// CONCATENATED MODULE: ./src/components/O_Footer/O_Footer.jsx
-
-
-
-
-function O_Footer() {
-  return /*#__PURE__*/react.createElement("div", {
-    className: "O_Footer"
-  }, /*#__PURE__*/react.createElement(C_FooterTextSection, null), /*#__PURE__*/react.createElement(W_FooterDecoration, null));
-}
-;// CONCATENATED MODULE: ./src/reactBasics.jsx
-
-
-
-
-
-
-
-var mainTitle = 'Schedule';
-var events = [{
-  title: 'React workshop 09',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 02',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 03',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 04',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 06',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 09',
-  date: '18 APR 2023'
-}, {
-  title: 'React workshop 08',
-  date: '18 APR 2023'
-}];
-var root = (0,client/* createRoot */.s)(document.getElementById('app'));
-root.render( /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement(O_Header, null), /*#__PURE__*/react.createElement(O_Schedule, {
-  events: events,
-  title: events,
-  fontTitle: 'Roboto',
-  splashBackground: '../images/bg.svg'
-}), /*#__PURE__*/react.createElement(O_Footer, null)));
+var root = (0,client/* createRoot */.s)(document.querySelector('#header'));
+root.render( /*#__PURE__*/react.createElement(O_Header, null));
 })();
 
 /******/ })()
