@@ -12,6 +12,16 @@
   padding: 12% 5%;
   align-self: center;
 }
+.W_LogoWithSignAndText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+}
 .O_FontSlot {
   overflow-x: hidden;
   min-height: fit-content;

@@ -2,4 +2,7 @@
 @import 'stylesheets/vars.scss';
 @import 'stylesheets/fonts.scss';
 @import 'stylesheets/basics.scss';
-@import 'stylesheets/open.scss';
+@import 'components/newAtoms.scss';
+@import 'components/newMolecules.scss';
+@import 'components/newOrganisms.scss';
+@import 'components/newSuperOrganisms.scss';
