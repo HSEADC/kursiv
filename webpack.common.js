@@ -16,7 +16,9 @@ module.exports = {
     spaces: './src/spaces.js',
     reactBasics: './src/reactBasics.jsx',
     open: './src/open.jsx',
-    rework: './src/rework.js'
+    rework: './src/rework.js',
+    header: './src/header.jsx',
+    footer: './src/footer.jsx'
   },
   output: {
     filename: '[name].js',
@@ -120,7 +122,7 @@ module.exports = {
 
       template: './src/open.html',
       filename: './open.html',
-      chunks: ['open']
+      chunks: ['open', 'header', 'footer']
     }),
     // Test page link
     new HtmlWebpackPlugin({
@@ -227,8 +229,16 @@ module.exports = {
     // Partials
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/analytics.html'),
-        location: 'analytics',
+        path: path.join(__dirname, './src/partials/O_Footer.html'),
+        location: 'O_Footer',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/O_Header.html'),
+        location: 'O_Header',
         template_filename: '*',
         priority: 'replace'
       }

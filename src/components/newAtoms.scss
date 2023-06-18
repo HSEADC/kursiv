@@ -5,6 +5,37 @@
     max-width: 100%;
   }
 }
+.A_MainText {
+  text-indent: 5.7vw;
+  font-size: 46px;
+}
+.A_Heading {
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+  font-size: 2.1vw;
+  color: var(--mainGray);
+  height: 10.5vw;
+  background: var(--mainBlue);
+  border-radius: 25px;
+}
+
+.A_SecondHeading {
+  border: 2px solid var(--mainGray);
+  padding: 5px 14px;
+  width: fit-content;
+  border-radius: 25px;
+  font-size: 1.3vw;
+  transition: 0.2s all ease;
+  cursor: pointer;
+  &:visited {
+    color: var(--mainGray);
+  }
+  &:hover {
+    background-color: var(--mainGray);
+    color: black;
+  }
+}
 .A_NavText {
   all: unset;
   display: flex;
@@ -18,6 +49,20 @@
     background: var(--mainBlue);
     color: white;
   }
+}
+.A_Sign {
+  color: black;
+  font-size: 24px;
+}
+.A_SupportiveText {
+  color: black;
+  font-size: 16px;
+}
+.C_SignRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
 }
 .A_FontStyle {
   font-size: var(--fontStyleSize);
@@ -272,7 +317,28 @@ textarea {
     display: none;
   }
 }
+@media all and (max-width: 1200px) {
+  .A_Sign {
+    color: black;
+    font-size: 24px;
+  }
+  .A_SupportiveText {
+    color: black;
+    font-size: 16px;
+  }
+  .C_SignRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
 @media all and (max-width: 1024px) {
+  .A_SecondHeading {
+    padding: 10px;
+    font-size: 2.2vw;
+  }
+
   #rightBorder {
     right: var(--margin);
   }
@@ -281,5 +347,14 @@ textarea {
   }
   .A_InfoTitle {
     font-size: var(--infoTitleSize);
+  }
+}
+@media all and (max-width: 700px) {
+  .A_SecondHeading {
+    padding: 10px;
+    font-size: 4vw;
+  }
+  .A_MainText {
+    font-size: 4.1vw;
   }
 }

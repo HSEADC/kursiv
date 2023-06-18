@@ -12,6 +12,12 @@
 .W_Usage {
   padding-left: var(--padding);
 }
+
+.M_MainTextAndSupBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .C_UseCases {
   display: flex;
   flex-direction: row;
