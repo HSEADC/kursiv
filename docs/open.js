@@ -753,7 +753,8 @@ var C_LogoAndDescription = /*#__PURE__*/function (_Component) {
   C_LogoAndDescription_createClass(C_LogoAndDescription, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react.createElement("div", {
+      return /*#__PURE__*/react.createElement("a", {
+        href: "../",
         className: "C_LogoAndDescription"
       }, /*#__PURE__*/react.createElement("div", null, "\u041A\u0443\u0440\u0441\u0438\u0432 \u2014"), /*#__PURE__*/react.createElement("div", null, "\u2014 \u0448\u0440\u0438\u0444\u0442\u043E\u0432\u043E\u0435 \u043C\u0435\u0434\u0438\u0430"));
     }
@@ -909,7 +910,7 @@ function C_HeaderBurgerStack() {
   return /*#__PURE__*/react.createElement("div", {
     className: "C_HeaderBurgerStack"
   }, /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
-    href: "../index.html",
+    href: "../library.html",
     buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
   }), /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
     href: "../journal.html",
