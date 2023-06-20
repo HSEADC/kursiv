@@ -756,7 +756,7 @@ var C_LogoAndDescription = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react.createElement("a", {
         href: "../",
         className: "C_LogoAndDescription"
-      }, /*#__PURE__*/react.createElement("div", null, "\u041A\u0443\u0440\u0441\u0438\u0432 \u2014"), /*#__PURE__*/react.createElement("div", null, "\u2014 \u0448\u0440\u0438\u0444\u0442\u043E\u0432\u043E\u0435 \u043C\u0435\u0434\u0438\u0430"));
+      }, /*#__PURE__*/react.createElement("div", null, "\u041A\u0423\u0420\u0421\u0418\u0412 \u2014\xA0"), /*#__PURE__*/react.createElement("div", null, "\u0448\u0440\u0438\u0444\u0442\u043E\u0432\u043E\u0435 \u043C\u0435\u0434\u0438\u0430"));
     }
   }]);
 
@@ -937,7 +937,7 @@ function C_HeaderBurgerDecoration(imageSource) {
   return /*#__PURE__*/react.createElement("div", {
     className: "C_HeaderBurgerDecoration"
   }, /*#__PURE__*/react.createElement("img", {
-    src: imageSource,
+    src: "https://kursiv.adc.ac/share/Q_HeaderSoloA.svg",
     alt: ""
   }), /*#__PURE__*/react.createElement(A_FooterText, {
     text: "2022-2023",

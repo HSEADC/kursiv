@@ -598,7 +598,7 @@ function W_FooterDecoration() {
   return /*#__PURE__*/react.createElement("div", {
     className: "W_FooterDecoration"
   }, /*#__PURE__*/react.createElement("img", {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png",
+    src: "https://kursiv.adc.ac/share/A_FooterAA.svg",
     alt: ""
   }), /*#__PURE__*/react.createElement(C_FooterDecorationIconAndText, null));
 }
