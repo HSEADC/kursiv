@@ -1,8 +1,8 @@
 .SO_Main {
+  grid-area: 1/1;
   margin-top: 100px;
-  max-width: 1380px;
+  max-width: 100%;
   transition: all 0.15s ease;
-
   &.active {
     filter: brightness(0.4);
   }
@@ -20,15 +20,29 @@
 }
 @media all and (max-width: 1440px) {
   .SO_Main {
+    width: 100%;
     margin: 0;
-    padding: 0 90px;
-    padding-top: 220px;
+    .O_AboutFontMain,
+    .O_AboutFontStyles,
+    .O_GlyphsAndGlyphSlot {
+      padding: 90px 90px 90px 90px;
+    }
   }
 }
 @media all and (max-width: 1024px) {
   .SO_Main {
-    padding: 0 40px;
-    padding-top: 180px;
-    max-width: 1920px;
+  }
+}
+@media all and (max-width: 824px) {
+  .SO_Main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .O_AboutFontMain,
+    .O_AboutFontStyles,
+    .O_GlyphsAndGlyphSlot {
+      flex-direction: column;
+      padding: 50px;
+    }
   }
 }
