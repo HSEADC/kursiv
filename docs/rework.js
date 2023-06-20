@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < screens.length; i++) {
       var screenPosition = screens[i].getBoundingClientRect().top;
 
-      if (screenPosition <= 0 && screenPosition <= window.innerHeight) {
+      if (screenPosition <= 0 + window.innerHeight / 2 && screenPosition <= window.innerHeight) {
         navTitles.forEach(function (title) {
           title.classList.remove('active');
         });
