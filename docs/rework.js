@@ -56,13 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     return changedWidth;
   }
 
-  document.querySelector('.C_HeaderSwitch').addEventListener('click', function () {
-    document.querySelector('.C_HeaderSwitch').classList.toggle('active');
-    document.querySelector('.W_Header').classList.toggle('active');
-    document.querySelector('.SO_Main').classList.toggle('active');
-  });
-  console.log(getChangedWindowSize());
-
   if (window.innerWidth > 1440) {
     var adjustLayoutOnScroll = function adjustLayoutOnScroll() {
       if (glyphAnimationTriggers[0].getBoundingClientRect().top <= 0 && glyphAnimationTriggers[0].getBoundingClientRect().top >= glyphAnimationTriggers[0].offsetHeight * -1) {
