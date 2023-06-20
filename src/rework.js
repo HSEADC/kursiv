@@ -24,12 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     return changedWidth
   }
-  document.querySelector('.C_HeaderSwitch').addEventListener('click', () => {
-    document.querySelector('.C_HeaderSwitch').classList.toggle('active')
-    document.querySelector('.W_Header').classList.toggle('active')
-    document.querySelector('.SO_Main').classList.toggle('active')
-  })
-  console.log(getChangedWindowSize())
   if (window.innerWidth > 1440) {
     function adjustLayoutOnScroll() {
       if (

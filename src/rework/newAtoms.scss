@@ -96,6 +96,7 @@
   font-size: 26px;
   cursor: pointer;
   &.active {
+    width: fit-content;
     background: var(--mainBlue);
     margin-right: 20px;
     color: white;

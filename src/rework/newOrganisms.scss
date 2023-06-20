@@ -13,6 +13,7 @@
   align-self: center;
 }
 .O_AboutFontMain {
+  padding: 70px 70px 70px var(--navigationWidth);
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -26,6 +27,17 @@
   height: 100vh;
   border-radius: 0 0 30px 30px;
   background: #161616;
+}
+.O_AboutFontStyles {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 70px 70px 70px var(--navigationWidth);
+  background-color: var(--mainBlack);
+  border-radius: 30px 30px;
+  .M_MainTextAndSupBlock {
+    color: var(--mainGray);
+  }
 }
 
 .W_LogoWithSignAndText {
