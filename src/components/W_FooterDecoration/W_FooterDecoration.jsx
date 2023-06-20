@@ -4,10 +4,7 @@ import C_FooterDecorationIconAndText from '../C_FooterDecorationIconAndText/C_Fo
 export default function W_FooterDecoration() {
   return (
     <div className="W_FooterDecoration">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1920px-SNice.svg.png"
-        alt=""
-      />
+      <img src="https://kursiv.adc.ac/share/A_FooterAA.svg" alt="" />
       <C_FooterDecorationIconAndText />
     </div>
   )
