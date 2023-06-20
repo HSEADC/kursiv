@@ -5,6 +5,13 @@
     max-width: 100%;
   }
 }
+.A_MainIllustrations {
+  display: block;
+}
+.A_MainIllustrationsMobile {
+  display: none;
+}
+
 .A_MainText {
   text-indent: 5.7vw;
   font-size: 46px;
@@ -27,6 +34,7 @@
   border-radius: 25px;
   font-size: 1.3vw;
   transition: 0.2s all ease;
+  color: var(--mainGray);
   cursor: pointer;
   &:visited {
     color: var(--mainGray);
@@ -338,6 +346,12 @@ textarea {
     padding: 10px;
     font-size: 2.2vw;
   }
+  .A_MainIllustrations {
+    display: none;
+  }
+  .A_MainIllustrationsMobile {
+    display: block;
+  }
 
   #rightBorder {
     right: var(--margin);
@@ -349,10 +363,16 @@ textarea {
     font-size: var(--infoTitleSize);
   }
 }
+@media all and (max-width: 1024px) {
+  .A_SecondHeading {
+    padding: 15px;
+    font-size: 2.9vw;
+  }
+}
 @media all and (max-width: 700px) {
   .A_SecondHeading {
     padding: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .A_MainText {
     font-size: 4.1vw;

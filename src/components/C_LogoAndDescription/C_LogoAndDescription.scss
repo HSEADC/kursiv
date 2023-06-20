@@ -2,4 +2,7 @@
   display: flex;
   white-space: nowrap;
   width: 313px;
+  div {
+    color: var(--mainGray);
+  }
 }

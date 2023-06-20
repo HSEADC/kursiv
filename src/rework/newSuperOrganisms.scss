@@ -1,9 +1,6 @@
 .SO_Main {
-  margin-left: var(--mainMarginLeft);
-  padding: 0px calc(var(--padding) + var(--newMargin)) 0px 0px;
   margin-top: 100px;
-  max-width: 1920px;
-  background-color: white;
+  max-width: 1380px;
   transition: all 0.15s ease;
 
   &.active {

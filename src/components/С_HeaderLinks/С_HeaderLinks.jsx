@@ -6,11 +6,11 @@ export default class C_HeaderLinks extends React.Component {
     return (
       <div className="C_HeaderLinks">
         <A_HeaderLink
-          href="../../index.html"
+          href="../../library.html"
           buttonTitle="Библиотека"
         ></A_HeaderLink>
         <A_HeaderLink
-          href="../../index.html"
+          href="../../journal.html"
           buttonTitle="Журнал"
         ></A_HeaderLink>
       </div>

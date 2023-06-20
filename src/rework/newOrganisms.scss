@@ -12,6 +12,22 @@
   padding: 12% 5%;
   align-self: center;
 }
+.O_AboutFontMain {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.O_SplashScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 56px 0px;
+  height: 100vh;
+  border-radius: 0 0 30px 30px;
+  background: #161616;
+}
+
 .W_LogoWithSignAndText {
   display: flex;
   flex-direction: column;
@@ -85,12 +101,6 @@
   .A_LanguagesButton {
     align-self: center;
   }
-}
-.O_Header {
-  position: fixed;
-  width: var(--navigationWidthPixels);
-  height: 100vh;
-  top: 0;
 }
 
 .O_Pairs {

@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
       styles[index].classList.toggle('extended')
     })
   }
-  function breadCrumbsDocumentTitleSet() {
-    document.getElementsByClassName(
-      'A_BreadCrumbs'
-    )[0].innerHTML = `<a>Главный экран</a> · <a href="">${document.title}</a>`
-  }
-  breadCrumbsDocumentTitleSet()
+  // function breadCrumbsDocumentTitleSet() {
+  //   document.getElementsByClassName(
+  //     'A_BreadCrumbs'
+  //   )[0].innerHTML = `<a>Главный экран</a> · <a href="">${document.title}</a>`
+  // }
+  // breadCrumbsDocumentTitleSet()
   function buildObjectWithFilteredFonts(object) {
     let wrapperObject = {}
     for (let fontStyle of object) {

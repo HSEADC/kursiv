@@ -37,9 +37,10 @@
   }
 }
 .M_ArticleBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   max-height: 100%;
   padding: 25px;
@@ -47,7 +48,7 @@
   .C_ColumnArticle {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 1vw;
     .C_SupportiveTextColumn {
       align-self: flex-start;
       height: fit-content;
@@ -61,9 +62,11 @@
     align-items: flex-end;
   }
   img {
-    align-self: flex-end;
+    position: absolute;
+    top: 30px;
+    right: 30px;
     height: 7.2vw;
-    width: fit-content;
+    width: auto;
   }
   &:nth-child(1) {
     background-color: var(--mainBlue);
@@ -180,6 +183,9 @@
   height: fit-content;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  .C_SupportiveTextColumn {
+    font-size: 0.9vw;
+  }
 }
 .W_MenuBottom {
   width: 338px;
@@ -295,6 +301,9 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .M_ArticleBlock {
+    // padding: 0px;
+  }
   .C_Rectangles {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 45px 20px;
@@ -332,6 +341,16 @@
   .M_InformationColumn {
     gap: 20px;
   }
+  .C_ArticleBlocks {
+    gap: 16px;
+    .A_Heading {
+      font-size: 3.8vw;
+    }
+    .C_SupportiveTextColumn {
+      font-size: 1.5vw;
+    }
+  }
+
   .M_UsageExample {
     gap: 0px;
     .A_InfoTitle {

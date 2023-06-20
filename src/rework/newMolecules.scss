@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 10vh;
   padding-left: var(--padding);
 }
 .W_InformationColumns {
@@ -12,7 +11,13 @@
 .W_Usage {
   padding-left: var(--padding);
 }
-
+.W_FontArticle {
+  width: 100%;
+  max-width: 100%;
+  gap: 300px;
+  display: flex;
+  flex-direction: row;
+}
 .M_MainTextAndSupBlock {
   display: flex;
   flex-direction: row;
@@ -168,7 +173,10 @@
   gap: 100px;
 }
 .W_Nav {
+  position: sticky;
+  top: 220px;
   overflow: hidden;
+  min-width: 22vw;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -177,6 +185,9 @@
 
   .C_NavList {
     padding: 0 30px;
+    a {
+      color: black;
+    }
   }
 }
 .W_BorderAndNavList {

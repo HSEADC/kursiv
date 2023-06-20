@@ -92,7 +92,7 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['library']
+      chunks: ['open', 'header', 'footer']
     }),
 
     new HtmlWebpackPlugin({
@@ -146,7 +146,7 @@ module.exports = {
       hash: true,
       template: './src/library/rework.html',
       filename: './library/rework.html',
-      chunks: ['rework']
+      chunks: ['rework', 'header', 'footer']
     }),
 
     new HtmlWebpackPlugin({
@@ -165,13 +165,12 @@ module.exports = {
       chunks: ['fontArticle']
     }),
 
-    //Library page link
     new HtmlWebpackPlugin({
       hash: true,
 
       template: './src/library.html',
       filename: './library.html',
-      chunks: ['library']
+      chunks: ['library', 'header', 'footer']
     }),
     // Article page link
     new HtmlWebpackPlugin({
