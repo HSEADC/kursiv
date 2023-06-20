@@ -25,11 +25,11 @@
   justify-content: space-between;
 }
 .C_UseCases {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   img {
-    width: 90%;
+    width: 100%;
     border-radius: 12px;
   }
   div {
@@ -285,6 +285,9 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .C_UseCases {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .W_GlyphTable {
     max-width: 100%;
     height: fit-content;
@@ -317,6 +320,20 @@
   }
 }
 @media all and (max-width: 824px) {
+  .C_UseCases {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    .M_UsageExample {
+      display: flex;
+      gap: 10px;
+      .A_SecondHeading {
+        font-size: 4vw;
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
+  }
   .M_MainTextAndSupBlock {
     flex-direction: column;
     gap: 50px;
