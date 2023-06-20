@@ -116,6 +116,7 @@
   }
 }
 .C_NavList {
+  justify-content: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -446,6 +447,17 @@ textarea {
     }
     &:nth-of-type(2) {
       right: 20px;
+    }
+  }
+}
+@media all and (max-width: 800px) {
+  .A_MainText {
+    text-indent: 30vw;
+    font-size: 4vw;
+    white-space: normal;
+    max-width: 100%;
+    br {
+      display: none;
     }
   }
 }

@@ -34,7 +34,7 @@
   .SO_Main {
   }
 }
-@media all and (max-width: 824px) {
+@media all and (max-width: 900px) {
   .SO_Main {
     width: 100%;
     margin: 0;
@@ -45,6 +45,20 @@
     .W_Usage {
       flex-direction: column;
       padding: 50px;
+    }
+  }
+}
+@media all and (max-width: 700px) {
+  .SO_Main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .O_AboutFontMain,
+    .O_AboutFontStyles,
+    .O_GlyphsAndGlyphSlot,
+    .W_Usage {
+      flex-direction: column;
+      padding: 30px;
     }
   }
 }

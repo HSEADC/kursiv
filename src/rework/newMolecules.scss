@@ -178,12 +178,12 @@
 .W_Nav {
   grid-area: 1/1;
   position: sticky;
-  top: 220px;
+  top: 1px;
   overflow: hidden;
   min-width: 22vw;
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  height: 100vh;
   width: var(--navigationWidth);
   justify-content: center;
 
@@ -319,6 +319,14 @@
 @media all and (max-width: 824px) {
   .M_MainTextAndSupBlock {
     flex-direction: column;
+    gap: 50px;
+    .Q_SupportiveText {
+      align-self: flex-end;
+    }
+    .A_MainText {
+      text-indent: 30vw;
+      font-size: 4vw;
+    }
   }
   .W_GlyphSlot {
     display: none;

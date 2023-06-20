@@ -74,7 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navTitles = document.querySelectorAll('.A_NavText')
     for (let i = 0; i < screens.length; i++) {
       const screenPosition = screens[i].getBoundingClientRect().top
-      if (screenPosition <= 0 && screenPosition <= window.innerHeight) {
+      if (
+        screenPosition <= 0 + window.innerHeight / 2 &&
+        screenPosition <= window.innerHeight
+      ) {
         navTitles.forEach((title) => {
           title.classList.remove('active')
         })
