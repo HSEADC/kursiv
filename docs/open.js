@@ -700,10 +700,10 @@ var C_HeaderLinks = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react.createElement("div", {
         className: "C_HeaderLinks"
       }, /*#__PURE__*/react.createElement(A_HeaderLink, {
-        href: "../../index.html",
+        href: "../../library.html",
         buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
       }), /*#__PURE__*/react.createElement(A_HeaderLink, {
-        href: "../../index.html",
+        href: "../../journal.html",
         buttonTitle: "\u0416\u0443\u0440\u043D\u0430\u043B"
       }));
     }
@@ -1104,20 +1104,24 @@ function C_FooterTextSection() {
     title: "\u0421\u043B\u0435\u0434\u0438 \u0437\u0430 \u043D\u043E\u0432\u043E\u0441\u0442\u044F\u043C\u0438:",
     firstLink: "\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u2192",
     secondLink: "\u0432\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u0435 \u2192",
-    firstHref: "https://ya.ru/",
-    secondHref: "https://ya.ru/",
+    firstHref: "https://t.me/kursiv_media",
+    secondHref: "https://vk.com/kursiv_media",
     thirdLink: "",
     thirdHref: ""
   }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
     title: "\u041A\u043E\u043C\u0430\u043D\u0434\u0430:",
     firstLink: "\u041C\u0430\u0442\u0432\u0435\u0439",
+    firstHref: "https://t.me/hounsout",
     secondLink: "\u0421\u043E\u043D\u044F",
-    thirdLink: "\u0414\u0430\u0448\u0430"
+    secondHref: "https://t.me/kochuka",
+    thirdLink: "\u0414\u0430\u0448\u0430",
+    thirdHref: "https://t.me/klimovaddasha"
   }), /*#__PURE__*/react.createElement(C_FooterTextColumn, {
     title: "\u041A\u0443\u0440\u0430\u0442\u043E\u0440\u044B:",
     firstLink: "\u0417\u0430\u0445\u0430\u0440 \u0414\u0435\u043D\u044C",
+    firstHref: "https://t.me/dayglobal",
     secondLink: "\u0421\u043E\u043D\u044F \u041A\u0430\u0435\u043C",
-    thirdLink: ""
+    secondHref: "https://t.me/sonia_kaem"
   }));
 }
 ;// CONCATENATED MODULE: ./src/components/C_FooterDecorationIconAndText/C_FooterDecorationIconAndText.jsx

@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   for (var index = 0; index < arrow.length; index++) {
     _loop(index);
-  }
+  } // function breadCrumbsDocumentTitleSet() {
+  //   document.getElementsByClassName(
+  //     'A_BreadCrumbs'
+  //   )[0].innerHTML = `<a>Главный экран</a> · <a href="">${document.title}</a>`
+  // }
+  // breadCrumbsDocumentTitleSet()
 
-  function breadCrumbsDocumentTitleSet() {
-    document.getElementsByClassName('A_BreadCrumbs')[0].innerHTML = "<a>\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u044D\u043A\u0440\u0430\u043D</a> \xB7 <a href=\"\">".concat(document.title, "</a>");
-  }
-
-  breadCrumbsDocumentTitleSet();
 
   function buildObjectWithFilteredFonts(object) {
     var wrapperObject = {};

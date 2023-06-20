@@ -700,10 +700,10 @@ var C_HeaderLinks = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react.createElement("div", {
         className: "C_HeaderLinks"
       }, /*#__PURE__*/react.createElement(A_HeaderLink, {
-        href: "../../index.html",
+        href: "../../library.html",
         buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
       }), /*#__PURE__*/react.createElement(A_HeaderLink, {
-        href: "../../index.html",
+        href: "../../journal.html",
         buttonTitle: "\u0416\u0443\u0440\u043D\u0430\u043B"
       }));
     }
