@@ -5,24 +5,158 @@
 }
 .SO_FontPreviewScreen {
   display: flex;
+  width: 100%;
+  max-width: 100%;
   padding-top: 100px;
   flex-direction: column;
   gap: 30px;
 }
 .SO_MainLibrary {
-  margin-left: var(--navigationWidthPixels);
-  padding: 0px 100px 0 40px;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 60px;
+  padding: 60px 50px 60px 50px;
   max-width: 1920px;
 }
+@media all and (max-width: 1680px) {
+  .SO_FontPreviewScreen {
+    gap: 10px;
+  }
+  .SO_MainLibrary {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 60px;
+    padding: 60px 50px 60px 50px;
+    max-width: 1920px;
+    .A_FontPreview {
+      font-size: 60px;
+      line-height: 40px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: #010101;
+      img {
+      }
+    }
+  }
+}
 @media all and (max-width: 1440px) {
+  .SO_FontPreviewScreen {
+    gap: 0;
+  }
+  .SO_MainLibrary {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 60px;
+    padding: 60px 50px 60px 50px;
+    max-width: 1920px;
+    .A_FontPreview {
+      font-size: 40px;
+      line-height: 40px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: #010101;
+      img {
+      }
+    }
+  }
   .SO_Main {
     margin: 0;
     padding: 0 90px;
   }
 }
 @media all and (max-width: 1024px) {
+  .SO_MainLibrary {
+    padding: 60px 20px 0 20px;
+    .O_FontSlot {
+      .M_FontTitleSubtitle {
+        height: 43px;
+        :nth-child(1) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .O_Menu {
+      display: none;
+    }
+  }
   .SO_Main {
-    // background-color: yellow;
+    max-width: 1920px;
+  }
+}
+@media all and (max-width: 834px) {
+  .SO_MainLibrary {
+    .O_Menu {
+      display: none;
+    }
+    .O_FontSlot {
+      .M_FontTitleSubtitle {
+        height: 43px;
+        :nth-child(1) {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+  .SO_Main {
+    max-width: 1920px;
+  }
+}
+@media all and (max-width: 834px) {
+  .SO_MainLibrary {
+    // padding: 60px 20px 0 20px;
+    .O_Menu {
+      display: none;
+    }
+    .O_FontSlot {
+      .M_FontTitleSubtitle {
+        height: 43px;
+        :nth-child(1) {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+  .SO_Main {
+    max-width: 1920px;
+  }
+}
+@media all and (max-width: 600px) {
+  .SO_FontPreviewScreen {
+    gap: 40px;
+  }
+  .SO_MainLibrary {
+    padding: 60px 20px 0 20px;
+    .O_Menu {
+      display: none;
+    }
+    .O_FontSlot {
+      padding: 0;
+      border-radius: 0;
+      .M_FontTitleSubtitle {
+        height: 44px;
+        :nth-child(1) {
+          font-size: 30px;
+        }
+      }
+      .A_FontPreview {
+        img {
+          max-width: none;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .SO_Main {
     max-width: 1920px;
   }
 }

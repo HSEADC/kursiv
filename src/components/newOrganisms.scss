@@ -8,6 +8,38 @@
   padding: 12% 5%;
   align-self: center;
 }
+.O_TextAndEmail {
+  width: 100%;
+  max-width: 100vw;
+  padding: 60px 10% 60px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 25px;
+  flex-direction: column;
+  gap: 3vw;
+  .A_MainText {
+    color: black;
+    white-space: nowrap;
+  }
+  .C_SupportiveTextColumn {
+    color: black;
+    white-space: normal;
+  }
+}
+.O_TextAndIllustrations {
+  width: 100%;
+  max-width: 100vw;
+  padding: 60px 10% 60px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 25px;
+  flex-direction: column;
+  background-color: #161616;
+  gap: 3vw;
+  .A_MainText {
+    text-indent: 8.7vw;
+  }
+}
 .W_LogoWithSignAndText {
   display: flex;
   flex-direction: column;
@@ -63,9 +95,13 @@
   flex-direction: column;
   padding: 10px 20px;
   border-radius: 25px;
+  gap: 20px;
   transition: all 0.2s ease-in-out;
   justify-content: space-between;
   padding-bottom: 1vh;
+  &:hover {
+    background-color: white;
+  }
   &.hidden {
     display: none;
   }
@@ -75,7 +111,6 @@
   .M_FontInfo {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     .Q_FontArrow {
       cursor: pointer;
       img {
@@ -118,12 +153,6 @@
     align-self: center;
   }
 }
-.O_Header {
-  position: fixed;
-  width: var(--navigationWidthPixels);
-  height: 100vh;
-  top: 0;
-}
 
 .O_Pairs {
   display: flex;
@@ -145,26 +174,29 @@
   .A_SecondHeading {
     border: 2px solid black;
     color: black;
+    &:visited {
+      color: black;
+    }
+    &:hover {
+      background-color: black;
+      color: var(--mainGray);
+    }
   }
 }
+
 .O_Menu {
   padding-top: 25px;
   padding-bottom: 145px;
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    175.97deg,
-    #5552ff 26.2%,
-    #225ee9 52.59%,
-    #4b54fa 81.07%
-  );
-  width: 370px;
+  position: sticky;
+  top: 100px;
+  background: url(https://v5.airtableusercontent.com/v1/18/18/1687226400000/xcY9Fyq3nU6AJqjtl2khdQ/Tqra98-q4H1tqW2YHci4aJ4UMnfET_7VJgKHZk9qLAxjXbtOIkxllGljfr7c3TiYg8geY7tDY7fNUXDvRLGmQQ/MzA2iZKKV_z6Z6WT9tQ3hjDZONvwVrwTMQnmRR8ZXIw);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 418px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 826px;
+  height: 791px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -206,17 +238,32 @@
   }
 }
 @media all and (max-width: 1300px) {
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles {
+    padding: 5% 5%;
+  }
   .W_LogoWithSignAndText {
     padding: 0 3%;
   }
 }
 @media all and (max-width: 1024px) {
+  .O_TextAndIllustrations {
+    .A_MainText {
+      text-indent: 14.2vw;
+    }
+  }
+
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles,
+  .O_TextAndIllustrations {
+    padding: 5% 5%;
+  }
+  .W_LogoWithSignAndText {
+    padding: 0 3%;
+  }
+
   .O_TextAndRectangles {
     gap: 6vw;
-    .A_SecondHeading {
-      padding: 10px;
-      font-size: 2.2vw;
-    }
     .M_MainTextAndSupBlock {
       .A_MainText {
         font-size: 2.7vw;
@@ -238,12 +285,15 @@
   }
 }
 @media all and (max-width: 700px) {
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles {
+    padding: 60px 5% 60px;
+  }
+  .O_TextAndIllustrations {
+    gap: 6vw;
+  }
   .O_TextAndRectangles {
     gap: 6vw;
-    .A_SecondHeading {
-      padding: 10px;
-      font-size: 4vw;
-    }
     .M_MainTextAndSupBlock {
       flex-direction: column;
       .A_MainText {
@@ -259,7 +309,7 @@
         }
         .A_SecondHeading {
           transition: none;
-          font-size: 4vw;
+          font-size: 5vw;
           height: 22vw;
         }
       }
@@ -273,12 +323,21 @@
     .C_ArticleBlocks {
       grid-template-columns: repeat(1, 1fr);
       .M_ArticleBlock {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
         .A_Heading {
-          font-size: 4vw;
+          width: 100%;
+          font-size: 7vw;
           height: 22vw;
         }
         img {
-          height: 10vw;
+          top: 0;
+          right: 0;
+          transform: translate(0);
+          position: relative;
+          height: 20vw;
         }
         .C_ColumnArticle {
           .C_SupportiveTextColumn {
