@@ -31,13 +31,30 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
   for (var index = 0; index < arrow.length; index++) {
     _loop(index);
-  } // function breadCrumbsDocumentTitleSet() {
+  }
+
+  var buttons = document.querySelectorAll('.A_FontAddClass');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var addClass = button.getAttribute('data-addClass');
+      var elements = document.querySelectorAll('.A_FontPreview');
+      elements.forEach(function (element) {
+        element.classList.remove('Upper', 'Lower', 'Bold');
+      });
+      buttons.forEach(function (button) {
+        button.classList.remove('active');
+      });
+      button.classList.add('active');
+      elements.forEach(function (element) {
+        element.classList.add(addClass);
+      });
+    });
+  }); // function breadCrumbsDocumentTitleSet() {
   //   document.getElementsByClassName(
   //     'A_BreadCrumbs'
   //   )[0].innerHTML = `<a>Главный экран</a> · <a href="">${document.title}</a>`
   // }
   // breadCrumbsDocumentTitleSet()
-
 
   function buildObjectWithFilteredFonts(object) {
     var wrapperObject = {};
