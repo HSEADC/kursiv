@@ -11,6 +11,45 @@
 .W_Usage {
   padding: 70px 70px 70px var(--navigationWidth);
 }
+.C_SignRowMulti {
+  z-index: 99;
+  margin-top: 40px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.C_SignRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+}
+.C_Rectangles {
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(3, 1fr);
+  .M_Rectangle {
+    width: 100%;
+    .A_SecondHeading {
+      white-space: normal;
+      display: flex;
+      align-items: flex-end;
+      padding: 32px;
+      font-size: 1.3vw;
+      width: 100%;
+      height: 10.5vw;
+      cursor: default;
+    }
+  }
+}
+
+.A_Sign {
+  color: var(--mainGray);
+  font-size: 24px;
+}
+
 .W_FontArticle {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -291,8 +330,29 @@
     width: 41vw;
   }
 }
-
 @media all and (max-width: 1024px) {
+  .M_ArticleBlock {
+    // padding: 0px;
+  }
+  .C_Rectangles {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 45px 20px;
+    .M_Rectangle {
+      .A_Heading,
+      .A_SecondHeading {
+        padding: 20px 20px 15px 20px;
+      }
+      .A_Heading {
+        font-size: 3vw;
+        height: 14.5vw;
+      }
+      .A_SecondHeading {
+        font-size: 2.2vw;
+        height: 14.5vw;
+      }
+    }
+  }
+
   .C_UseCases {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -328,6 +388,21 @@
   }
 }
 @media all and (max-width: 824px) {
+  .C_Rectangles {
+    grid-template-columns: repeat(1, 1fr);
+    .M_Rectangle {
+      .A_Heading {
+        font-size: 4vw;
+        height: 22vw;
+      }
+      .A_SecondHeading {
+        transition: none;
+        font-size: 4vw;
+        height: 22vw;
+      }
+    }
+  }
+
   .C_UseCases {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;

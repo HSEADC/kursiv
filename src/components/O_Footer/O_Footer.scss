@@ -26,7 +26,7 @@
     }
     .W_FooterDecoration {
       align-self: flex-end;
-      width: 50%;
+      // width: 50%;
       padding: 0;
       .C_FooterDecorationIconAndText {
         align-items: flex-end;
@@ -43,7 +43,7 @@
 }
 @media all and (max-width: 650px) {
   .O_Footer {
-    padding: 0 13px;
+    padding: 0 13px 40px;
     .C_FooterTextSection {
       * {
         gap: 0px;
@@ -56,7 +56,7 @@
     }
     .W_FooterDecoration {
       align-self: flex-end;
-      width: 50%;
+      // width: 50%;
       padding-right: 10%;
       .C_FooterDecorationIconAndText {
         align-items: flex-end;
