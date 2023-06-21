@@ -1,64 +1,90 @@
 .O_GlyphSlot {
-  background-image: url('../images/bg.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   display: flex;
-  position: absolute;
   flex-direction: row;
-  width: 700px;
-  left: 0;
-
+  background-color: var(--mainBlue);
+  border-radius: 15px;
+  width: 90%;
   height: 90%;
+  padding: 12% 5%;
   align-self: center;
 }
-.O_AboutFontMain {
-  padding: 70px 70px 70px var(--navigationWidth);
+.O_TextAndEmail {
+  width: 100%;
+  max-width: 100vw;
+  padding: 60px 10% 60px;
+  overflow: hidden;
   display: flex;
+  border-radius: 25px;
   flex-direction: column;
-  gap: 80px;
-}
-.O_SplashScreen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 56px 0px;
-  height: 100vh;
-  border-radius: 0 0 30px 30px;
-  background: #161616;
-  &.journal {
-    img {
-      width: 80%;
-    }
+  gap: 3vw;
+  .A_MainText {
+    color: black;
+    white-space: nowrap;
   }
-  img {
-    width: 95%;
+  .C_SupportiveTextColumn {
+    color: black;
+    white-space: normal;
   }
 }
-.O_AboutFontStyles {
+.O_TextAndIllustrations {
+  width: 100%;
+  max-width: 100vw;
+  padding: 60px 10% 60px;
+  overflow: hidden;
   display: flex;
+  border-radius: 25px;
   flex-direction: column;
-  gap: 100px;
-  padding: 70px 70px 70px var(--navigationWidth);
-  background-color: var(--mainBlack);
-  border-radius: 30px 30px;
-  .M_MainTextAndSupBlock {
-    color: var(--mainGray);
+  background-color: #161616;
+  gap: 3vw;
+  .A_MainText {
+    text-indent: 8.7vw;
   }
 }
-
 .W_LogoWithSignAndText {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
   width: 100%;
   max-width: 100vw;
+  padding: 0 10%;
   overflow: hidden;
   height: 100vh;
-  &.BG {
-    background-color: var(--mainBlack);
+  white-space: nowrap;
+}
+.C_SignRowMulti {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.C_SupportiveTextColumn {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 30%;
+  align-self: end;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.O_TextAndRectangles {
+  gap: 3vw;
+  width: 100%;
+  padding: 60px 10% 60px;
+  border-radius: 30px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  .C_Rectangles {
+    .M_Rectangle {
+      .A_SecondHeading {
+        transition: none;
+      }
+    }
   }
 }
 .O_FontSlot {
@@ -69,9 +95,13 @@
   flex-direction: column;
   padding: 10px 20px;
   border-radius: 25px;
+  gap: 20px;
   transition: all 0.2s ease-in-out;
   justify-content: space-between;
   padding-bottom: 1vh;
+  &:hover {
+    background-color: white;
+  }
   &.hidden {
     display: none;
   }
@@ -81,7 +111,6 @@
   .M_FontInfo {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     .Q_FontArrow {
       cursor: pointer;
       img {
@@ -114,8 +143,7 @@
     color: #010101;
   }
 }
-.W_Languages {
-  padding-left: var(--padding);
+.O_Languages {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -133,24 +161,95 @@
   height: 40vw;
   align-items: flex-end;
 }
+.O_ArticleAndMainText {
+  width: 100%;
+  padding: 60px 10% 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  .A_MainText {
+    text-indent: 13.7vw;
+    color: black;
+  }
+  .A_SecondHeading {
+    border: 2px solid black;
+    color: black;
+    &:visited {
+      color: black;
+    }
+    &:hover {
+      background-color: black;
+      color: var(--mainGray);
+    }
+  }
+}
+.O_ArticlesPreview {
+  padding: 0 5%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-column-gap: 60px;
+  justify-items: center;
+
+  min-height: 90vh;
+  align-items: center;
+  gap: 60px;
+  .W_ArticlePreview {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 20px;
+    .A_SecondHeading {
+      color: var(--mainBlack);
+      border: 2px solid var(--mainBlack);
+      &:visited {
+        color: var(--mainBlack);
+      }
+      &:hover {
+        background-color: var(--mainBlack);
+        color: var(--mainGray);
+      }
+    }
+    .M_Rectangle {
+      width: 500px;
+      .A_Heading {
+        font-size: 36px;
+        height: 256px;
+      }
+      .A_SecondHeading {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 30px;
+        padding: 50px 20px 20px 20px;
+        height: 256px;
+        width: 100%;
+        color: var(--mainBlack);
+        border: 2px solid var(--mainBlack);
+        cursor: default;
+        &:visited {
+          color: var(--mainBlack);
+        }
+        &:hover {
+          background-color: transparent;
+          color: var(--mainBlack);
+          border: 2px solid var(--mainBlack);
+        }
+      }
+    }
+  }
+}
 .O_Menu {
-  padding-top: 25px;
-  padding-bottom: 145px;
-  border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(
-    175.97deg,
-    #5552ff 26.2%,
-    #225ee9 52.59%,
-    #4b54fa 81.07%
-  );
-  width: 370px;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 826px;
+  padding: 15px 15px 70px;
+  position: sticky;
+  top: 100px;
+  background-image: url('/src/images/Q_MenuBG.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 418px;
+  height: 791px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -178,66 +277,117 @@
     }
   }
 }
-.O_FixedElements {
-  // pointer-events: none;
+.O_Usage {
+  height: 50vh;
   display: flex;
-  flex-direction: column;
-  gap: 50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0 30px;
-  z-index: 9999999;
-}
-@media all and (max-width: 1690px) and (min-width: 1025px) {
-  .O_GlyphSlot {
-    width: 600px;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 90%;
+    border-radius: 12px;
+  }
+  div {
+    flex-grow: 1;
   }
 }
-@media all and (max-width: 1440px) {
-  .O_GlyphSlot {
-    padding: 100px;
-    left: 0;
-    width: 41vw;
-  }
-}
-@media all and (max-width: 1200px) {
-  .O_SplashScreen {
-    img {
-      width: 90%;
+@media all and (max-width: 1650px) {
+  .O_ArticlesPreview {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-column-gap: 30px;
+    .W_ArticlePreview {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      flex-direction: column;
+      .M_Rectangle {
+        width: 400px;
+        .A_Heading {
+          font-size: 28px;
+          height: 256px;
+        }
+        .A_SecondHeading {
+          font-size: 20px;
+        }
+      }
     }
   }
-  .O_GlyphSlot {
-    padding: 40% 0 40% 0;
-    left: 0;
-    width: 41vw;
+}
+@media all and (max-width: 1400px) {
+  .O_ArticlesPreview {
+    padding: 0 10% 5vw;
+    margin-top: 10vw;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+    .W_ArticlePreview {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      flex-direction: column;
+      .M_Rectangle {
+        width: 100%;
+        .A_Heading {
+          font-size: 2.4vw;
+          height: 200px;
+        }
+        .A_SecondHeading {
+          font-size: 2.1vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 1300px) {
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles {
+    padding: 5% 5%;
+  }
+  .W_LogoWithSignAndText {
+    padding: 0 3%;
   }
 }
 @media all and (max-width: 1024px) {
-  .O_SplashScreen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 56px 0px;
-    height: 100vh;
-    border-radius: 0 0 30px 30px;
-    background: #161616;
-    .Q_SplashBackground {
-      width: 95%;
-      display: none;
-    }
-    .U_Mobile {
-      display: block;
+  .O_ArticlesPreview {
+    padding: 0 10% 5vw;
+    min-height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    .W_ArticlePreview {
+      .M_Rectangle {
+        width: 100%;
+        .A_Heading {
+          font-size: 4vw;
+          height: 256px;
+        }
+        .A_SecondHeading {
+          font-size: 3.5vw;
+        }
+      }
     }
   }
-  .O_AboutFontStyles {
-    img {
-      display: none;
+  .O_TextAndIllustrations {
+    .A_MainText {
+      text-indent: 14.2vw;
     }
-    .A_Mobile {
-      display: block;
+  }
+
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles,
+  .O_TextAndIllustrations {
+    padding: 5% 5%;
+  }
+  .W_LogoWithSignAndText {
+    padding: 0 3%;
+  }
+
+  .O_TextAndRectangles {
+    gap: 6vw;
+    .M_MainTextAndSupBlock {
+      .A_MainText {
+        font-size: 2.7vw;
+      }
     }
   }
   .O_Languages {
@@ -251,6 +401,90 @@
     height: fit-content;
     img {
       width: 98%;
+    }
+  }
+}
+@media all and (max-width: 700px) {
+  .O_ArticlesPreview {
+    padding: 0 5% 10vw;
+    margin-top: 20vw;
+    min-height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    .W_ArticlePreview {
+      .M_Rectangle {
+        width: 100%;
+        .A_Heading {
+          height: 200px !important;
+          font-size: 6vw;
+          height: 256px;
+        }
+        .A_SecondHeading {
+          height: 200px;
+          font-size: 5vw;
+        }
+      }
+    }
+  }
+  .O_ArticleAndMainText,
+  .O_TextAndRectangles {
+    padding: 60px 5% 60px;
+  }
+  .O_TextAndIllustrations {
+    gap: 6vw;
+  }
+  .O_TextAndRectangles {
+    gap: 6vw;
+    .M_MainTextAndSupBlock {
+      flex-direction: column;
+      .A_MainText {
+        font-size: 4.1vw;
+      }
+    }
+    .C_Rectangles {
+      grid-template-columns: repeat(1, 1fr);
+      .M_Rectangle {
+        .A_Heading {
+          font-size: 4vw;
+          height: 22vw;
+        }
+        .A_SecondHeading {
+          transition: none;
+          font-size: 5vw;
+          height: 22vw;
+        }
+      }
+    }
+  }
+  .O_ArticleAndMainText {
+    .A_MainText {
+      white-space: nowrap;
+      text-indent: 21.7vw;
+    }
+    .C_ArticleBlocks {
+      grid-template-columns: repeat(1, 1fr);
+      .M_ArticleBlock {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        .A_Heading {
+          width: 100%;
+          font-size: 7vw;
+          height: 22vw;
+        }
+        img {
+          top: 0;
+          right: 0;
+          transform: translate(0);
+          position: relative;
+          height: 20vw;
+        }
+        .C_ColumnArticle {
+          .C_SupportiveTextColumn {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
