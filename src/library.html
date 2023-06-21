@@ -15,11 +15,25 @@
     <main class="SO_MainLibrary">
         <nav class="O_Menu">
             <section class="W_MenuTop">
-                <div class="M_MenuSearch">
+                <div>
+                    <p class="A_MenuSectionTitle">Параметры</p>
+                    <div class="C_MenuHorizontalButtonRow">
+                        <div class="A_MenuHorizontalButton" data-value="">
+                            <div class="Q_RadioButton">
+                            </div>
+                            <div>Только бесплатные</div>
+                        </div>
+                        <div class="A_MenuHorizontalButton">
+                            <div class="Q_RadioButton"></div>
+                            <div>Только вариативные</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="M_MenuSearch">
                     <input placeholder="Найти шрифт" type="text">
                     <img src="images/Q_MenuSearchIcon.svg" class="Q_MenuSearchIcon">
                     </img>
-                </div>
+                </div> -->
                 <div class="W_MenuButtonTable">
                     <div class="M_MenuFontStyleButton" data-filterParameter="sans">
                         <img src="images/Q_MenuFontStyleTypeSans.svg" class="Q_MenuFontStyleType" alt="">
@@ -51,16 +65,19 @@
 
                     </div>
                 </div>
-                <p class="A_MenuSectionTitle">Дополнительно</p>
-                <div class="C_MenuHorizontalButtonRow">
-                    <div class="A_MenuHorizontalButton" data-value="">
-                        <div class="Q_RadioButton">
+                <div>
+                    <p class="A_MenuSectionTitle">Настройки текста</p>
+                    <div class="C_MainTextEditButtons">
+                        <input type="text" placeholder="70px">
+                        <input type="text" placeholder="70%">
+                        <div class="W_FontEditOptions">
+                            <img src="./images/Q_Aa" alt="">
                         </div>
-                        <div>Только бесплатные</div>
                     </div>
-                    <div class="A_MenuHorizontalButton">
-                        <div class="Q_RadioButton"></div>
-                        <div>Только вариативные</div>
+                    <div class="C_MainTextEditButtons">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
                     </div>
                 </div>
             </section>
