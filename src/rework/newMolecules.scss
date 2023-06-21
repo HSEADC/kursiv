@@ -11,6 +11,26 @@
 .W_Usage {
   padding: 70px 70px 70px var(--navigationWidth);
 }
+.C_SignRowMulti {
+  z-index: 99;
+  margin-top: 40px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.C_SignRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+}
+.A_Sign {
+  color: var(--mainGray);
+  font-size: 24px;
+}
+
 .W_FontArticle {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;

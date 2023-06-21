@@ -16,6 +16,7 @@ module.exports = {
     spaces: './src/spaces.js',
     reactBasics: './src/reactBasics.jsx',
     open: './src/open.jsx',
+    journal: './src/journal.js',
     rework: './src/rework.js',
     header: './src/header.jsx',
     footer: './src/footer.jsx'
@@ -93,6 +94,12 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
       chunks: ['open', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/journal/aboutLetter.html',
+      filename: './journal/aboutLetter.html',
+      chunks: ['rework', 'header', 'footer']
     }),
 
     new HtmlWebpackPlugin({
@@ -354,6 +361,13 @@ module.exports = {
       template: './src/library/saint.html',
       filename: './library/saint.html',
       chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/journal.html',
+      filename: './journal.html',
+      chunks: ['journal', 'header', 'footer']
     }),
     // Article page link
     new HtmlWebpackPlugin({
