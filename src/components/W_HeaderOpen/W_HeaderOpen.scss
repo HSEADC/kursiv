@@ -14,3 +14,13 @@
     display: block;
   }
 }
+@media all and (max-width: 650px) {
+  .W_HeaderOpen {
+    flex-direction: column-reverse;
+    .C_HeaderBurgerDecoration {
+      img {
+        width: 45%;
+      }
+    }
+  }
+}
