@@ -910,11 +910,14 @@ function C_HeaderBurgerStack() {
   return /*#__PURE__*/react.createElement("div", {
     className: "C_HeaderBurgerStack"
   }, /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
-    href: "../library.html",
-    buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+    href: "../",
+    buttonTitle: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"
   }), /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
     href: "../journal.html",
     buttonTitle: "\u0416\u0443\u0440\u043D\u0430\u043B"
+  }), /*#__PURE__*/react.createElement(A_HeaderBurgerButtons, {
+    href: "../library.html",
+    buttonTitle: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
   }));
 }
 ;// CONCATENATED MODULE: ./src/components/A_FooterText/A_FooterText.jsx
