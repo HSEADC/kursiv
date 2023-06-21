@@ -6,7 +6,7 @@
   }
 }
 .Q_AnimationContainer {
-  height: 60vh;
+  height: 30vh;
 }
 .A_Description {
   font-family: var(--interfaceFont);
@@ -15,6 +15,13 @@
   white-space: nowrap;
   transition: all 0.15s ease;
 }
+.U_Mobile {
+  display: none;
+}
+.A_Mobile {
+  display: none;
+}
+
 .A_Switch {
   display: flex;
 }
@@ -28,7 +35,8 @@
   letter-spacing: -0.04em;
   color: var(--mainGray);
 }
-.Q_SplashBackground {
+.Q_SplashBackground,
+.U_Mobile {
   z-index: 1;
   position: absolute;
   width: 80%;
@@ -128,6 +136,11 @@
   justify-items: center;
   width: var(--navigationWidth);
   height: 100%;
+  .A_NavText:not(.active) {
+    color: var(--mainBlack);
+    width: fit-content;
+    background: var(--mainGray);
+  }
 }
 .C_BreadCrumbsAndDownloadButton {
   position: fixed;
@@ -151,8 +164,9 @@
     }
   }
 }
-.A_Screen {
+.A_Screen:not(.W_Usage) {
   width: 100%;
+  min-height: 90vh;
   // border-bottom: 1px solid black;
   // padding: 3vw 0 3vw;
   &.M_Intro {
@@ -425,15 +439,44 @@ textarea {
   .C_Glyphs {
     grid-template-columns: repeat(8, 1fr);
   }
-}
-
-@media all and (max-width: 1024px) {
-  .A_FontStyle {
-    line-height: 5vw;
+  .A_MainText {
+    text-indent: 250px;
+    font-size: 32px;
   }
   .A_SecondHeading {
     padding: 10px;
-    font-size: 2.2vw;
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 1150px) {
+  .A_MainText {
+    text-indent: 250px;
+    font-size: 26px;
+  }
+  .A_SecondHeading {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .Q_SupportiveText {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .A_MainText {
+    text-indent: 250px;
+    font-size: 26px;
+  }
+  .A_SecondHeading {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .Q_SupportiveText {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .A_FontStyle {
+    line-height: 5vw;
   }
 
   #rightBorder {
@@ -455,6 +498,9 @@ textarea {
   }
 }
 @media all and (max-width: 800px) {
+  .U_Mobile {
+    display: block;
+  }
   .A_MainText {
     text-indent: 30vw;
     font-size: 4vw;
@@ -463,5 +509,9 @@ textarea {
     br {
       display: none;
     }
+  }
+  .A_SecondHeading {
+    padding: 10px;
+    font-size: 5vw;
   }
 }

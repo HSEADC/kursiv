@@ -4,15 +4,15 @@
   max-width: 1920px;
 }
 .SO_FontPreviewScreen {
-  display: flex;
+  overflow: hidden;
   width: 100%;
   max-width: 100%;
+  display: flex;
   padding-top: 100px;
   flex-direction: column;
   gap: 30px;
 }
 .SO_MainLibrary {
-  overflow: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -26,7 +26,6 @@
     gap: 10px;
   }
   .SO_MainLibrary {
-    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -50,7 +49,6 @@
     gap: 0;
   }
   .SO_MainLibrary {
-    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: row;

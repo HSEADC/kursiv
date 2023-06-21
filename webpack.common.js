@@ -148,6 +148,84 @@ module.exports = {
       filename: './library/rework.html',
       chunks: ['rework', 'header', 'footer']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/ptSans.html',
+      filename: './library/ptSans.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/ebGaramond.html',
+      filename: './library/ebGaramond.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/comissioner.html',
+      filename: './library/comissioner.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/manrope.html',
+      filename: './library/manrope.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/montserrat.html',
+      filename: './library/montserrat.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/raleway.html',
+      filename: './library/raleway.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/rubik.html',
+      filename: './library/rubik.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/openSans.html',
+      filename: './library/openSans.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/merriweather.html',
+      filename: './library/merriweather.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/inter.html',
+      filename: './library/inter.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/firaSans.html',
+      filename: './library/firaSans.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/bodoni.html',
+      filename: './library/bodoni.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/library/spectral.html',
+      filename: './library/spectral.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
 
     new HtmlWebpackPlugin({
       hash: true,
@@ -157,13 +235,13 @@ module.exports = {
       chunks: ['fontArticle']
     }),
 
-    new HtmlWebpackPlugin({
-      hash: true,
+    // new HtmlWebpackPlugin({
+    //   hash: true,
 
-      template: './src/library/ptsans.html',
-      filename: './library/ptsans.html',
-      chunks: ['fontArticle']
-    }),
+    //   template: './src/library/ptsans.html',
+    //   filename: './library/ptsans.html',
+    //   chunks: ['fontArticle']
+    // }),
 
     new HtmlWebpackPlugin({
       hash: true,
@@ -171,6 +249,111 @@ module.exports = {
       template: './src/library.html',
       filename: './library.html',
       chunks: ['library', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/playfairDisplay.html',
+      filename: './library/playfairDisplay.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/akzidenzGrotesk.html',
+      filename: './library/akzidenzGrotesk.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/20kopeek.html',
+      filename: './library/20kopeek.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/21cent.html',
+      filename: './library/21cent.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/basebloom.html',
+      filename: './library/basebloom.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/bebasNeue.html',
+      filename: './library/bebasNeue.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/charter.html',
+      filename: './library/charter.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/geometria.html',
+      filename: './library/geometria.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/itcFranklin.html',
+      filename: './library/itcFranklin.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/museoSans.html',
+      filename: './library/museoSans.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/nunitoSans.html',
+      filename: './library/nunitoSans.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/oldStandart.html',
+      filename: './library/oldStandart.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/podkova.html',
+      filename: './library/podkova.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/comissioner.html',
+      filename: './library/comissioner.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/library/saint.html',
+      filename: './library/saint.html',
+      chunks: ['rework', 'header', 'footer']
     }),
     // Article page link
     new HtmlWebpackPlugin({

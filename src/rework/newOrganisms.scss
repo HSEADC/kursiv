@@ -1,15 +1,15 @@
 .O_GlyphSlot {
   background-image: url('../images/bg.svg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
   display: flex;
   position: absolute;
   flex-direction: row;
   width: 700px;
-  left: var(--padding);
+  left: 0;
 
   height: 90%;
-  padding: 12% 5%;
   align-self: center;
 }
 .O_AboutFontMain {
@@ -27,6 +27,9 @@
   height: 100vh;
   border-radius: 0 0 30px 30px;
   background: #161616;
+  img {
+    width: 95%;
+  }
 }
 .O_AboutFontStyles {
   display: flex;
@@ -186,11 +189,49 @@
 }
 @media all and (max-width: 1440px) {
   .O_GlyphSlot {
+    padding: 100px;
+    left: 0;
+    width: 41vw;
+  }
+}
+@media all and (max-width: 1200px) {
+  .O_SplashScreen {
+    img {
+      width: 90%;
+    }
+  }
+  .O_GlyphSlot {
+    padding: 40% 0 40% 0;
     left: 0;
     width: 41vw;
   }
 }
 @media all and (max-width: 1024px) {
+  .O_SplashScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 0px;
+    height: 100vh;
+    border-radius: 0 0 30px 30px;
+    background: #161616;
+    .Q_SplashBackground {
+      width: 95%;
+      display: none;
+    }
+    .U_Mobile {
+      display: block;
+    }
+  }
+  .O_AboutFontStyles {
+    img {
+      display: none;
+    }
+    .A_Mobile {
+      display: block;
+    }
+  }
   .O_Languages {
   }
   .O_Usage {

@@ -38,19 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
           0,
           glyphMaxWidth
         )}px`
-        glyphSlotWidth.style.borderRight = `1px solid rgba(0, 0, 0, ${scale(
-          glyphAnimationTriggers[0].getBoundingClientRect().top * -1,
-          0,
-          glyphAnimationTriggers[0].offsetHeight,
-          0,
-          1
-        )})`
+        // glyphSlotWidth.style.borderRight = `1px solid rgba(0, 0, 0, ${scale(
+        //   glyphAnimationTriggers[0].getBoundingClientRect().top * -1,
+        //   0,
+        //   glyphAnimationTriggers[0].offsetHeight,
+        //   0,
+        //   1
+        // )})`
       } else if (
         glyphAnimationTriggers[0].getBoundingClientRect().top <=
         glyphAnimationTriggers[0].offsetHeight * -1
       ) {
         glyphSlotWidth.style.maxWidth = `${glyphMaxWidth}px`
-        glyphSlotWidth.style.borderRight = `1px solid rgba(0, 0, 0, 1)`
+        // glyphSlotWidth.style.borderRight = `1px solid rgba(0, 0, 0, 1)`
       } else {
         glyphSlotWidth.style.maxWidth = `0px`
       }

@@ -2,5 +2,9 @@
   padding-top: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  img {
+    width: 70%;
+    align-self: end;
+  }
 }

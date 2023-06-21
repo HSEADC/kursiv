@@ -25,6 +25,7 @@
   justify-content: space-between;
 }
 .C_UseCases {
+  gap: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
@@ -96,11 +97,10 @@
   gap: 10px;
 }
 .M_HorizontalLines {
-  left: var(--padding);
+  left: 0;
   display: flex;
   flex-direction: column;
   width: 700px;
-  padding: 12% 5%;
   position: absolute;
   height: 90%;
   top: 50%;
@@ -163,7 +163,6 @@
   flex-direction: row;
   width: 90%;
   height: 90%;
-  padding: 12% 5%;
   align-self: center;
 }
 .W_GlyphArea {
@@ -189,9 +188,6 @@
 
   .C_NavList {
     padding: 0 30px;
-    a {
-      color: black;
-    }
   }
 }
 .W_BorderAndNavList {
@@ -257,6 +253,7 @@
 }
 @media all and (max-width: 1440px) {
   .M_HorizontalLines {
+    padding: 30px;
     left: 0;
     width: 41vw;
   }
@@ -272,6 +269,9 @@
   .Q_Devision {
     display: none;
   }
+  .M_MainTextAndSupBlock {
+    gap: 30px;
+  }
   .O_GlyphsAndGlyphSlot {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -284,6 +284,14 @@
     }
   }
 }
+@media all and (max-width: 1200px) {
+  .M_HorizontalLines {
+    padding: 40% 7% 40% 7%;
+    left: 0;
+    width: 41vw;
+  }
+}
+
 @media all and (max-width: 1024px) {
   .C_UseCases {
     grid-template-columns: repeat(2, 1fr);

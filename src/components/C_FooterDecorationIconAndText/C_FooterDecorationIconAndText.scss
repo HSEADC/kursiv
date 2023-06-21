@@ -1,5 +1,14 @@
 .C_FooterDecorationIconAndText {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 13px;
+  width: fit-content;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 60%;
+  }
 }
