@@ -13,7 +13,7 @@ module.exports = {
     test: './src/jsbasics.js',
     library: './src/library.js',
     fontArticle: './src/library/fontArticle.js',
-    spaces: './src/spaces.js',
+    // spaces: './src/spaces.js',
     reactBasics: './src/reactBasics.jsx',
     open: './src/open.jsx',
     journal: './src/journal.js',
@@ -114,20 +114,6 @@ module.exports = {
       chunks: ['rework', 'header', 'footer']
     }),
 
-    new HtmlWebpackPlugin({
-      hash: true,
-
-      template: './src/knowledge.html',
-      filename: './knowledge.html'
-    }),
-    // Spaces page link
-    new HtmlWebpackPlugin({
-      hash: true,
-
-      template: './src/spaces.html',
-      filename: './spaces.html',
-      chunks: ['spaces']
-    }),
     // Spaces page link
     new HtmlWebpackPlugin({
       hash: true,
