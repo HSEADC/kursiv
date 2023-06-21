@@ -101,6 +101,18 @@ module.exports = {
       filename: './journal/aboutLetter.html',
       chunks: ['rework', 'header', 'footer']
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/journal/russianStudies.html',
+      filename: './journal/russianStudies.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/journal/fontChoice.html',
+      filename: './journal/fontChoice.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
 
     new HtmlWebpackPlugin({
       hash: true,

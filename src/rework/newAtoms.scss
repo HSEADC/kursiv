@@ -21,6 +21,16 @@
 .A_Mobile {
   display: none;
 }
+.A_Heading {
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+  font-size: 2.1vw;
+  color: var(--mainGray);
+  height: 10.5vw;
+  background: var(--mainBlue);
+  border-radius: 25px;
+}
 
 .A_Switch {
   display: flex;
