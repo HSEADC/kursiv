@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
       styles[index].classList.toggle('extended')
     })
   }
+  const buttons = document.querySelectorAll('.A_FontAddClass')
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const addClass = button.getAttribute('data-addClass')
+      const elements = document.querySelectorAll('.A_FontPreview')
+      elements.forEach((element) => {
+        element.classList.remove('Upper', 'Lower', 'Bold')
+      })
+      buttons.forEach((button) => {
+        button.classList.remove('active')
+      })
+      button.classList.add('active')
+      elements.forEach((element) => {
+        element.classList.add(addClass)
+      })
+    })
+  })
   // function breadCrumbsDocumentTitleSet() {
   //   document.getElementsByClassName(
   //     'A_BreadCrumbs'

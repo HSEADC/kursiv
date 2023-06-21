@@ -242,17 +242,13 @@
   }
 }
 .O_Menu {
-  padding-top: 25px;
-  padding-bottom: 145px;
-  border-radius: 15px;
+  padding: 15px 15px 70px;
   position: sticky;
-  top: 100px;
+  top: 130px;
   background-image: url('/src/images/Q_MenuBG.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 418px;
-  padding-left: 15px;
-  padding-right: 15px;
   height: 791px;
   display: flex;
   flex-direction: column;
