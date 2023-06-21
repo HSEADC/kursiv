@@ -8,6 +8,26 @@
   max-height: 100%;
   width: fit-content;
 }
+.C_MainTextEditButtons {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  input,
+  input:focus {
+    all: unset;
+    padding: 10px;
+    color: var(--mainGray);
+    width: 100%;
+    height: 10px;
+    border: 2px solid var(--mainGray);
+    border-radius: 10px;
+    &::placeholder {
+      color: var(--mainGray);
+    }
+  }
+}
 .M_MainTextAndSupBlock {
   display: flex;
   flex-direction: row;
@@ -17,6 +37,11 @@
     padding: 5px 0 0 0;
     align-self: flex-start;
   }
+}
+.W_MenuTop {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 .C_Rectangles {
   display: grid;
