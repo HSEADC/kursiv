@@ -54,7 +54,7 @@
     flex-direction: row;
     width: 100%;
     gap: 60px;
-    padding: 60px 50px 60px 50px;
+    padding: 60px 2.5% 60px 2.5%;
     max-width: 1920px;
     .A_FontPreview {
       font-size: 40px;
@@ -62,6 +62,16 @@
       white-space: nowrap;
       text-decoration: none;
       color: #010101;
+      &.Upper {
+        text-transform: capitalize;
+      }
+      &.Bold {
+        text-transform: uppercase;
+      }
+      &.Lower {
+        text-transform: lowercase;
+      }
+
       img {
       }
     }
