@@ -291,6 +291,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
 
+      template: './src/library/plex.html',
+      filename: './library/plex.html',
+      chunks: ['rework', 'header', 'footer']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
       template: './src/library/akzidenzGrotesk.html',
       filename: './library/akzidenzGrotesk.html',
       chunks: ['rework', 'header', 'footer']

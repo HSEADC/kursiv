@@ -56,7 +56,7 @@ export default class A_HeaderButton extends React.Component {
           className={classes}
           onClick={handleClick}
           onKeyDown={(e) => e.key === 'Enter' && handleEnter()}
-          placeholder="Поиск по странице"
+          placeholder="Поиск шрифта"
           value={this.state.inputValue}
           onChange={(evt) => this.updateInputValue(evt)}
         ></input>
