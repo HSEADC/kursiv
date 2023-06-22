@@ -353,6 +353,8 @@
   }
 }
 .A_FontPreview {
+  overflow: hidden;
+  height: 80px;
   text-overflow: ellipsis;
   &.Upper {
     text-transform: capitalize;
