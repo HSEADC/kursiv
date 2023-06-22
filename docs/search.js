@@ -3870,7 +3870,7 @@ function getPostTeasers() {
           id: record.id,
           title: record.fields['Name'],
           description: record.fields['Author'],
-          url: record.fields['URL']
+          Kursiv: record.fields['Kursiv']
         });
       });
       resolve(content);
@@ -3901,9 +3901,6 @@ function getPathFromUrl(url) {
 function createContentCard(contentItemData) {
   var contentItem = document.createElement('div');
   contentItem.classList.add('O_ContentItem');
-  var contentItemCover = document.createElement('img');
-  contentItemCover.classList.add('A_ContentItemCover');
-  contentItemCover.src = contentItemData.image;
   var contentItemTags = document.createElement('div');
   contentItemTags.classList.add('C_ContentItemTags'); //   contentItemData.tags.forEach((tag) => {
   //     const contentItemTag = document.createElement('div')
@@ -3915,13 +3912,16 @@ function createContentCard(contentItemData) {
   var contentItemTitle = document.createElement('h2');
   contentItemTitle.classList.add('A_ContentItemTitle');
   contentItemTitle.innerText = contentItemData.title;
+  var contentItemURL = document.createElement('a');
+  contentItemURL.classList.add('A_ContentItemURL');
+  console.log(contentItemData.Kursiv);
+  contentItemURL.href = contentItemData.Kursiv;
+  contentItemURL.innerHTML = 'Читать →';
   var contentItemDescription = document.createElement('p');
   contentItemDescription.classList.add('A_ContentItemDescription');
   contentItemDescription.innerText = contentItemData.description;
-  contentItem.appendChild(contentItemCover);
-  contentItem.appendChild(contentItemTags);
   contentItem.appendChild(contentItemTitle);
-  contentItem.appendChild(contentItemDescription);
+  contentItem.appendChild(contentItemURL);
   return contentItem;
 }
 

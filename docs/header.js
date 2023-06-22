@@ -873,7 +873,7 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
           return _this2.updateInputValue(evt);
         }
       }), /*#__PURE__*/react.createElement("img", {
-        src: "https://kursiv.adc.ac/share/searchIcon.svg.jpg"
+        src: "https://kursiv.adc.ac/share/searchIcon.svg"
       }));
     }
   }, {
