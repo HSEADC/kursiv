@@ -8,6 +8,9 @@
 .Q_AnimationContainer {
   height: 30vh;
 }
+.A_BlueHeading {
+  color: var(--mainBlue);
+}
 .A_Description {
   font-family: var(--interfaceFont);
   font-size: 14px;
@@ -292,6 +295,12 @@
   line-height: var(--mainTextLineHeight);
   white-space: nowrap;
 }
+.A_BlueHeading {
+  font-size: var(--mainTextSize);
+  line-height: var(--mainTextLineHeight);
+  white-space: nowrap;
+  width: fit-content;
+}
 .A_MainText {
   font-size: var(--mainTextSize);
   line-height: var(--mainTextLineHeight);
@@ -466,6 +475,9 @@ textarea {
 @media all and (max-width: 1150px) {
   .A_MainText {
     text-indent: 250px;
+    font-size: 26px;
+  }
+  .A_BlueHeading {
     font-size: 26px;
   }
   .A_SecondHeading {

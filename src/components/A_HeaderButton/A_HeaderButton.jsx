@@ -60,7 +60,7 @@ export default class A_HeaderButton extends React.Component {
           value={this.state.inputValue}
           onChange={(evt) => this.updateInputValue(evt)}
         ></input>
-        <img src="https://kursiv.adc.ac/share/searchIcon.svg.jpg"></img>
+        <img src="https://kursiv.adc.ac/share/searchIcon.svg"></img>
       </>
     )
   }

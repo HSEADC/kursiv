@@ -1,19 +1,25 @@
+body {
+  background-color: var(--mainGray);
+}
 .O_Search {
+  margin-top: 170px;
   display: flex;
-  padding: 50px;
-
+  flex-direction: column;
+  width: 60%;
+  gap: 25px;
+  justify-content: flex-start;
+  align-self: flex-start;
   .A_Button {
     margin-left: 10px;
   }
 }
 
 .A_SearchInput {
-  border: 1px solid black;
-  border-radius: 0;
-  width: 250px;
+  border-radius: 45px;
+  border: 2px solid var(--mainBlack);
   background-color: transparent;
-  padding: 1px 8px;
-
+  padding: 20px 50px;
+  font-size: 24px;
   &:focus {
     border-color: inherit;
     -webkit-box-shadow: none;
@@ -23,34 +29,62 @@
 }
 
 .A_Button {
-  padding: 10px 20px;
-  background: black;
-  color: white;
+  color: var(--mainBlack);
+  width: fit-content;
+  height: fit-content;
+  font-size: 24px;
+  border-radius: 20px;
+  border: 2px solid var(--mainBlack);
+  padding: 10px 30px;
   cursor: pointer;
   user-select: none;
 
   &:hover:not(.disabled) {
-    background: lighten(black, 20%);
+    background: var(--mainBlack);
+    color: var(--mainGray);
   }
 
   &.disabled {
-    background: lightgrey;
-    color: grey;
+    opacity: 0.5;
     cursor: default;
   }
 }
 
 .S_Content {
+  padding: 0 25%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 900px;
+  width: 100%;
   margin: 100px auto;
+  flex-direction: column;
 }
 
 .O_ContentItem {
-  width: 280px;
-
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: var(--mainBlue);
+  border-radius: 24px;
+  .A_ContentItemTitle {
+    font-size: 40px;
+  }
+  .A_ContentItemURL {
+    padding: 10px;
+    font-size: 24px;
+    color: var(--mainGray);
+    border: 2px solid var(--mainGray);
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--mainGray);
+      color: var(--mainBlue);
+    }
+  }
   .C_ContentItemTags {
     display: flex;
     gap: 8px;
@@ -74,4 +108,14 @@
 
 .A_ContentItemTitle {
   font-weight: bold;
+}
+.SO_SearchPage {
+  display: flex;
+  flex-direction: row;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5%;
+
+  width: 100%;
 }
