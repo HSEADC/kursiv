@@ -818,19 +818,42 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
 
   var _super = A_HeaderButton_createSuper(A_HeaderButton);
 
-  function A_HeaderButton() {
+  function A_HeaderButton(props) {
+    var _this;
+
     A_HeaderButton_classCallCheck(this, A_HeaderButton);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+
+    _this.reset();
+
+    return _this;
   }
 
   A_HeaderButton_createClass(A_HeaderButton, [{
+    key: "reset",
+    value: function reset() {
+      this.state = {
+        inputValue: ''
+      };
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var endOf = 'le.com/';
+      var inputValue = document.querySelector('.A_HeaderButton');
       var isActive = this.props.isActive;
 
       var handleClick = function handleClick() {
-        console.log(isActive);
+        console.log(window.location.href);
+        isActive = !isActive;
+      };
+
+      var handleEnter = function handleEnter() {
+        console.log('https://www.app' + endOf);
+        window.location.href = 'https://kursiv.adc.ac/search.html?request=' + _this2.state.inputValue;
         isActive = !isActive;
       };
 
@@ -838,12 +861,29 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
         A_HeaderButton: true,
         Active: isActive
       });
-      return /*#__PURE__*/react.createElement("div", {
+      return /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("input", {
         className: classes,
-        onClick: handleClick
-      }, /*#__PURE__*/react.createElement("div", {
-        className: "Q_Circle"
+        onClick: handleClick,
+        onKeyDown: function onKeyDown(e) {
+          return e.key === 'Enter' && handleEnter();
+        },
+        placeholder: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435",
+        value: this.state.inputValue,
+        onChange: function onChange(evt) {
+          return _this2.updateInputValue(evt);
+        }
+      }), /*#__PURE__*/react.createElement("img", {
+        src: "https://kursiv.adc.ac/share/searchIcon.svg.jpg"
       }));
+    }
+  }, {
+    key: "updateInputValue",
+    value: function updateInputValue(evt) {
+      var val = evt.target.value; // ...
+
+      this.setState({
+        inputValue: val
+      });
     }
   }]);
 
@@ -852,14 +892,17 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
 
 
 ;// CONCATENATED MODULE: ./src/components/C_HeaderTitleAndButton/C_HeaderTitleAndButton.jsx
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
 
 
 
 function C_HeaderTitleAndButton(_ref) {
-  var headerButtonTitle = _ref.headerButtonTitle;
+  _objectDestructuringEmpty(_ref);
+
   return /*#__PURE__*/react.createElement("div", {
     className: "C_HeaderTitleAndButton"
-  }, /*#__PURE__*/react.createElement("div", null, "\u0422\u0451\u043C\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C ", headerButtonTitle), /*#__PURE__*/react.createElement(A_HeaderButton, null));
+  }, /*#__PURE__*/react.createElement(A_HeaderButton, null));
 }
 ;// CONCATENATED MODULE: ./src/components/C_BurgerMenu/C_BurgerMenu.jsx
 
