@@ -7,4 +7,8 @@
   padding: 5px 10px;
   background-color: var(--mainGray);
   border-radius: 12px;
+  color: black;
+  &:focus {
+    color: black;
+  }
 }
