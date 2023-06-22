@@ -867,7 +867,7 @@ var A_HeaderButton = /*#__PURE__*/function (_React$Component) {
         onKeyDown: function onKeyDown(e) {
           return e.key === 'Enter' && handleEnter();
         },
-        placeholder: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435",
+        placeholder: "\u041F\u043E\u0438\u0441\u043A \u0448\u0440\u0438\u0444\u0442\u0430",
         value: this.state.inputValue,
         onChange: function onChange(evt) {
           return _this2.updateInputValue(evt);
