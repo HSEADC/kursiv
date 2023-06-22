@@ -128,7 +128,7 @@ module.exports = {
 
       template: './src/search.html',
       filename: './search.html',
-      chunks: ['search']
+      chunks: ['search', 'header', 'footer']
     }),
     new HtmlWebpackPlugin({
       hash: true,
@@ -387,7 +387,8 @@ module.exports = {
       hash: true,
 
       template: './src/styleguide.html',
-      filename: './styleguide.html'
+      filename: './styleguide.html',
+      chunks: ['rework', 'header', 'footer']
     }),
     // Styleguide page link
     new HtmlWebpackPlugin({

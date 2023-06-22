@@ -233,7 +233,7 @@
     }
   }
   .O_AboutFontStyles {
-    img {
+    img:not(.exclude) {
       display: none;
     }
     .A_Mobile {

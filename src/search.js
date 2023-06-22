@@ -25,7 +25,7 @@ function getPostTeasers() {
             id: record.id,
             title: record.fields['Name'],
             description: record.fields['Author'],
-            url: record.fields['URL']
+            Kursiv: record.fields['Kursiv']
           })
         })
 
@@ -57,10 +57,6 @@ function createContentCard(contentItemData) {
   const contentItem = document.createElement('div')
   contentItem.classList.add('O_ContentItem')
 
-  const contentItemCover = document.createElement('img')
-  contentItemCover.classList.add('A_ContentItemCover')
-  contentItemCover.src = contentItemData.image
-
   const contentItemTags = document.createElement('div')
   contentItemTags.classList.add('C_ContentItemTags')
 
@@ -75,14 +71,17 @@ function createContentCard(contentItemData) {
   contentItemTitle.classList.add('A_ContentItemTitle')
   contentItemTitle.innerText = contentItemData.title
 
+  const contentItemURL = document.createElement('a')
+  contentItemURL.classList.add('A_ContentItemURL')
+  console.log(contentItemData.Kursiv)
+  contentItemURL.href = contentItemData.Kursiv
+  contentItemURL.innerHTML = 'Читать →'
   const contentItemDescription = document.createElement('p')
   contentItemDescription.classList.add('A_ContentItemDescription')
   contentItemDescription.innerText = contentItemData.description
 
-  contentItem.appendChild(contentItemCover)
-  contentItem.appendChild(contentItemTags)
   contentItem.appendChild(contentItemTitle)
-  contentItem.appendChild(contentItemDescription)
+  contentItem.appendChild(contentItemURL)
 
   return contentItem
 }

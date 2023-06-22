@@ -2,17 +2,40 @@
 <html lang="en">
 
 <head>
+    <analytics></analytics>
+    <meta name="title" content="Поиск — Курсив" />
+    <meta name="description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kursiv.adc.ac/" />
+    <meta property="og:title" content="Курсив — медиа о типографике" />
+    <meta property="og:description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <meta property="og:image" content="https://kursiv.adc.ac/share/shareImage/library.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kursiv.adc.ac/" />
+    <meta property="twitter:title" content="Журнал — Курсив" />
+    <meta property="twitter:description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <meta property="twitter:image" content="https://kursiv.adc.ac/share/shareImage/library.jpg" />
+    <link rel="icon" type="image/x-icon" href="https://kursiv.adc.ac/share/favicon2.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="O_Search">
-        <input class="A_SearchInput" type="text" placeholder="Поиск шрифта и статьи">
-        <div class="A_Button">Search</div>
+    <O_Header></O_Header>
+    <div class="SO_SearchPage">
+        <img class="Q_DecorationLeft" src="./images/Q_SearchLeft.svg" alt="">
+        <div class="O_Search">
+            <input class="A_SearchInput" type="text" placeholder="Поиск шрифта и статьи">
+            <div class="A_Button">Найти →</div>
+            <section class="S_Content"></section>
+        </div>
+        <img class="Q_DecorationRight" src="./images/Q_SearchRight.svg" alt="">
     </div>
-    <section class="S_Content"></section>
+    <O_Footer></O_Footer>
 </body>
 
 </html>
