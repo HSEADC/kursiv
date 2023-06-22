@@ -49,6 +49,65 @@ document.addEventListener('DOMContentLoaded', function (e) {
         element.classList.add(addClass);
       });
     });
+  });
+  var buttonsSecondary = document.querySelectorAll('.A_FontAddClassSecondary');
+  buttonsSecondary.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var addClass = button.getAttribute('data-addClass');
+      var elements = document.querySelectorAll('.A_FontPreview');
+      elements.forEach(function (element) {
+        element.classList.remove('Strike', 'Underline');
+      });
+      buttonsSecondary.forEach(function (button) {
+        button.classList.remove('active');
+      });
+      button.classList.add('active');
+      elements.forEach(function (element) {
+        element.classList.add(addClass);
+      });
+    });
+  }); // Get the input element
+
+  var input = document.querySelector('.textSize'); // Add input event listener to the input element
+
+  input.addEventListener('input', function () {
+    var elements = document.querySelectorAll('.A_FontPreview');
+
+    if (input.value != '') {
+      var inputVal = input.value;
+      console.log(inputVal);
+      elements.forEach(function (element) {
+        console.log();
+        element.style.fontSize = "".concat(inputVal, "px");
+      });
+    } else {
+      elements.forEach(function (element) {
+        console.log();
+        element.style.fontSize = "";
+      });
+    }
+  });
+  var inputik = document.querySelector('.innerSpace');
+  console.log(inputik); // Add input event listener to the input element
+
+  inputik.addEventListener('input', function () {
+    if (inputik.value != '') {
+      var inputVal = inputik.value;
+
+      var _elements = document.querySelectorAll('.A_FontPreview');
+
+      console.log(inputVal);
+
+      _elements.forEach(function (element) {
+        console.log();
+        element.style.letterSpacing = "".concat(inputVal, "px");
+      });
+    } else {
+      elements.forEach(function (element) {
+        console.log();
+        element.style.letterSpacing = '';
+      });
+    }
   }); // function breadCrumbsDocumentTitleSet() {
   //   document.getElementsByClassName(
   //     'A_BreadCrumbs'
