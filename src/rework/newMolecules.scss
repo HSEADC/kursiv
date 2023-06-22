@@ -427,6 +427,14 @@
     flex-direction: column;
     gap: 50px;
     .Q_SupportiveText {
+      br {
+        display: none;
+      }
+      white-space: normal;
+      opacity: 0.6;
+      font-size: 4.1vw;
+      width: fit-content;
+      line-height: var(--mainTextLineHeight);
       align-self: flex-end;
     }
     .A_MainText {

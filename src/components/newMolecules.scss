@@ -404,3 +404,18 @@
     }
   }
 }
+@media all and (max-width: 600px) {
+  .M_MainTextAndSupBlock {
+    .C_SupportiveTextColumn {
+      br {
+        display: none;
+      }
+      white-space: normal;
+      opacity: 0.6;
+      font-size: 4.1vw;
+      width: fit-content;
+      line-height: var(--mainTextLineHeight);
+      align-self: flex-end;
+    }
+  }
+}
