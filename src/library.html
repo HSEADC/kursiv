@@ -3,10 +3,26 @@
 
 <head>
     <analytics></analytics>
+    <meta name="title" content="Библиотека — Курсив" />
+    <meta name="description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kursiv.adc.ac/" />
+    <meta property="og:title" content="Курсив — медиа о типографике" />
+    <meta property="og:description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <meta property="og:image" content="https://kursiv.adc.ac/share/shareImage/journal.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kursiv.adc.ac/" />
+    <meta property="twitter:title" content="Журнал — Курсив" />
+    <meta property="twitter:description" content="«Курсив» — ваш помощник и инструмент в работе с кириллицей." />
+    <meta property="twitter:image" content="https://kursiv.adc.ac/share/shareImage/journal.jpg" />
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Библиотека</title>
+    <title>Библиотека — Курсив</title>
 </head>
 
 <body>
@@ -34,46 +50,61 @@
                     <img src="images/Q_MenuSearchIcon.svg" class="Q_MenuSearchIcon">
                     </img>
                 </div> -->
-                <div class="W_MenuButtonTable">
-                    <div class="M_MenuFontStyleButton" data-filterParameter="sans">
-                        <img src="images/Q_MenuFontStyleTypeSans.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Гротеск</p>
-                    </div>
-                    <div class="M_MenuFontStyleButton" data-filterParameter="serif">
-                        <img src="images/Q_MenuFontStyleTypeOld.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Новая антиква</p>
+                <div>
 
+                    <p class="A_MenuSectionTitle">Настройки текста</p>
+                    <div class="C_MainTextEditButtons">
+                        <input type="text" class='textSize' placeholder="40px">
+                        <input type="text" class="innerSpace" placeholder="0%">
+                        <div class="W_FontEditOptions">
+                            <div class="A_FontAddClass" data-addClass="Upper">Aa</div>
+                            <div class="A_FontAddClass" data-addClass="Lower">aa</div>
+                            <div class="A_FontAddClass" data-addClass="Bold">AA</div>
+                        </div>
                     </div>
-                    <div class="M_MenuFontStyleButton" data-filterParameter="old">
-                        <img src="images/Q_MenuFontStyleTypeOld.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Старая антиква</p>
-
-                    </div>
-                    <div class="M_MenuFontStyleButton" data-filterParameter="art">
-                        <img src="images/Q_MenuFontStyleTypeArt.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Художественный</p>
-
-                    </div>
-                    <div class="M_MenuFontStyleButton" data-filterParameter="handwritten">
-                        <img src="images/Q_MenuFontStyleTypeHandwritten.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Рукописный</p>
-
-                    </div>
-                    <div class="M_MenuFontStyleButton" data-filterParameter="slab">
-                        <img src="images/Q_MenuFontStyleTypeSlab.svg" class="Q_MenuFontStyleType" alt="">
-                        <p class="A_MenuFontStyleText">Египетский</p>
-
+                    <div class="C_MainTextEditButtons">
+                        <div class="W_FontEditOptions">
+                            <div class="A_FontAddClassSecondary" data-addClass="Strike"
+                                style="text-decoration: line-through;">AA
+                            </div>
+                            <div class="A_FontAddClassSecondary" data-addClass="Underline"
+                                style="text-decoration: underline;">AA
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <p class="A_MenuSectionTitle">Настройки текста</p>
-                    <div class="C_MainTextEditButtons">
-                        <input type="text" placeholder="70px">
-                        <input type="text" placeholder="70%">
-                        <div class="W_FontEditOptions">
-                            <div class="A_FontAddClass" data-addClass="Upper">Aa</div>
-                            <div class="A_FontAddClass" data-addClass="Bold">aa</div>
-                            <div class="A_FontAddClass" data-addClass="Lower">AA</div>
+                    <p class="A_MenuSectionTitle">Гарнитура</p>
+
+                    <div class="W_MenuButtonTable">
+                        <div class="M_MenuFontStyleButton" data-filterParameter="sans">
+                            <img src="images/Q_MenuFontStyleTypeSans.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Гротеск</p>
+                        </div>
+                        <div class="M_MenuFontStyleButton" data-filterParameter="serif">
+                            <img src="images/Q_MenuFontStyleTypeOld.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Новая антиква</p>
+
+                        </div>
+                        <div class="M_MenuFontStyleButton" data-filterParameter="old">
+                            <img src="images/Q_MenuFontStyleTypeOld.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Старая антиква</p>
+
+                        </div>
+                        <div class="M_MenuFontStyleButton" data-filterParameter="art">
+                            <img src="images/Q_MenuFontStyleTypeArt.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Художественный</p>
+
+                        </div>
+                        <div class="M_MenuFontStyleButton" data-filterParameter="handwritten">
+                            <img src="images/Q_MenuFontStyleTypeHandwritten.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Рукописный</p>
+
+                        </div>
+                        <div class="M_MenuFontStyleButton" data-filterParameter="slab">
+                            <img src="images/Q_MenuFontStyleTypeSlab.svg" class="Q_MenuFontStyleType" alt="">
+                            <p class="A_MenuFontStyleText">Египетский</p>
+
                         </div>
                     </div>
                 </div>

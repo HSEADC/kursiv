@@ -184,8 +184,8 @@
     flex-direction: column;
     width: 105px;
     height: 65px;
-    border: 1px solid white;
-    border-radius: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     &:hover {
@@ -316,6 +316,14 @@
   }
 }
 @media all and (max-width: 1440px) {
+  .M_MainTextAndSupBlock {
+    .C_SupportiveTextColumn {
+      width: fit-content;
+      font-size: 1.4vw;
+      padding: 5px 0 0 0;
+      align-self: flex-start;
+    }
+  }
   .W_Nav {
     .W_GlyphSlot {
       display: none;
@@ -326,6 +334,14 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .M_MainTextAndSupBlock {
+    .C_SupportiveTextColumn {
+      font-size: 2vw;
+      width: fit-content;
+      align-self: flex-end;
+    }
+  }
+
   .M_ArticleBlock {
     // padding: 0px;
   }
