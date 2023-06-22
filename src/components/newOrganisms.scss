@@ -22,6 +22,7 @@
     white-space: nowrap;
   }
   .C_SupportiveTextColumn {
+    width: fit-content;
     color: black;
     white-space: normal;
   }
@@ -69,7 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 30%;
+  width: fit-content;
   align-self: end;
   white-space: nowrap;
   align-self: flex-end;

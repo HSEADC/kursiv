@@ -291,6 +291,9 @@
   }
 }
 @media all and (max-width: 1440px) {
+  .W_FontArticle {
+    display: block;
+  }
   .M_HorizontalLines {
     padding: 30px;
     left: 0;
@@ -331,6 +334,9 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .A_Sign {
+    display: none;
+  }
   .M_ArticleBlock {
     // padding: 0px;
   }
@@ -421,6 +427,14 @@
     flex-direction: column;
     gap: 50px;
     .Q_SupportiveText {
+      br {
+        display: none;
+      }
+      white-space: normal;
+      opacity: 0.6;
+      font-size: 4.1vw;
+      width: fit-content;
+      line-height: var(--mainTextLineHeight);
       align-self: flex-end;
     }
     .A_MainText {
