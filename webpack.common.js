@@ -17,6 +17,7 @@ module.exports = {
     reactBasics: './src/reactBasics.jsx',
     open: './src/open.jsx',
     journal: './src/journal.js',
+    search: './src/search.js',
     rework: './src/rework.js',
     header: './src/header.jsx',
     footer: './src/footer.jsx'
@@ -121,6 +122,13 @@ module.exports = {
       template: './src/reactBasics.html',
       filename: './reactBasics.html',
       chunks: ['reactBasics']
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+
+      template: './src/search.html',
+      filename: './search.html',
+      chunks: ['search']
     }),
     new HtmlWebpackPlugin({
       hash: true,

@@ -1,8 +1,14 @@
 .C_HeaderTitleAndButton {
+  position: relative;
+  width: 300px;
+  height: 30px;
+  padding: 0 10px;
+  background-color: var(--mainGray);
+  border-radius: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 11px;
   div {
     color: var(--mainGray);
