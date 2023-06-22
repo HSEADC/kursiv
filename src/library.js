@@ -38,6 +38,63 @@ document.addEventListener('DOMContentLoaded', (e) => {
       })
     })
   })
+  const buttonsSecondary = document.querySelectorAll('.A_FontAddClassSecondary')
+  buttonsSecondary.forEach((button) => {
+    button.addEventListener('click', () => {
+      const addClass = button.getAttribute('data-addClass')
+      const elements = document.querySelectorAll('.A_FontPreview')
+      elements.forEach((element) => {
+        element.classList.remove('Strike', 'Underline')
+      })
+      buttonsSecondary.forEach((button) => {
+        button.classList.remove('active')
+      })
+      button.classList.add('active')
+      elements.forEach((element) => {
+        element.classList.add(addClass)
+      })
+    })
+  })
+  // Get the input element
+  const input = document.querySelector('.textSize')
+
+  // Add input event listener to the input element
+  input.addEventListener('input', () => {
+    const elements = document.querySelectorAll('.A_FontPreview')
+    if (input.value != '') {
+      const inputVal = input.value
+      console.log(inputVal)
+      elements.forEach((element) => {
+        console.log()
+        element.style.fontSize = `${inputVal}px`
+      })
+    } else {
+      elements.forEach((element) => {
+        console.log()
+        element.style.fontSize = ``
+      })
+    }
+  })
+  const inputik = document.querySelector('.innerSpace')
+  console.log(inputik)
+  // Add input event listener to the input element
+  inputik.addEventListener('input', () => {
+    if (inputik.value != '') {
+      const inputVal = inputik.value
+      const elements = document.querySelectorAll('.A_FontPreview')
+      console.log(inputVal)
+      elements.forEach((element) => {
+        console.log()
+        element.style.letterSpacing = `${inputVal}px`
+      })
+    } else {
+      elements.forEach((element) => {
+        console.log()
+        element.style.letterSpacing = ''
+      })
+    }
+  })
+
   // function breadCrumbsDocumentTitleSet() {
   //   document.getElementsByClassName(
   //     'A_BreadCrumbs'

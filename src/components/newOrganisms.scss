@@ -48,6 +48,9 @@
   width: 100%;
   max-width: 100vw;
   padding: 0 10%;
+  .U_MobileShown {
+    display: none;
+  }
   overflow: hidden;
   height: 100vh;
   white-space: nowrap;
@@ -141,6 +144,21 @@
     white-space: nowrap;
     text-decoration: none;
     color: #010101;
+    &.Upper {
+      text-transform: capitalize;
+    }
+    &.Bold {
+      text-transform: uppercase;
+    }
+    &.Strike {
+      text-decoration: line-through;
+    }
+    &.Underline {
+      text-decoration: underline;
+    }
+    &.Lower {
+      text-transform: lowercase;
+    }
   }
 }
 .O_Languages {
@@ -340,7 +358,7 @@
     }
   }
 }
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1440px) {
   .O_ArticleAndMainText,
   .O_TextAndRectangles {
     padding: 5% 5%;
@@ -350,6 +368,9 @@
   }
 }
 @media all and (max-width: 1024px) {
+  .M_MainTextAndSupBlock {
+    flex-direction: column;
+  }
   .O_ArticlesPreview {
     padding: 0 10% 5vw;
     min-height: 100vh;
@@ -379,6 +400,15 @@
     padding: 5% 5%;
   }
   .W_LogoWithSignAndText {
+    .C_SupportiveTextColumn {
+      align-self: center;
+    }
+    .U_Mobile {
+      display: none;
+    }
+    .U_MobileShown {
+      display: block;
+    }
     padding: 0 3%;
   }
 

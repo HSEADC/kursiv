@@ -65,6 +65,12 @@
       &.Upper {
         text-transform: capitalize;
       }
+      &.Strike {
+        text-decoration: line-through;
+      }
+      &.Underline {
+        text-decoration: underline;
+      }
       &.Bold {
         text-transform: uppercase;
       }

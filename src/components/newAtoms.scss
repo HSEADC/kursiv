@@ -16,8 +16,22 @@
   text-indent: 5.7vw;
   font-size: 46px;
 }
+.C_MainTextEditButtons:nth-last-of-type(1) {
+  width: 30%;
+}
 .W_FontEditOptions {
   .A_FontAddClass {
+    font-size: 20px;
+    font-family: 'suisse';
+    color: var(--mainGray);
+    opacity: 0.8;
+    cursor: pointer;
+    &.active {
+      opacity: 1;
+      color: var(--mainGray);
+    }
+  }
+  .A_FontAddClassSecondary {
     font-size: 20px;
     font-family: 'suisse';
     color: var(--mainGray);
@@ -260,7 +274,7 @@
   cursor: pointer;
 }
 .A_MenuSectionTitle {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 18px;
   color: white;
@@ -340,7 +354,26 @@
 }
 .A_FontPreview {
   text-overflow: ellipsis;
+  &.Upper {
+    text-transform: capitalize;
+  }
+  &.Bold {
+    text-transform: uppercase;
+  }
+  &.Strike {
+    text-decoration: line-through;
+  }
+  &.Underline {
+    text-decoration: underline;
+  }
+  &.Lower {
+    text-transform: lowercase;
+  }
+
+  img {
+  }
 }
+
 textarea {
   all: unset;
 }
